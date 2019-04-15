@@ -1,0 +1,24 @@
+---
+title: Aktionen – HTML-SDK für .NET
+author: matthidinger
+ms.author: mahiding
+ms.date: 10/19/2017
+ms.topic: article
+ms.openlocfilehash: 99bf6121489391c207a71b45264dc68aa2c6116e
+ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59553312"
+---
+# <a name="actions---net-html"></a><span data-ttu-id="d7b47-102">Aktionen – .NET HTML</span><span class="sxs-lookup"><span data-stu-id="d7b47-102">Actions - .NET HTML</span></span>
+
+<span data-ttu-id="d7b47-103">Der obersten Ebene Karte `actions` als HTML rendert `<button>`.</span><span class="sxs-lookup"><span data-stu-id="d7b47-103">Top-level card `actions` will render as an HTML `<button>`.</span></span> <span data-ttu-id="d7b47-104">Da es sich um eine serverseitige-Bibliothek, die es liegt an Ihnen handelt, um clientseitige-Ereignishandler zu verknüpfen, wenn die Taste gedrückt werden.</span><span class="sxs-lookup"><span data-stu-id="d7b47-104">Since this is a server-side library it's up to you to wire up client-side event handlers when buttons are pressed.</span></span> <span data-ttu-id="d7b47-105">Jede `<button>` im HTML-Attribute, die Sie verwenden können, müssen das richtige Verhalten verknüpfen.</span><span class="sxs-lookup"><span data-stu-id="d7b47-105">Each `<button>` in the HTML will have attributes that you can use to wire up the proper behavior.</span></span>
+
+<span data-ttu-id="d7b47-106">Einige Elemente haben eine `selectAction` Eigenschaft (Spalten-Container-Image), wodurch sie aufrufbaren.</span><span class="sxs-lookup"><span data-stu-id="d7b47-106">Some elements have a `selectAction` property (Container, Columns, Image) which makes them invokable.</span></span> <span data-ttu-id="d7b47-107">Wenn ein Element verfügt über eine `selectAction` der Renderer Fügt eine CSS-Klasse von `ac-selectable`, zusammen mit der folgenden Attribute.</span><span class="sxs-lookup"><span data-stu-id="d7b47-107">If an element has a `selectAction` the renderer will add a CSS class of `ac-selectable`, along with the below attributes.</span></span>
+
+<span data-ttu-id="d7b47-108">Aktionstyp</span><span class="sxs-lookup"><span data-stu-id="d7b47-108">Action Type</span></span> | <span data-ttu-id="d7b47-109">CSS-Klasse</span><span class="sxs-lookup"><span data-stu-id="d7b47-109">CSS class</span></span> | <span data-ttu-id="d7b47-110">Zusätzliche Attribute</span><span class="sxs-lookup"><span data-stu-id="d7b47-110">Additional attributes</span></span>
+---|---|---
+`Action.OpenUrl` | `ac-action-openUrl` | <span data-ttu-id="d7b47-111">`data-ac-url` (die `url` Eigenschaft von der Karte)</span><span class="sxs-lookup"><span data-stu-id="d7b47-111">`data-ac-url` (the `url` property from the card)</span></span>
+`Action.Submit` | `ac-action-submit` | <span data-ttu-id="d7b47-112">`data-ac-data` (die `data` Eigenschaft von der Karte)</span><span class="sxs-lookup"><span data-stu-id="d7b47-112">`data-ac-data` (the `data` property from the card)</span></span>
+`Action.ShowCard` | `ac-action-showCard` | <span data-ttu-id="d7b47-113">`data-ac-showcardid` (die `id` von der `<div>` , enthält die innere-Karte)</span><span class="sxs-lookup"><span data-stu-id="d7b47-113">`data-ac-showcardid` (the `id` of the `<div>` containing the inner card)</span></span>
