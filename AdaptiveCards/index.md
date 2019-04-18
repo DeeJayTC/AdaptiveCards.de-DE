@@ -1,0 +1,83 @@
+---
+title: 'Adaptive Karten: Übersicht'
+author: matthidinger
+ms.author: mahiding
+ms.date: 06/26/2017
+ms.topic: article
+ms.openlocfilehash: 545d22a9dd2208d0a506f05943cd5ed9dd3de437
+ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59552302"
+---
+# <a name="adaptive-cards-overview"></a><span data-ttu-id="d9bdf-102">Adaptive Karten: Übersicht</span><span class="sxs-lookup"><span data-stu-id="d9bdf-102">Adaptive Cards Overview</span></span> 
+
+<span data-ttu-id="d9bdf-103">Adaptive Karten sind ein offenes Kartenaustauschformat, mit dem Entwickler UI-Inhalte auf einheitliche und konsistente Weise austauschen können.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-103">Adaptive Cards are an open card exchange format enabling developers to exchange UI content in a common and consistent way.</span></span>
+
+<video controls width="100%" poster="./content/videoposter.png">
+    <source src="https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4" type="video/mp4">
+</video>
+
+## <a name="how-they-work"></a><span data-ttu-id="d9bdf-104">Funktionsweise</span><span class="sxs-lookup"><span data-stu-id="d9bdf-104">How they work</span></span>
+
+<span data-ttu-id="d9bdf-105">[**Kartenautoren**](authoring-cards/getting-started.md) beschreiben ihre Inhalte als ein einfaches JSON-Objekt.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-105">[**Card Authors**](authoring-cards/getting-started.md) describe their content as a simple JSON object.</span></span> <span data-ttu-id="d9bdf-106">Dieser Inhalt kann dann systemintern in einer [**Hostanwendung**](rendering-cards/getting-started.md) gerendert werden und passt sich automatisch an das Erscheinungsbild des Hosts an.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-106">That content can then be rendered natively inside a [**Host Application**](rendering-cards/getting-started.md), automatically adapting to the look and feel of the Host.</span></span>
+
+<span data-ttu-id="d9bdf-107">Contoso Bot kann beispielsweise eine adaptive Karte über Bot Framework erstellen, die bei der Übermittlung an Skype das Erscheinungsbild einer Skype-Karte annimmt.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-107">For example, Contoso Bot can author an Adaptive Card through the Bot Framework, and when delivered to Skype, it will look and feel like a Skype card.</span></span> <span data-ttu-id="d9bdf-108">Wenn die gleiche Nutzlast an Microsoft Teams gesendet wird, nimmt die das Erscheinungsbild von Microsoft Teams an.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-108">When that same payload is sent to Microsoft Teams, it will look and feel like Microsoft Teams.</span></span> <span data-ttu-id="d9bdf-109">Da immer mehr Host-Apps beginnen, Adaptive Karten zu unterstützen, wird dieselbe Nutzlast automatisch in diesen Anwendungen bereitgestellt, wobei die Darstellung wie speziell für die jeweilige App konzipiert erscheint.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-109">As more host apps start to support Adaptive Cards, that same payload will automatically light up inside these applications, yet still feel entirely native to the app.</span></span>
+
+<span data-ttu-id="d9bdf-110">Benutzer haben den Vorteil, dass sich alles vertraut anfühlt.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-110">Users win because everything feels familiar.</span></span> <span data-ttu-id="d9bdf-111">Hosts haben den Vorteil, die Benutzerfreundlichkeit steuern zu können.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-111">Host apps win because they control the user experience.</span></span> <span data-ttu-id="d9bdf-112">Und Kartenautoren haben den Vorteil, dass ihre Inhalte ohne zusätzlichen Aufwand eine größere Reichweite erhalten.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-112">And Card Authors win because their content gets broader reach without any additional work.</span></span>
+
+## <a name="goals"></a><span data-ttu-id="d9bdf-113">Ziele</span><span class="sxs-lookup"><span data-stu-id="d9bdf-113">Goals</span></span> 
+
+<span data-ttu-id="d9bdf-114">Ziele für adaptive Karten:</span><span class="sxs-lookup"><span data-stu-id="d9bdf-114">The goals for adaptive cards are:</span></span>
+
+* <span data-ttu-id="d9bdf-115">**Portierbar** zu jeder App, jedem Gerät und jedem Benutzeroberflächenframework</span><span class="sxs-lookup"><span data-stu-id="d9bdf-115">**Portable** - To any app, device, and UI framework</span></span>
+* <span data-ttu-id="d9bdf-116">**Offen**: Bibliotheken und das Schema sind Open Source und freigegeben.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-116">**Open** - Libraries and schema are open source and shared</span></span>
+* <span data-ttu-id="d9bdf-117">**Niedrige Kosten**: Einfach zu definieren und einfach zu nutzen</span><span class="sxs-lookup"><span data-stu-id="d9bdf-117">**Low cost** - Easy to define, easy to consume</span></span>
+* <span data-ttu-id="d9bdf-118">**Ausdrucksstark**: Ausgerichtet auf die lange Reihe von Inhalten, die Entwickler erstellen möchten</span><span class="sxs-lookup"><span data-stu-id="d9bdf-118">**Expressive** - Targeted at the long tail of content that developers want to produce</span></span>
+* <span data-ttu-id="d9bdf-119">**Rein deklarativ**: Code ist nicht erforderlich oder zulässig.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-119">**Purely declarative** - No code is needed or allowed</span></span>
+* <span data-ttu-id="d9bdf-120">**Automatisch formatiert**: angepasst an die Benutzeroberfläche der Hostanwendung und Markenrichtlinien</span><span class="sxs-lookup"><span data-stu-id="d9bdf-120">**Automatically styled** - To the Host application UX and brand guidelines</span></span>
+
+## <a name="for-card-authors"></a><span data-ttu-id="d9bdf-121">Für Kartenautoren</span><span class="sxs-lookup"><span data-stu-id="d9bdf-121">For Card Authors</span></span>
+<span data-ttu-id="d9bdf-122">Adaptive Karten eignen sich hervorragend für Kartenautoren:</span><span class="sxs-lookup"><span data-stu-id="d9bdf-122">Adaptive Cards are great for card authors:</span></span>
+
+* <span data-ttu-id="d9bdf-123">**Ein Schema**: Sie arbeiten mit nur einem Format, sodass die Kosten für das Erstellen einer Karte minimiert und die Anzahl der Verwendungsmöglichkeiten maximiert werden.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-123">**One schema** - You get a single format, minimizing the cost of creating a card and maximizing the number of places it can be used.</span></span>
+* <span data-ttu-id="d9bdf-124">**Umfangreicherer Ausdruck**:Ihr Inhalt kann besser daran ausgerichtet werden, was Sie sagen möchten, da Sie über eine reichhaltigere Palette an Nuancen verfügen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-124">**Richer expression** - Your content can more closely align with want you want to say because you have a richer palette to paint with.</span></span>
+* <span data-ttu-id="d9bdf-125">**Große Reichweite**: Ihre Inhalte funktionieren für eine breitere Gruppe von Anwendungen, ohne dass Sie neue Schemata erlernen müssen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-125">**Broad reach** - Your content will work across a broader set of applications without you having to learn new schemas.</span></span>
+* <span data-ttu-id="d9bdf-126">**Eingabesteuerelemente**: Ihre Karte kann Eingabesteuerelemente zum Erfassen von Informationen zum Benutzer beinhalten, der die Karte anzeigt.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-126">**Input controls** - Your card can include input controls for gathering information from the user that is viewing the card.</span></span>
+* <span data-ttu-id="d9bdf-127">**Bessere Tools**: Ein offenes Karten-Ökosystem bedeutet bessere Tools, die von allen gemeinsam verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-127">**Better tooling** - An open card ecosystem means better tooling that is shared by everyone.</span></span>
+
+## <a name="for-experience-owners"></a><span data-ttu-id="d9bdf-128">Für Besitzer von Benutzerumgebungen</span><span class="sxs-lookup"><span data-stu-id="d9bdf-128">For Experience Owners</span></span>
+<span data-ttu-id="d9bdf-129">Wenn Sie ein App-Entwickler sind, der ein Ökosystem mit Inhalten von Drittanbietern nutzen möchte, werden Sie Adaptive Karten lieben:</span><span class="sxs-lookup"><span data-stu-id="d9bdf-129">If you are an app developer who wants to tap into an ecosystem of third-party content you will love Adaptive Cards because:</span></span>
+
+* <span data-ttu-id="d9bdf-130">**Einheitliche Benutzerumgebung**: Sie garantieren eine einheitliche Umgebung für Ihre Benutzer, da Sie die Formatvorlagen der gerenderten Karte besitzen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-130">**Consistent user experience** - You guarantee a consistent experience for your users, because you own the style of the rendered card.</span></span>
+* <span data-ttu-id="d9bdf-131">**Native Leistung**: Sie profitieren von nativer Leistung, da sie direkt auf Ihr Benutzeroberflächenframework ausgerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-131">**Native performance** - You get native performance as it targets your UI framework directly.</span></span>
+* <span data-ttu-id="d9bdf-132">**Sicher**: Inhalte werden über sichere Nutzlasten bereitgestellt, sodass Sie Ihr Benutzeroberflächenframework nicht für Rohmarkup und -skripting öffnen müssen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-132">**Safe** - Content is delivered in safe payloads so you don't have to open up your UI framework to raw markup and scripting.</span></span>
+* <span data-ttu-id="d9bdf-133">**Einfache Implementierung**: Sie erhalten vordefinierte Bibliotheken, die mühelos auf jeder von Ihnen unterstützten Plattform integriert werden können.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-133">**Easy to implement** - You get off the shelf libraries to easily integrate on any platform you support</span></span> 
+* <span data-ttu-id="d9bdf-134">**Kostenlose Dokumentation**: Sie sparen Zeit, weil Sie kein proprietäres Schema entwerfen, implementieren und dokumentieren müssen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-134">**Free documentation** - You save time because you don't have invent, implement, and document a proprietary schema.</span></span>
+* <span data-ttu-id="d9bdf-135">**Freigegebene Tools**: Sie sparen Zeit, da Sie keine benutzerdefinierten Tools erstellen müssen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-135">**Shared tooling** - You save time because you don't have to create custom tooling.</span></span>
+
+## <a name="core-design-principles"></a><span data-ttu-id="d9bdf-136">Wichtigste Designprinzipien</span><span class="sxs-lookup"><span data-stu-id="d9bdf-136">Core Design Principles</span></span> 
+
+<span data-ttu-id="d9bdf-137">Adaptive Karten werden durch eine Reihe von [Leitprinzipien](resources/principles.md) gesteuert, die sich für die Einhaltung des Designs als nützlich erwiesen haben.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-137">Adaptive Cards are driven by a set of [guiding principles](resources/principles.md) that have been useful for keeping the design on track.</span></span> 
+
+### <a name="semantic-instead-of-pixel-perfect"></a><span data-ttu-id="d9bdf-138">Semantik statt Pixelpräzision</span><span class="sxs-lookup"><span data-stu-id="d9bdf-138">Semantic instead of pixel-perfect</span></span>
+<span data-ttu-id="d9bdf-139">Wir haben uns beim Layout so stark wie möglich um semantische Werte und Konzepte im Gegensatz zu reiner Pixelperfektion bemüht.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-139">We have striven as much as possible for semantic values and concepts as opposed to pure pixel-perfect layout.</span></span> <span data-ttu-id="d9bdf-140">Beispiele für semantische Ausdrücke finden sich in Farben, Größen und Elementen wie „FactSet“ und „ImageSet“.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-140">Examples of semantic expression show up in colors, sizes, and in elements like FactSet and ImageSet.</span></span> <span data-ttu-id="d9bdf-141">Diese ermöglichen es der Host-Anwendung, bessere Entscheidungen über das tatsächliche Erscheinungsbild zu treffen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-141">These all allow the host application to make better decisions about the actual look and feel.</span></span>
+
+### <a name="card-authors-own-the-content-host-app-owns-the-look-and-feel"></a><span data-ttu-id="d9bdf-142">Kartenautoren besitzen den Inhalt, die Host-App das Erscheinungsbild.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-142">Card Authors own the content, Host App owns the look and feel</span></span>
+<span data-ttu-id="d9bdf-143">Die Kartenautoren besitzen ihre beabsichtigte Aussage, die anzeigende Anwendung besitzt jedoch Erscheinungsbild der Karte im Kontext ihrer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-143">The card authors own what they want to say, but the application displaying it owns the look and feel of the card in the context of their application.</span></span>
+
+### <a name="keep-it-simple-but-expressive"></a><span data-ttu-id="d9bdf-144">Halten Sie es einfach, aber ausdrucksstark.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-144">Keep it simple, but expressive</span></span>
+<span data-ttu-id="d9bdf-145">Wir möchten, dass Adaptive Karten ausdrucksstark und universell einsetzbar sind, möchten aber kein Benutzeroberflächenframework erstellen.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-145">We want Adaptive Cards to be expressive and general purpose, but we don't want to build a UI framework.</span></span>  <span data-ttu-id="d9bdf-146">Das Ziel ist die Erstellung einer Zwischenebene, die „aussagekräftig genug“ ist, so wie Markdown aussagekräftig genug für Dokumente ist.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-146">The goal is to create an intermediate layer which is "expressive enough" in the same way Markdown is expressive enough for documents.</span></span>
+
+<span data-ttu-id="d9bdf-147">Durch den Schwerpunkt auf Einfachheit und Aussagekraft hat Markdown eine einfache und konsistente Beschreibung von Dokumentinhalt erstellt.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-147">By focusing on keeping it simple and expressive, Markdown created an easy and consistent description of document content.</span></span>  <span data-ttu-id="d9bdf-148">Wir sind der Meinung, dass Adaptive Karten auf die gleiche Weise ein einfaches, ausdrucksstarkes Mittel zur Beschreibung von Karteninhalten darstellen können.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-148">In the same way, we believe that Adaptive Cards can create a simple, expressive means of describing card content.</span></span>
+
+### <a name="when-in-doubt-keep-it-out"></a><span data-ttu-id="d9bdf-149">Im Zweifelsfall weglassen</span><span class="sxs-lookup"><span data-stu-id="d9bdf-149">When in doubt, keep it out</span></span>
+<span data-ttu-id="d9bdf-150">Es ist einfacher, etwas nachträglich hinzuzufügen, als mit einem Fehler zu leben.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-150">It is easier to add later then it is to live with a mistake.</span></span> <span data-ttu-id="d9bdf-151">Wenn wir darüber diskutiert haben, ob wir etwas hinzufügen sollten oder nicht, haben wir uns entschieden, es wegzulassen.  Es ist immer einfacher, eine Eigenschaft hinzuzufügen, als mit einer Vorgängerversion zu leben, von der wir uns wünschen, dass wir sie nicht unterstützen müssten.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-151">If we found ourselves debating whether we should add something or not, we opted to leave it out.  It is always easier to add a property than to live with a legacy we wish we didn't have to support.</span></span>
+
+
+## <a name="build-2018-session"></a><span data-ttu-id="d9bdf-152">Build 2018-Sitzung</span><span class="sxs-lookup"><span data-stu-id="d9bdf-152">Build 2018 Session</span></span>
+
+<span data-ttu-id="d9bdf-153">Die folgende Sitzung auf der Build 2018 stellt Adaptive Karten in Bots, Cortana, Outlook und Windows vor.</span><span class="sxs-lookup"><span data-stu-id="d9bdf-153">The following session at Build 2018 showcases Adaptive Cards in Bots, Cortana, Outlook, and Windows.</span></span> 
+
+<iframe src="https://medius.studios.ms/Embed/Video/BRK2401?SFYT=true" width="960" height="540" allowFullScreen frameBorder="0"></iframe>

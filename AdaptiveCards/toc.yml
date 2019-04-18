@@ -1,0 +1,57 @@
+items:
+- name: Übersicht
+  href: index.md
+- name: Erste Schritte
+  items:
+  - name: Bot-Entwickler
+    href: getting-started/bots.md
+  - name: Windows-Entwickler
+    href: getting-started/windows.md
+  - name: Outlook-Entwickler
+    href: getting-started/outlook.md
+- name: Dokumenterstellung von Karten
+  items:
+  - name: Erste Schritte
+    href: authoring-cards/getting-started.md
+  - name: Kartenschema
+    href: authoring-cards/card-schema.md
+  - name: Spracherkennung
+    href: authoring-cards/speech.md
+  - name: Textmerkmale
+    href: authoring-cards/text-features.md
+- name: Rendern von Karten
+  items:
+  - name: Erste Schritte
+    href: rendering-cards/getting-started.md
+  - name: Aktionen
+    href: rendering-cards/actions.md
+  - name: Hostkonfiguration
+    href: rendering-cards/host-config.md
+  - name: Erweiterbarkeit
+    href: rendering-cards/extensibility.md
+  - name: Status des Renderers
+    href: rendering-cards/renderer-status.md
+  - name: Einen Renderer implementieren
+    href: rendering-cards/implement-a-renderer.md
+- name: SDK
+  items:
+  - name: Dokumenterstellung von Karten
+    href: sdk/authoring-cards/toc.yml
+  - name: Rendern von Karten
+    href: sdk/rendering-cards/toc.yml
+- name: Ressourcen
+  items:
+  - name: Prinzipien
+    href: resources/principles.md
+  - name: Partner
+    href: resources/partners.md
+  - name: Tools
+    href: resources/tools.md
+  - name: Roadmap
+    href: resources/future.md
+ms.openlocfilehash: 0d11154a56cef4b2814a28544ebf83b50081bfae
+ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59552342"
