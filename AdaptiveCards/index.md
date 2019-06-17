@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 545d22a9dd2208d0a506f05943cd5ed9dd3de437
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 8d9e30d4e188a1f0a9d10a9a4821f78b9b3b2f57
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552302"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134209"
 ---
 # <a name="adaptive-cards-overview"></a>Adaptive Karten: Übersicht 
 
@@ -54,7 +54,7 @@ Wenn Sie ein App-Entwickler sind, der ein Ökosystem mit Inhalten von Drittanbie
 * **Native Leistung**: Sie profitieren von nativer Leistung, da sie direkt auf Ihr Benutzeroberflächenframework ausgerichtet ist.
 * **Sicher**: Inhalte werden über sichere Nutzlasten bereitgestellt, sodass Sie Ihr Benutzeroberflächenframework nicht für Rohmarkup und -skripting öffnen müssen.
 * **Einfache Implementierung**: Sie erhalten vordefinierte Bibliotheken, die mühelos auf jeder von Ihnen unterstützten Plattform integriert werden können. 
-* **Kostenlose Dokumentation**: Sie sparen Zeit, weil Sie kein proprietäres Schema entwerfen, implementieren und dokumentieren müssen.
+* **Kostenlose Dokumentation:** Sie sparen Zeit, weil Sie kein proprietäres Schema entwerfen, implementieren und dokumentieren müssen.
 * **Freigegebene Tools**: Sie sparen Zeit, da Sie keine benutzerdefinierten Tools erstellen müssen.
 
 ## <a name="core-design-principles"></a>Wichtigste Designprinzipien 
