@@ -4,31 +4,32 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 03/14/2019
 ms.topic: article
-ms.openlocfilehash: 35ce89653a6cf2a313518be0f221a166e1eb7711
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: ad520693224509deaf0ea1c2cd6a837089dbf2d5
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552502"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67137983"
 ---
-# <a name="card-designer"></a>Karten-Designer 
+# <a name="tools-and-samples"></a>Tools und Beispielen
+
+## <a name="card-designer"></a>Karten-Designer 
 
 Benötigen Sie für ein Tool zum Entwerfen Ihrer Karten? Finden Sie den Designer adaptive Card browserbasierte und in [https://adaptivecards.io/designer](https://adaptivecards.io/designer)
 
 [![Designer-screenshot](media/tools/designer.jpg)](https://adaptivecards.io/designer)
 
-## <a name="embed-the-designer-into-your-app"></a>Den Designer in Ihre Anwendung einbetten.
+### <a name="embed-the-designer-into-your-app"></a>Den Designer in Ihre Anwendung einbetten.
 
 Aber warum es Ihren Benutzern zu senden, wenn möglich **einbetten den Karte Designer direkt in Ihrer Web** -app mit unseren JavaScript-Bibliothek. 
 
 Sehen Sie sich die [Adaptivecards-Designer](https://npmjs.com/adaptivecards-designer) Paket, um zu beginnen.
 
-# <a name="schema-validation"></a>Schema-Validierung
+## <a name="schema-validation"></a>Schema-Validierung
 
 Schema-Validierung ist eine leistungsfähige Möglichkeit einfacher erstellen und aktivieren die Tools zu machen.
 
-## <a name="json-schema"></a>JSON-Schema
-Wir haben eine vollständige bereitgestellt [JSON-Schemadatei](http://adaptivecards.io/schemas/adaptive-card.json) zum Bearbeiten und Validieren mit adaptive Cards im JSON-Format.
+Wir haben eine vollständige bereitgestellt [JSON-Schemadatei](http://adaptivecards.io/schemas/1.2.0/adaptive-card.json) zum Bearbeiten und Validieren mit adaptive Cards im JSON-Format. Beachten Sie, dass die Schema-URL mit Versionsangabe, neuere Versionen mit Adaptive Cards ist, wird eine entsprechende URL haben.
 
 Sie können automatische Intellisense in Visual Studio und Visual Studio Code abrufen, mit einem `$schema` Verweis.
 
@@ -36,21 +37,19 @@ Sie können automatische Intellisense in Visual Studio und Visual Studio Code ab
 
 ![AutoVervollständigen-Funktion](media/tools/autocomplete.png)
 
-### <a name="example"></a>Beispiel
+## <a name="example"></a>Beispiel
 
 ```json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "http://adaptivecards.io/schemas/1.2.0/adaptive-card.json",
     "type": "AdaptiveCard",
-    "version": "0.5",
+    "version": "1.0",
     "body": []
 }
 ```
 
-# <a name="tools-and-samples"></a>Tools und Beispiele
-Es gibt einige Tools und Beispiele in der ursprünglichen Struktur nützliche Verweise als auch nützliche Tools sind.
-
 ## <a name="visual-studio-code-extension"></a>Visual Studio Code-Erweiterung
+
 Wir haben Visual Studio Code-Erweiterung erstellt, die Sie die Karte visuell darstellen, die Sie in Echtzeit in den Editor bearbeitet werden können. 
 
 ![Erweiterung](media/tools/vscode-extension.png)
@@ -64,7 +63,7 @@ Klicken Sie zum Installieren Erweiterungen Marketplace zu öffnen, und suchen Si
 Wenn Sie eine JSON-Datei mit der eine Adaptive Card bearbeiten `$schema` Eigenschaft, die Sie anzeigen können, mithilfe von `Ctrl+Shift+V A`.
 ```json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "http://adaptivecards.io/schemas/1.2.0/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": []
@@ -83,9 +82,11 @@ Die folgende Einstellung für die Visual Studio Code ist für den AdaptiveCards 
 ```
 
 ## <a name="wpf-visualizer-sample"></a>Beispiel für WPF-Schnellansicht
+
 Die [WPF-Schnellansicht-Beispielprojekt](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/WPFVisualizer) ermöglicht Ihnen das Visualisieren von Karten, die mithilfe von WPF-Xaml auf einem Windows-Computer.  Ein `hostconfig` Editor zum Bearbeiten und Anzeigen von Host-Konfigurationseinstellungen integriert ist. Speichern Sie diese Einstellungen als JSON, sie in das Rendering in Ihrer Anwendung verwenden.
 
 ![WPF-Schnellansicht](media/tools/wpfvisualizer.png)
 
 ## <a name="wpf-imagerender-sample"></a>Beispiel für WPF-ImageRender
+
 Die [ImageRender Beispielprojekt](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/AdaptiveCards.Sample.ImageRender) eine Karte, in eine PNG-Datei über die Befehlszeile mit WPF umwandelt. 

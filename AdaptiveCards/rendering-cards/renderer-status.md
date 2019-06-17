@@ -1,17 +1,17 @@
 ---
-title: Renderer-Status
+title: Status des Renderers
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/12/2018
 ms.topic: article
-ms.openlocfilehash: 303d5675f58bd2c870dcdf5718d508d2e3c78fca
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: bffa49012a8ebe686fc033f98b2438d2e9e959cc
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553352"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67138033"
 ---
-# <a name="renderer-status"></a>Renderer-Status
+# <a name="renderer-status"></a>Status des Renderers
 Die folgenden Tabellen zeigen den aktuellen Status jeder Renderer, basierend auf ihrer öffentlichen veröffentlichten Versionen.
 
 ### <a name="parsing"></a>Analysieren von
@@ -43,7 +43,7 @@ Die folgenden Tabellen zeigen den aktuellen Status jeder Renderer, basierend auf
 
 \* Der HTML-Renderer enthält keine integrierten Unterstützung für Markdown, um die Größe der Bibliothek zu minimieren und verarbeitende Anwendungen, die ihre bevorzugten Markdown-Prozessor verwenden zu können. Der HTML-Renderer verwendet jedoch automatisch Markdown-It, wenn es geladen wird.
 
-### <a name="extensbility"></a>Extensbility
+### <a name="extensibility"></a>Erweiterungen
 
 |Funktionalität | HTML | .NET | UWP | iOS | Android |
 |--- | --- | --- | --- | --- | --- | --- |

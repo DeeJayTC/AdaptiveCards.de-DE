@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 09/15/2017
 ms.topic: article
-ms.openlocfilehash: 3c79d768d5c979626b66614a1856ad6c2e390805
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: b39493f82f3378e5a554abc6df890d6821869671
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552552"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67138023"
 ---
 # <a name="adaptive-card-renderer-specification"></a>Adaptive Card Renderer-Spezifikation
 
@@ -89,12 +89,12 @@ Ein `AdaptiveCard` besteht aus einem `body` und `actions`. Die `body` ist eine S
 
 ### <a name="images"></a>Abbilder
 
-1. Ein Renderer **sollte** zulassen apps hosten, wissen Sie, wenn alle HTTP-Images heruntergeladen wurden und dass die Karte "vollständig Rendererd"
+1. Ein Renderer **sollte** können Sie apps hosten, wissen Sie, wenn alle HTTP-Images heruntergeladen wurden, und die Karte "vollständig gerendert wird"
 1. Ein Renderer **müssen** überprüfen Sie die Hosts Config `maxImageSize` Param beim Herunterladen von HTTP-Images
 1. Ein Renderer **müssen** unterstützen `.png` und `.jpeg`
 1. Ein Renderer **sollte** unterstützen `.gif` Images
 
-### <a name="host-config"></a>Host-Konfiguration
+### <a name="host-config"></a>Hostkonfiguration
 
 * TODO: Was sollten folgende Standardwerte verwendet werden? Sollten sie sie freigeben? Sollten wir eine gemeinsame hostConfig.json-Datei in den Binärdateien einbetten?
 * TODO: Ich denke, dass HostConfig sowie für die Analyse mit Versionsangaben versehen werden muss?
@@ -142,7 +142,7 @@ Aktion | Verhalten
 
 Die Aktion senden verhält sich wie ein HTML-Formular übermitteln, mit dem Unterschied, dass, in dem HTML in der Regel HTTP Post auf, mit Adaptive Cards löst sie bis zu verlassen jeder Host-app, um zu bestimmen, was "Absenden" bedeutet, dass sie. 
 
-1. Wenn dies **müssen** lösen ein Ereignis der Benutzer tippt der Invokved Aktion.  
+1. Wenn dies **müssen** Auslösen eines Ereignisses, das der Benutzer tippt auf die Aktion aufgerufen wird.  
 1. Die `data` Eigenschaft **müssen** in die Rückruf-Nutzlast enthalten sein.
 1. Für `Action.Submit`, einen Renderer **müssen** sammeln Sie alle Eingaben auf der Karte und deren Werte abrufen. 
 
@@ -156,7 +156,7 @@ Die Aktion senden verhält sich wie ein HTML-Formular übermitteln, mit dem Unte
 1. Wenn HostConfig `supportsInteractivity` ist `false` einen Renderer **darf keinen** Eingaben zu rendern.
 2. Eingaben **sollte** Rendern mit der höchsten Genauigkeit möglich. Z. B. eine `Input.Date` würde im Idealfall eine Datumsauswahl für einem Benutzer, aber wenn ist dies nicht möglich für Ihre UI-Stack, und klicken Sie dann auf den Renderer bieten **müssen** ein Fallback auf das ein normales Textfeld zu rendern.
 3. Ein Renderer **sollte** Anzeigen der `placeholderText` möglichst
-4. Ein Renderer **nicht** Validierungen der Eingabe zu implementieren. Benutzer mit Adaptive Cards müssen planen, empfangene Daten auf ihrer Seite zu überprüfen.
+4. Ein Renderer **nicht** Validierungen der Eingabe zu implementieren. Benutzer mit Adaptive Cards müssen planen, um alle empfangenen Daten auf ihrer Seite überprüfen.
 5. Geben Sie die wertbindung **müssen** ordnungsgemäß mit Escapezeichen versehen werden
 
 6. Das Objekt **müssen** an den Host-app wie folgt zurückgegeben:
