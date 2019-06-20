@@ -42,7 +42,8 @@
     },
     "fileMetadata": {
        "open_to_public_contributors": {
-          "getting-started/**.md": true
+          "getting-started/**.md": true,
+          "authoring-cards/**.md": true
         }
     },
     "template": [],
