@@ -42,7 +42,7 @@
     },
     "fileMetadata": {
        "open_to_public_contributors": {
-          "getting-started/**.md": false
+          "getting-started/**.md": true
         }
     },
     "template": [],
