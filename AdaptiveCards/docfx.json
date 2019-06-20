@@ -42,7 +42,7 @@
     },
     "fileMetadata": {
        "open_to_public_contributors": {
-          "adaptivecards/getting-started/**.md": "true",
+          "adaptivecards/getting-started/**.md": "false",
           "adaptivecards/*.md": "true",
           "adaptivecards/authoring-cards/**.md": "true"
         }
