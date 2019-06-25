@@ -1,45 +1,45 @@
 ---
-title: Text-Features
+title: Textmerkmale
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/09/2017
 ms.topic: article
 ms.openlocfilehash: ac8ec0c48e06377ebd17f1b31abe463c48809fe3
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
-ms.translationtype: MT
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "59553612"
 ---
-# <a name="text-features"></a><span data-ttu-id="786ea-102">Text-features</span><span class="sxs-lookup"><span data-stu-id="786ea-102">Text features</span></span>
+# <a name="text-features"></a><span data-ttu-id="c1531-102">Textmerkmale</span><span class="sxs-lookup"><span data-stu-id="c1531-102">Text features</span></span>
 
-<span data-ttu-id="786ea-103">`TextBlock` bietet einige erweiterten Funktionen zum Formatieren und den Text lokalisieren.</span><span class="sxs-lookup"><span data-stu-id="786ea-103">`TextBlock` offers some advanced features for formatting and localizing the text.</span></span>
+<span data-ttu-id="c1531-103">`TextBlock` bietet einige erweiterte Features zum Formatieren und Lokalisieren von Text.</span><span class="sxs-lookup"><span data-stu-id="c1531-103">`TextBlock` offers some advanced features for formatting and localizing the text.</span></span>
 
-## <a name="markdown"></a><span data-ttu-id="786ea-104">Markdown</span><span class="sxs-lookup"><span data-stu-id="786ea-104">Markdown</span></span>
-<span data-ttu-id="786ea-105">Zur Unterstützung von Inline-Markup mit Adaptive Cards unterstützen eine **Teilmenge** von Markdown-Syntax.</span><span class="sxs-lookup"><span data-stu-id="786ea-105">To support inline markup, Adaptive Cards support a **subset** of Markdown syntax.</span></span>
+## <a name="markdown"></a><span data-ttu-id="c1531-104">Markdown</span><span class="sxs-lookup"><span data-stu-id="c1531-104">Markdown</span></span>
+<span data-ttu-id="c1531-105">Damit Inline-Markup möglich ist, unterstützen adaptive Karten eine **Teilmenge** an Markdown-Syntax.</span><span class="sxs-lookup"><span data-stu-id="c1531-105">To support inline markup, Adaptive Cards support a **subset** of Markdown syntax.</span></span>
 
-<span data-ttu-id="786ea-106">_Unterstützt_</span><span class="sxs-lookup"><span data-stu-id="786ea-106">_Supported_</span></span>
+<span data-ttu-id="c1531-106">_Unterstützt_</span><span class="sxs-lookup"><span data-stu-id="c1531-106">_Supported_</span></span>
 
-| <span data-ttu-id="786ea-107">Textstil</span><span class="sxs-lookup"><span data-stu-id="786ea-107">Text Style</span></span>      | <span data-ttu-id="786ea-108">Markdown</span><span class="sxs-lookup"><span data-stu-id="786ea-108">Markdown</span></span> |
+| <span data-ttu-id="c1531-107">Textstil</span><span class="sxs-lookup"><span data-stu-id="c1531-107">Text Style</span></span>      | <span data-ttu-id="c1531-108">Markdown</span><span class="sxs-lookup"><span data-stu-id="c1531-108">Markdown</span></span> |
 |-----------------|-----|
-| <span data-ttu-id="786ea-109">**Fett**</span><span class="sxs-lookup"><span data-stu-id="786ea-109">**Bold**</span></span>        | ```**Bold**``` |
-| <span data-ttu-id="786ea-110">_Kursiv_</span><span class="sxs-lookup"><span data-stu-id="786ea-110">_Italic_</span></span>        | ```_Italic_``` |
-| <span data-ttu-id="786ea-111">Liste mit Aufzählungszeichen</span><span class="sxs-lookup"><span data-stu-id="786ea-111">Bullet list</span></span>     | ```- Item 1\r- Item 2\r- Item 3``` | 
-| <span data-ttu-id="786ea-112">Nummerierte Liste</span><span class="sxs-lookup"><span data-stu-id="786ea-112">Numbered list</span></span>   | ```1. Green\r2. Orange\r3. Blue``` |
-| <span data-ttu-id="786ea-113">Hyperlinks</span><span class="sxs-lookup"><span data-stu-id="786ea-113">Hyperlinks</span></span>      | ```[Title](url)``` |
+| <span data-ttu-id="c1531-109">**Fett**</span><span class="sxs-lookup"><span data-stu-id="c1531-109">**Bold**</span></span>        | ```**Bold**``` |
+| <span data-ttu-id="c1531-110">_Kursiv_</span><span class="sxs-lookup"><span data-stu-id="c1531-110">_Italic_</span></span>        | ```_Italic_``` |
+| <span data-ttu-id="c1531-111">Aufzählung</span><span class="sxs-lookup"><span data-stu-id="c1531-111">Bullet list</span></span>     | ```- Item 1\r- Item 2\r- Item 3``` | 
+| <span data-ttu-id="c1531-112">Nummerierte Liste</span><span class="sxs-lookup"><span data-stu-id="c1531-112">Numbered list</span></span>   | ```1. Green\r2. Orange\r3. Blue``` |
+| <span data-ttu-id="c1531-113">Hyperlinks</span><span class="sxs-lookup"><span data-stu-id="c1531-113">Hyperlinks</span></span>      | ```[Title](url)``` |
 
-<span data-ttu-id="786ea-114">_Nicht unterstützt_</span><span class="sxs-lookup"><span data-stu-id="786ea-114">_Not supported_</span></span>
+<span data-ttu-id="c1531-114">_Nicht unterstützt_</span><span class="sxs-lookup"><span data-stu-id="c1531-114">_Not supported_</span></span>
 
-* <span data-ttu-id="786ea-115">Header</span><span class="sxs-lookup"><span data-stu-id="786ea-115">Headers</span></span>
-* <span data-ttu-id="786ea-116">Tabellen</span><span class="sxs-lookup"><span data-stu-id="786ea-116">Tables</span></span>
-* <span data-ttu-id="786ea-117">Abbilder</span><span class="sxs-lookup"><span data-stu-id="786ea-117">Images</span></span>
-* <span data-ttu-id="786ea-118">Alle Elemente nicht in der obigen Tabelle</span><span class="sxs-lookup"><span data-stu-id="786ea-118">Anything not in the table above</span></span>
+* <span data-ttu-id="c1531-115">Header</span><span class="sxs-lookup"><span data-stu-id="c1531-115">Headers</span></span>
+* <span data-ttu-id="c1531-116">Tabellen</span><span class="sxs-lookup"><span data-stu-id="c1531-116">Tables</span></span>
+* <span data-ttu-id="c1531-117">Abbilder</span><span class="sxs-lookup"><span data-stu-id="c1531-117">Images</span></span>
+* <span data-ttu-id="c1531-118">Alle in der obigen Tabelle nicht genannten Elemente</span><span class="sxs-lookup"><span data-stu-id="c1531-118">Anything not in the table above</span></span>
 
-### <a name="markdown-example"></a><span data-ttu-id="786ea-119">Markdown-Beispiel</span><span class="sxs-lookup"><span data-stu-id="786ea-119">Markdown Example</span></span>
+### <a name="markdown-example"></a><span data-ttu-id="c1531-119">Markdown-Beispiel</span><span class="sxs-lookup"><span data-stu-id="c1531-119">Markdown Example</span></span>
 
-<span data-ttu-id="786ea-120">Die folgenden Nutzlast würde etwa wie folgt gerendert:</span><span class="sxs-lookup"><span data-stu-id="786ea-120">The below payload would render something like this:</span></span>
+<span data-ttu-id="c1531-120">Die folgende Nutzlast rendert etwa Folgendes:</span><span class="sxs-lookup"><span data-stu-id="c1531-120">The below payload would render something like this:</span></span>
 
-![bildschirmabbildung von markdown](media/text-features/markdown.png)
+![Markdown-Screenshot](media/text-features/markdown.png)
 
 ```json
 {
@@ -73,11 +73,11 @@ ms.locfileid: "59553612"
 }
 ```
 
-## <a name="datetime-formatting-and-localization"></a><span data-ttu-id="786ea-122">Formatieren von Datum/Uhrzeit und Lokalisierung</span><span class="sxs-lookup"><span data-stu-id="786ea-122">Date/Time formatting and localization</span></span>
+## <a name="datetime-formatting-and-localization"></a><span data-ttu-id="c1531-122">Datums-/Uhrzeitformat und Lokalisierung</span><span class="sxs-lookup"><span data-stu-id="c1531-122">Date/Time formatting and localization</span></span>
 
-<span data-ttu-id="786ea-123">Manchmal wird nicht man die Zeitzone des Benutzers empfangen von der Karte daher mit Adaptive Cards bietet `DATE()` und `TIME()` Formatierungsfunktionen, um die Uhrzeit auf dem Zielgerät automatisch zu lokalisieren.</span><span class="sxs-lookup"><span data-stu-id="786ea-123">Sometimes you won't know the timezone of the user receiving the card, so Adaptive Cards offers `DATE()` and `TIME()` formatting functions to automatically localize the time on the target device.</span></span>
+<span data-ttu-id="c1531-123">Es kann vorkommen, dass du die Zeitzone des Benutzers, der die Karte empfängt, nicht kennst. Daher bieten adaptive Karten Formatierungsfunktionen für `DATE()` und `TIME()`, damit die Zeit auf dem Zielgerät automatisch lokalisiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="c1531-123">Sometimes you won't know the timezone of the user receiving the card, so Adaptive Cards offers `DATE()` and `TIME()` formatting functions to automatically localize the time on the target device.</span></span>
 
-### <a name="datetime-example"></a><span data-ttu-id="786ea-124">Datum/Uhrzeit-Beispiel</span><span class="sxs-lookup"><span data-stu-id="786ea-124">Date/Time Example</span></span>
+### <a name="datetime-example"></a><span data-ttu-id="c1531-124">Beispiel für Datum/Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="c1531-124">Date/Time Example</span></span>
 
 ```json
 {
@@ -94,33 +94,33 @@ ms.locfileid: "59553612"
 }
 ```
 
-<span data-ttu-id="786ea-125">Die oben genannten Karte wird angezeigt:</span><span class="sxs-lookup"><span data-stu-id="786ea-125">The above card will display:</span></span> 
+<span data-ttu-id="c1531-125">Obige Karte zeigt Folgendes an:</span><span class="sxs-lookup"><span data-stu-id="c1531-125">The above card will display:</span></span> 
 
-> <span data-ttu-id="786ea-126">**Das Paket wird am Dienstag, 14. Februar 2017 um 06:00 Uhr angezeigt.**</span><span class="sxs-lookup"><span data-stu-id="786ea-126">**Your package will arrive on Tue, Feb 14th, 2017 at 6:00 AM**</span></span>
+> <span data-ttu-id="c1531-126">**Your package will arrive on Tue, Feb 14th, 2017 at 6:00 AM**</span><span class="sxs-lookup"><span data-stu-id="c1531-126">**Your package will arrive on Tue, Feb 14th, 2017 at 6:00 AM**</span></span>
 
-### <a name="datetime-function-rules"></a><span data-ttu-id="786ea-127">Datum/Uhrzeit – Funktionsregeln</span><span class="sxs-lookup"><span data-stu-id="786ea-127">Date/Time function rules</span></span>
+### <a name="datetime-function-rules"></a><span data-ttu-id="c1531-127">Funktionsregeln für Datum/Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="c1531-127">Date/Time function rules</span></span>
 
-<span data-ttu-id="786ea-128">Es gibt einige Regeln ordnungsgemäß interpretieren die der Datums-/Uhrzeitfunktionen auf jeder Plattform.</span><span class="sxs-lookup"><span data-stu-id="786ea-128">There are some rules to properly interpret the the date/time functions on every platform.</span></span> <span data-ttu-id="786ea-129">Klicken Sie dann die unformatierte Zeichenfolge für den Benutzer angezeigt wird, und niemand möchte, die, wenn die Regeln nicht erfüllt sind.</span><span class="sxs-lookup"><span data-stu-id="786ea-129">If the rules aren't met then the raw string will be displayed to the user, and no one wants that.</span></span>
+<span data-ttu-id="c1531-128">Es gibt einige Regeln für das korrekte Interpretieren der Datums-/Uhrzeitfunktionen auf jeder Plattform.</span><span class="sxs-lookup"><span data-stu-id="c1531-128">There are some rules to properly interpret the the date/time functions on every platform.</span></span> <span data-ttu-id="c1531-129">Wenn die Regeln nicht eingehalten werden, wird dem Benutzer die unformatierte Zeichenfolge anzeigt, was unerwünscht ist.</span><span class="sxs-lookup"><span data-stu-id="c1531-129">If the rules aren't met then the raw string will be displayed to the user, and no one wants that.</span></span>
 
-1. <span data-ttu-id="786ea-130">**Groß-/ KLEINSCHREIBUNG** (muss Großbuchstaben)</span><span class="sxs-lookup"><span data-stu-id="786ea-130">**CASE SENSITIVE** (must be all caps)</span></span>
-1. <span data-ttu-id="786ea-131">**KEINE Leerzeichen** zwischen der `{{`, `}}`, oder runden Klammern</span><span class="sxs-lookup"><span data-stu-id="786ea-131">**NO SPACES** between the `{{`, `}}`, or parentheses</span></span>
-1. <span data-ttu-id="786ea-132">**STRENGE [RFC 3389](https://tools.ietf.org/html/rfc3339) FORMATIERUNG** (Siehe Beispiele unten)</span><span class="sxs-lookup"><span data-stu-id="786ea-132">**STRICT [RFC 3389](https://tools.ietf.org/html/rfc3339) FORMATTING** (See examples below)</span></span>
-1. <span data-ttu-id="786ea-133">**MUSS** ein gültiges Datum und Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="786ea-133">**MUST BE** a valid date and time</span></span>
+1. <span data-ttu-id="c1531-130">**GROß-/KLEINSCHREIBUNG** (darf nur Großbuchstaben enthalten)</span><span class="sxs-lookup"><span data-stu-id="c1531-130">**CASE SENSITIVE** (must be all caps)</span></span>
+1. <span data-ttu-id="c1531-131">**KEINE LEERZEICHEN** zwischen `{{`, `}}` oder runden Klammern</span><span class="sxs-lookup"><span data-stu-id="c1531-131">**NO SPACES** between the `{{`, `}}`, or parentheses</span></span>
+1. <span data-ttu-id="c1531-132">**STRIKTE [RFC 3389](https://tools.ietf.org/html/rfc3339)-FORMATIERUNG** (siehe Beispiele unten)</span><span class="sxs-lookup"><span data-stu-id="c1531-132">**STRICT [RFC 3389](https://tools.ietf.org/html/rfc3339) FORMATTING** (See examples below)</span></span>
+1. <span data-ttu-id="c1531-133">**MUSS** gültige Werte für Datum und Uhrzeit aufweisen</span><span class="sxs-lookup"><span data-stu-id="c1531-133">**MUST BE** a valid date and time</span></span>
 
-### <a name="valid-formats"></a><span data-ttu-id="786ea-134">Gültige Formate</span><span class="sxs-lookup"><span data-stu-id="786ea-134">Valid formats</span></span>
+### <a name="valid-formats"></a><span data-ttu-id="c1531-134">Gültige Formate</span><span class="sxs-lookup"><span data-stu-id="c1531-134">Valid formats</span></span>
 
 * `2017-02-14T06:08:00Z`
 * `2017-02-14T06:08:00-07:00`
 * `2017-02-14T06:08:00+07:00`
 
-### <a name="date-formatting-param"></a><span data-ttu-id="786ea-135">Param-datumsformatierung</span><span class="sxs-lookup"><span data-stu-id="786ea-135">Date formatting param</span></span>
+### <a name="date-formatting-param"></a><span data-ttu-id="c1531-135">Dateiformatparameter</span><span class="sxs-lookup"><span data-stu-id="c1531-135">Date formatting param</span></span>
 
-<span data-ttu-id="786ea-136">Für Daten kann ein optionaler Parameter zum Formatieren der Ausgabe angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="786ea-136">For dates, an optional param may be specified to format the output.</span></span>
+<span data-ttu-id="c1531-136">Für Daten kann ein optionaler Parameter zum Formatieren der Ausgabe angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c1531-136">For dates, an optional param may be specified to format the output.</span></span>
 
 
-|       <span data-ttu-id="786ea-137">Format</span><span class="sxs-lookup"><span data-stu-id="786ea-137">Format</span></span>        |            <span data-ttu-id="786ea-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="786ea-138">Example</span></span>            |
+|       <span data-ttu-id="c1531-137">Format</span><span class="sxs-lookup"><span data-stu-id="c1531-137">Format</span></span>        |            <span data-ttu-id="c1531-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c1531-138">Example</span></span>            |
 |---------------------|-------------------------------|
-| <span data-ttu-id="786ea-139">`COMPACT` (Standard)</span><span class="sxs-lookup"><span data-stu-id="786ea-139">`COMPACT` (Default)</span></span> |          <span data-ttu-id="786ea-140">"2/13/2017"</span><span class="sxs-lookup"><span data-stu-id="786ea-140">"2/13/2017"</span></span>          |
-|       `SHORT`       |     <span data-ttu-id="786ea-141">"Mon, 13. Februar 2017"</span><span class="sxs-lookup"><span data-stu-id="786ea-141">"Mon, Feb 13th, 2017"</span></span>     |
-|       `LONG`        | <span data-ttu-id="786ea-142">"Montag, 13. Februar 2017"</span><span class="sxs-lookup"><span data-stu-id="786ea-142">"Monday, February 13th, 2017"</span></span> |
+| <span data-ttu-id="c1531-139">`COMPACT` (Standard)</span><span class="sxs-lookup"><span data-stu-id="c1531-139">`COMPACT` (Default)</span></span> |          <span data-ttu-id="c1531-140">„2/13/2017“</span><span class="sxs-lookup"><span data-stu-id="c1531-140">"2/13/2017"</span></span>          |
+|       `SHORT`       |     <span data-ttu-id="c1531-141">„Mon, Feb 13th, 2017“</span><span class="sxs-lookup"><span data-stu-id="c1531-141">"Mon, Feb 13th, 2017"</span></span>     |
+|       `LONG`        | <span data-ttu-id="c1531-142">„Monday, February 13th, 2017“</span><span class="sxs-lookup"><span data-stu-id="c1531-142">"Monday, February 13th, 2017"</span></span> |
 
