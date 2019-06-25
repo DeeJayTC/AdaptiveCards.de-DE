@@ -1,22 +1,22 @@
 ---
-title: Text-Features
+title: Textmerkmale
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/09/2017
 ms.topic: article
 ms.openlocfilehash: ac8ec0c48e06377ebd17f1b31abe463c48809fe3
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
-ms.translationtype: MT
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "59553612"
 ---
-# <a name="text-features"></a>Text-features
+# <a name="text-features"></a>Textmerkmale
 
-`TextBlock` bietet einige erweiterten Funktionen zum Formatieren und den Text lokalisieren.
+`TextBlock` bietet einige erweiterte Features zum Formatieren und Lokalisieren von Text.
 
 ## <a name="markdown"></a>Markdown
-Zur Unterstützung von Inline-Markup mit Adaptive Cards unterstützen eine **Teilmenge** von Markdown-Syntax.
+Damit Inline-Markup möglich ist, unterstützen adaptive Karten eine **Teilmenge** an Markdown-Syntax.
 
 _Unterstützt_
 
@@ -24,7 +24,7 @@ _Unterstützt_
 |-----------------|-----|
 | **Fett**        | ```**Bold**``` |
 | _Kursiv_        | ```_Italic_``` |
-| Liste mit Aufzählungszeichen     | ```- Item 1\r- Item 2\r- Item 3``` | 
+| Aufzählung     | ```- Item 1\r- Item 2\r- Item 3``` | 
 | Nummerierte Liste   | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks      | ```[Title](url)``` |
 
@@ -33,13 +33,13 @@ _Nicht unterstützt_
 * Header
 * Tabellen
 * Abbilder
-* Alle Elemente nicht in der obigen Tabelle
+* Alle in der obigen Tabelle nicht genannten Elemente
 
 ### <a name="markdown-example"></a>Markdown-Beispiel
 
-Die folgenden Nutzlast würde etwa wie folgt gerendert:
+Die folgende Nutzlast rendert etwa Folgendes:
 
-![bildschirmabbildung von markdown](media/text-features/markdown.png)
+![Markdown-Screenshot](media/text-features/markdown.png)
 
 ```json
 {
@@ -73,11 +73,11 @@ Die folgenden Nutzlast würde etwa wie folgt gerendert:
 }
 ```
 
-## <a name="datetime-formatting-and-localization"></a>Formatieren von Datum/Uhrzeit und Lokalisierung
+## <a name="datetime-formatting-and-localization"></a>Datums-/Uhrzeitformat und Lokalisierung
 
-Manchmal wird nicht man die Zeitzone des Benutzers empfangen von der Karte daher mit Adaptive Cards bietet `DATE()` und `TIME()` Formatierungsfunktionen, um die Uhrzeit auf dem Zielgerät automatisch zu lokalisieren.
+Es kann vorkommen, dass du die Zeitzone des Benutzers, der die Karte empfängt, nicht kennst. Daher bieten adaptive Karten Formatierungsfunktionen für `DATE()` und `TIME()`, damit die Zeit auf dem Zielgerät automatisch lokalisiert werden kann.
 
-### <a name="datetime-example"></a>Datum/Uhrzeit-Beispiel
+### <a name="datetime-example"></a>Beispiel für Datum/Uhrzeit
 
 ```json
 {
@@ -94,18 +94,18 @@ Manchmal wird nicht man die Zeitzone des Benutzers empfangen von der Karte daher
 }
 ```
 
-Die oben genannten Karte wird angezeigt: 
+Obige Karte zeigt Folgendes an: 
 
-> **Das Paket wird am Dienstag, 14. Februar 2017 um 06:00 Uhr angezeigt.**
+> **Your package will arrive on Tue, Feb 14th, 2017 at 6:00 AM**
 
-### <a name="datetime-function-rules"></a>Datum/Uhrzeit – Funktionsregeln
+### <a name="datetime-function-rules"></a>Funktionsregeln für Datum/Uhrzeit
 
-Es gibt einige Regeln ordnungsgemäß interpretieren die der Datums-/Uhrzeitfunktionen auf jeder Plattform. Klicken Sie dann die unformatierte Zeichenfolge für den Benutzer angezeigt wird, und niemand möchte, die, wenn die Regeln nicht erfüllt sind.
+Es gibt einige Regeln für das korrekte Interpretieren der Datums-/Uhrzeitfunktionen auf jeder Plattform. Wenn die Regeln nicht eingehalten werden, wird dem Benutzer die unformatierte Zeichenfolge anzeigt, was unerwünscht ist.
 
-1. **Groß-/ KLEINSCHREIBUNG** (muss Großbuchstaben)
-1. **KEINE Leerzeichen** zwischen der `{{`, `}}`, oder runden Klammern
-1. **STRENGE [RFC 3389](https://tools.ietf.org/html/rfc3339) FORMATIERUNG** (Siehe Beispiele unten)
-1. **MUSS** ein gültiges Datum und Uhrzeit
+1. **GROß-/KLEINSCHREIBUNG** (darf nur Großbuchstaben enthalten)
+1. **KEINE LEERZEICHEN** zwischen `{{`, `}}` oder runden Klammern
+1. **STRIKTE [RFC 3389](https://tools.ietf.org/html/rfc3339)-FORMATIERUNG** (siehe Beispiele unten)
+1. **MUSS** gültige Werte für Datum und Uhrzeit aufweisen
 
 ### <a name="valid-formats"></a>Gültige Formate
 
@@ -113,14 +113,14 @@ Es gibt einige Regeln ordnungsgemäß interpretieren die der Datums-/Uhrzeitfunk
 * `2017-02-14T06:08:00-07:00`
 * `2017-02-14T06:08:00+07:00`
 
-### <a name="date-formatting-param"></a>Param-datumsformatierung
+### <a name="date-formatting-param"></a>Dateiformatparameter
 
 Für Daten kann ein optionaler Parameter zum Formatieren der Ausgabe angegeben werden.
 
 
 |       Format        |            Beispiel            |
 |---------------------|-------------------------------|
-| `COMPACT` (Standard) |          "2/13/2017"          |
-|       `SHORT`       |     "Mon, 13. Februar 2017"     |
-|       `LONG`        | "Montag, 13. Februar 2017" |
+| `COMPACT` (Standard) |          „2/13/2017“          |
+|       `SHORT`       |     „Mon, Feb 13th, 2017“     |
+|       `LONG`        | „Monday, February 13th, 2017“ |
 

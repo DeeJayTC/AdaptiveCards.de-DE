@@ -1,31 +1,31 @@
 ---
-title: Mit Adaptive Cards in Outlook
+title: Adaptive Karten in Outlook
 author: dclaux
 ms.author: dclaux
 ms.date: 5/10/2018
 ms.topic: article
 ms.openlocfilehash: 6fc3687edd2a1770f7611473c3e02d0e01a26eef
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
-ms.translationtype: MT
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "59552422"
 ---
-# <a name="adaptive-cards-for-outlook-actionable-message-developers"></a>Mit Adaptive Cards für Outlook-Aktionen erfordernde Nachricht-Entwickler
+# <a name="adaptive-cards-for-outlook-actionable-message-developers"></a>Adaptive Karten für Entwickler von Outlook-Nachrichten, die Aktionen erfordern
 
-Ob Sie eine Umfrage ausfüllen, ermöglichen eine Spesenabrechnung genehmigen oder Aktualisieren einer Verkaufschance von CRM Aktionen erfordernde Nachrichten direkt in Outlook schnelle Maßnahmen ergreifen. Entwickler können jetzt mit Adaptive Cards in ihren e-Mails oder Benachrichtigungen, erhöhen Engagement der Benutzer mit ihrer Dienste und erhöhen die Produktivität einbetten.
+Aktionen erfordernde Nachrichten ermöglichen es dir direkt in Outlook, schnelle Aktionen durchzuführen, unabhängig davon, ob es darum geht, eine Umfrage auszufüllen, eine Spesenabrechnung zu genehmigen oder eine CRM-Verkaufschance zu aktualisieren. Entwickler können adaptive Karten jetzt in ihre E-Mails oder Benachrichtigungen einbinden, um die Interaktion der Benutzer mit ihren Diensten zu verbessern und die Produktivität zu steigern.
 
-Sie können jetzt mit Adaptive Cards So schalten Sie Ihre Aktionen erfordernde Nachrichten für Outlook verwenden und Erstellen von umfassendem Funktionsumfang wie konnten auf der Konferenz Build 2018:
+Jetzt kannst du adaptive Karten verwenden, um deine Aktionen erfordernden Outlook-Nachrichten zu optimieren und komplexe Erfahrungen zu erstellen, wie die, die auf der Build 2018-Konferenz gezeigt wurden:
 
 ## <a name="github"></a>GitHub
-![GitHub-Aktionen erfordernde Nachricht](media/outlook/GitHub.png)
+![Aktionen erfordernde GitHub-Nachricht](media/outlook/GitHub.png)
 
 ## <a name="limeade"></a>Limeade
-![GitHub-Aktionen erfordernde Nachricht](media/outlook/Limeade.jpg)
+![Aktionen erfordernde GitHub-Nachricht](media/outlook/Limeade.jpg)
 
 
-# <a name="ready-to-start"></a>Möchten Sie beginnen?
+# <a name="ready-to-start"></a>Bist du bereit?
 
-- Wechseln Sie zu https://docs.microsoft.com/en-us/outlook/actionable-messages/ die führt Sie durch die Schritte zum Erstellen Ihrer ersten Aktionen erfordernde Nachricht-Szenarios.
-- Verwenden Sie das Tool Aktionen erfordernde Nachricht Karte Playground finden Beispiele für die Karte, Ihre eigenen Karten erstellen, senden sie in Ihr eigenes Office 365-Konto und finden in [Outlook für das Web](https://outlook.office.com).
-- Würden Sie stattdessen nicht JSON manuell schreiben? Die [Adaptive Card-Designers (Vorschau)](https://acdesignerbeta.azurewebsites.net) können Sie mit Adaptive Cards zu erstellen, ohne eine einzige Codezeile JSON schreiben zu müssen.
+- Unter https://docs.microsoft.com/en-us/outlook/actionable-messages/ findest du die Schritte zum Erstellen deines ersten Szenarios für Aktionen erfordernden Nachrichten.
+- Verwende das Actionable Message Card Playground-Tool, um Kartenbeispiele zu sehen, deine eigenen Karten zu erstellen, sie an dein Office 365-Konto zu senden und in [Outlook im Web](https://outlook.office.com) anzuzeigen.
+- Möchtest du JSON lieber nicht manuell schreiben? Der [Adaptive Card Designer (Vorschau)](https://acdesignerbeta.azurewebsites.net) ermöglicht es dir, adaptive Karten zu erstellen, ohne eine einzige JSON-Codezeile zu schreiben.
