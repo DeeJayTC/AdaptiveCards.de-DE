@@ -1,28 +1,36 @@
 ---
-title: Rendern einer Karte - Android-SDK
+title: Rendern einer Karte – Android SDK
 author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: b93ce97a41152641892e6a69d5221842181fcb72
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: a4eeda54a80c959ff9a1246371240954b4c3fb12
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552512"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134290"
 ---
-# <a name="render-a-card---android"></a><span data-ttu-id="6f996-102">Rendern einer Karte – Android</span><span class="sxs-lookup"><span data-stu-id="6f996-102">Render a card - Android</span></span>
+# <a name="render-a-card---android"></a><span data-ttu-id="09da9-102">Rendern einer Karte – Android</span><span class="sxs-lookup"><span data-stu-id="09da9-102">Render a card - Android</span></span>
 
-<span data-ttu-id="6f996-103">Hier ist eine Karte mit dem Android SDK darstellen.</span><span class="sxs-lookup"><span data-stu-id="6f996-103">Here's how to render a card using the Android SDK.</span></span>
+<span data-ttu-id="09da9-103">Hier findest du Informationen zum Rendern einer Karte mit dem Android SDK.</span><span class="sxs-lookup"><span data-stu-id="09da9-103">Here's how to render a card using the Android SDK.</span></span>
 
-## <a name="create-adaptive-card-object-instance-from-json-text"></a><span data-ttu-id="6f996-104">Erstellen von Adaptive Card Objektinstanz aus JSON-Text</span><span class="sxs-lookup"><span data-stu-id="6f996-104">Create Adaptive Card Object Instance from JSON Text</span></span>
+## <a name="create-adaptive-card-object-instance-from-json-text"></a><span data-ttu-id="09da9-104">Erstellen einer Objektinstanz für die adaptive Karte aus JSON-Text</span><span class="sxs-lookup"><span data-stu-id="09da9-104">Create Adaptive Card Object Instance from JSON Text</span></span>
 
 ```java
-ParseResult parseResult = AdaptiveCard.DeserializeFromString(jsonText, AdaptiveCardRenderer.VERSION);
+ParseResult parseResult = AdaptiveCard.DeserializeFromString(jsonText, AdaptiveCardRenderer.VERSION, elementParserRegistration);
 AdaptiveCard adaptiveCard = parseResult.GetAdaptiveCard();
 ```
+> [!IMPORTANT]
+> <span data-ttu-id="09da9-105">**Wichtige Änderungen für v1.2**</span><span class="sxs-lookup"><span data-stu-id="09da9-105">**Breaking changes for v1.2**</span></span>
+> 
+> 1. <span data-ttu-id="09da9-106">Der Parameter „ElementParserRegistration“ wurde in „ParseContext“ geändert. Dieses Element enthält ein ElementParserRegistration- und ein ActionRegistration-Objekt.</span><span class="sxs-lookup"><span data-stu-id="09da9-106">ElementParserRegistration parameter changed to ParseContext which includes an ElementParserRegistration and an ActionRegistration object</span></span>
+> ```java
+> ParseContext context = new ParseContext(elementParserRegistration, actionParserRegistration);
+> ParseResult parseResult = AdaptiveCard.DeserializeFromString(jsonText, AdaptiveCardRenderer.VERSION, context);
+> ```
 
-## <a name="render-a-card"></a><span data-ttu-id="6f996-105">Rendern einer Karte</span><span class="sxs-lookup"><span data-stu-id="6f996-105">Render a card</span></span>
+## <a name="render-a-card"></a><span data-ttu-id="09da9-107">Rendern einer Karte</span><span class="sxs-lookup"><span data-stu-id="09da9-107">Render a card</span></span>
 
 ```java
 RenderedAdaptiveCard renderedCard = AdaptiveCardRenderer.getInstance().render(context, getSupportFragmentManager(), adaptiveCard, cardActionHandler, new HostConfig());

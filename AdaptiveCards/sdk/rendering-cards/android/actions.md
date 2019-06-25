@@ -1,19 +1,19 @@
 ---
-title: Aktionen – Android-SDK
+title: Aktionen – Android SDK
 author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: b823b139a706e5149ff1cabc672f57cede4bfa33
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: e21c03e069e7ab29dd7d2724d49a2d439c67e5a1
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552542"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134252"
 ---
-# <a name="actions---android"></a><span data-ttu-id="eefa4-102">Aktionen – Android</span><span class="sxs-lookup"><span data-stu-id="eefa4-102">Actions - Android</span></span>
+# <a name="actions---android"></a><span data-ttu-id="db8fc-102">Aktionen – Android</span><span class="sxs-lookup"><span data-stu-id="db8fc-102">Actions - Android</span></span>
 
-<span data-ttu-id="eefa4-103">Wenn eine Aktion für Karten ausgeführt wird, ruft die Klasse, die an den Renderingaufruf übergeben wurde, der ICardActionHandler-Schnittstelle implementiert, aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="eefa4-103">When a cards action is executed, the class that was passed to the render call that implements the ICardActionHandler interface gets invoked.</span></span> <span data-ttu-id="eefa4-104">Hier ist Ihre Aktionshandler definieren:</span><span class="sxs-lookup"><span data-stu-id="eefa4-104">Here is how to define your action handler:</span></span>
+<span data-ttu-id="db8fc-103">Beim Ausführen einer Kartenaktion wird die Klasse aufgerufen, die an den Renderingaufruf übergeben wurde, der die ICardActionHandler-Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="db8fc-103">When a cards action is executed, the class that was passed to the render call that implements the ICardActionHandler interface gets invoked.</span></span> <span data-ttu-id="db8fc-104">So wird ein Aktionshandler definiert:</span><span class="sxs-lookup"><span data-stu-id="db8fc-104">Here is how to define your action handler:</span></span>
 
 ```java
 public class ActionHandler implements ICardActionHandler
@@ -109,3 +109,15 @@ public class ActionHandler implements ICardActionHandler
     }
 }
 ```
+
+> [!IMPORTANT]
+> <span data-ttu-id="db8fc-105">**Wichtige Änderungen für v1.1**</span><span class="sxs-lookup"><span data-stu-id="db8fc-105">**Breaking changes for v1.1**</span></span>
+> 
+> 1. <span data-ttu-id="db8fc-106">Das in dieser Version enthaltene Medienelement erfordert die Implementierung von zwei neuen Methoden durch die Klassen, die ICardActionHandler implementieren. Diese Methoden sind:</span><span class="sxs-lookup"><span data-stu-id="db8fc-106">The media element included in this version requires two new methods to be implemented by the classes that implement ICardActionHandler, these methods are</span></span>
+>
+> ```java
+> public void onMediaPlay(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+> public void onMediaStop(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+> ```
+>
+> <span data-ttu-id="db8fc-107">onMediaPlay wird aufgerufen, wenn die Wiedergabeschaltfläche zum ersten Mal in einem Medienelement betätigt wird. onMediaStop wird aufgerufen, wenn die Medien das Ende erreichen.</span><span class="sxs-lookup"><span data-stu-id="db8fc-107">onMediaPlay is invoked when the play button is pressed for the first time in any media element, meanwhile onMediaStop is invoked when the media reaches it's end</span></span>
