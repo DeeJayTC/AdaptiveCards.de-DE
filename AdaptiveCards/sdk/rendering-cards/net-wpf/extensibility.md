@@ -1,23 +1,23 @@
 ---
-title: Erweiterbarkeit – .NET WPF-SDK
+title: Erweiterbarkeit – .NET WPF SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: af301ec4d73b6791c1d132b9df7040d71cf70d7b
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 4f89784f711727deb538b2ed2195007ca8e6aca1
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552622"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134311"
 ---
-# <a name="extensibility---net-wpf"></a>Erweiterbarkeit – WPF für .NET
+# <a name="extensibility---net-wpf"></a>Erweiterbarkeit – .NET WPF
 
-## <a name="custom-element-rendering"></a>Benutzerdefiniertes Element-Textrendering
+## <a name="custom-element-rendering"></a>Benutzerdefiniertes Rendering von Elementen
 
-Für die vollständige Kontrolle über den Renderer können Sie die `ElementRenderers` Eigenschaft **hinzufügen**, **entfernen**, oder **außer Kraft setzen** Standard Renderer.
+Für die vollständige Kontrolle über den Renderer kannst du die `ElementRenderers`-Eigenschaft verwenden, um Standardrenderer **hinzuzufügen**, **zu entfernen** oder **außer Kraft zu setzen**.
 
-Das folgende Beispiel zeigt, wie Sie ein benutzerdefiniertes konnte `"type": "Rating"` Element und zu rendern.
+Das folgende Beispiel zeigt, wie du ein benutzerdefiniertes `"type": "Rating"`-Element definieren und rendern kannst.
 
 ```csharp
 // Register the new type with the JSON parser
@@ -29,9 +29,9 @@ renderer.ElementRenderers.Set<MyCustomRating>(MyCustomRating.Render);
 // Define a custom Rating element type
 public class MyCustomRating : AdaptiveElement
 {
-    public override string Type => "Rating";
+    public MyCustomRating() { Type = "Rating"; }
 
-    public double Rating { get; set; }
+    public override string Type { get; set; }
 
     public AdaptiveTextSize Size { get; set; }
 

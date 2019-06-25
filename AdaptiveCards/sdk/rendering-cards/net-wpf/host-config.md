@@ -1,45 +1,54 @@
 ---
-title: Host-Konfiguration – .NET WPF-SDK
+title: Hostkonfiguration – .NET WPF SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: c3414860ee9822a02dbf36ff11fd83488fedf34e
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 9ca540cbbb445f306f073f1936af46f8c2def99b
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552912"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134307"
 ---
-# <a name="host-config---net-wpf"></a>Host-Konfiguration – WPF für .NET
+# <a name="host-config---net-wpf"></a>Hostkonfiguration – .NET WPF
 
-Ein [Hosts Config](../../../rendering-cards/host-config.md) ist eine Konfiguration für shared-Objekt, das Verstehen von allen Renderern. Dadurch können Sie allgemeine Formatvorlagen (z. B. Schriftfamilie, Schriftgrößen, Abstände Standard) und Verhaltensweisen (z. B. maximale Anzahl von Aktionen), die automatisch mit jeder Plattform Renderer interpretiert werden, zu definieren. 
+Eine [Hostkonfiguration](../../../rendering-cards/host-config.md) ist ein gemeinsam genutztes Konfigurationsobjekt, das von allen Renderern verstanden wird. Dadurch kannst du allgemeine Formatvorlagen (z. B. Schriftfamilie, Schriftgrad, Standardabstand) und Verhaltensweisen (z. B. die maximale Anzahl von Aktionen) definieren, die von jedem Plattformrenderer automatisch interpretiert werden. 
 
-Das Ziel ist, dass von jeder Plattform Renderer generierten systemeigene Benutzeroberfläche sehr ähnlich, mit minimalem Aufwand ihrerseits aussieht.
+Das Ziel besteht darin, dass die von jedem Plattformrenderer generierte native Benutzeroberfläche ähnlich aussieht und dein Aufwand hierfür nur gering ist.
 
 ```csharp
 // Construct programmatically
-renderer.HostConfig = new AdaptiveHostConfig() 
+renderer.HostConfig = new AdaptiveHostConfig()
 {
-    FontFamily = "Comic Sans",
-    FontSizes = {
-        Small = 15,
-        Default = 20,
-        Medium = 25,
-        Large = 30,
-        ExtraLarge= 40
+    FontStyles = new FontStylesConfig()
+    {
+        Default = new FontStyleConfig()
+        {
+            FontFamily = "Consolas",
+            FontSizes = {
+                Small = 15,
+                Default = 20,
+                Medium = 25,
+                Large = 30,
+                ExtraLarge= 40
+            }
+        },
     }
 };
 
 // Or parse from JSON
-renderer.HostConfig  = AdaptiveHostConfig.FromJson(@"{
-    ""fontFamily"": ""Comic Sans"",
-    ""fontSizes"": {
-        ""small"": 25,
-        ""default"": 26,
-        ""medium"": 27,
-        ""large"": 28,
-        ""extraLarge"": 29
-    }
-}");
+renderer.HostConfig = AdaptiveHostConfig.FromJson(@"{
+    ""fontStyles"": {
+        ""default"": {
+            ""fontFamily"": ""Consolas"",
+            ""fontSizes"": {
+                ""small"": 15,
+                ""default"": 20,
+                ""medium"": 25,
+                ""large"": 30,
+                ""extraLarge"": 40
+            }
+        }
+    }}");
 ```

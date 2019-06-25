@@ -1,31 +1,31 @@
 ---
-title: Aktionen – .NET WPF-SDK
+title: Aktionen – .NET WPF SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 9e96fd0ce6322e79f8717d8132857233f62f66f1
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 39ddbc47fd123c5f25ba778925f0bf1bf1845f54
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553132"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134338"
 ---
-# <a name="actions---net-wpf"></a>Aktionen – WPF für .NET
+# <a name="actions---net-wpf"></a>Aktionen – .NET WPF
 
-Alle `actions` auf der Karte wird als WPF-gerendert `Button`s, aber das Einrichten Ihrer App zu verarbeiten, was geschieht, wenn ein Benutzer sie drückt. 
+Alle `actions` in der Karte werden als WPF-`Button`-Elemente gerendert. Was passiert, wenn ein Benutzer auf sie klickt, wird jedoch von der App verarbeitet. 
 
-Die `RenderedAdaptiveCard` -Objekt ermöglicht eine `OnAction` -Ereignis für diesen Zweck.
+Das `RenderedAdaptiveCard`-Objekt stellt ein `OnAction`-Ereignis für diesen Zweck bereit.
 
 ```csharp
 // Event handler fires when a user clicks an action within the card
 renderedCard.OnAction += MyActionHandler;
 
-private void MyActionHandler(RenderedAdaptiveCard sender, ActionEventArgs e)
+private void MyActionHandler(RenderedAdaptiveCard sender, AdaptiveActionEventArgs e)
 {
     if (e.Action is AdaptiveOpenUrlAction openUrlAction)
     {
-        Process.Start(openUrlAction.Url);
+        Process.Start(openUrlAction.Url.AbsoluteUri);
     }
     else if (e.Action is AdaptiveShowCardAction showCardAction)
     {

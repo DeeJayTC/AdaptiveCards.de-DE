@@ -1,19 +1,19 @@
 ---
-title: Aktionen – Android-SDK
+title: Aktionen – Android SDK
 author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: b823b139a706e5149ff1cabc672f57cede4bfa33
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: e21c03e069e7ab29dd7d2724d49a2d439c67e5a1
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552542"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134252"
 ---
 # <a name="actions---android"></a>Aktionen – Android
 
-Wenn eine Aktion für Karten ausgeführt wird, ruft die Klasse, die an den Renderingaufruf übergeben wurde, der ICardActionHandler-Schnittstelle implementiert, aufgerufen. Hier ist Ihre Aktionshandler definieren:
+Beim Ausführen einer Kartenaktion wird die Klasse aufgerufen, die an den Renderingaufruf übergeben wurde, der die ICardActionHandler-Schnittstelle implementiert. So wird ein Aktionshandler definiert:
 
 ```java
 public class ActionHandler implements ICardActionHandler
@@ -109,3 +109,15 @@ public class ActionHandler implements ICardActionHandler
     }
 }
 ```
+
+> [!IMPORTANT]
+> **Wichtige Änderungen für v1.1**
+> 
+> 1. Das in dieser Version enthaltene Medienelement erfordert die Implementierung von zwei neuen Methoden durch die Klassen, die ICardActionHandler implementieren. Diese Methoden sind:
+>
+> ```java
+> public void onMediaPlay(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+> public void onMediaStop(BaseCardElement mediaElement, RenderedAdaptiveCard renderedAdaptiveCard)
+> ```
+>
+> onMediaPlay wird aufgerufen, wenn die Wiedergabeschaltfläche zum ersten Mal in einem Medienelement betätigt wird. onMediaStop wird aufgerufen, wenn die Medien das Ende erreichen.

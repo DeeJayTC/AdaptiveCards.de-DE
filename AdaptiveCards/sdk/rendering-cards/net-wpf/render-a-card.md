@@ -1,28 +1,28 @@
 ---
-title: Rendern einer Karte – .NET WPF-SDK
+title: Rendern einer Karte – .NET WPF SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 6bc476c79c6d06c7ecb770fb1c3e89eb55e81b9a
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: f847b83a17456dbf80f869ef8ef0df699e57f50e
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553472"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134297"
 ---
-# <a name="render-a-card---net-wpf"></a>Rendern einer Karte – WPF für .NET
+# <a name="render-a-card---net-wpf"></a>Rendern einer Karte – .NET WPF
 
-Hier ist eine Karte mit dem .NET-SDK für WPF darstellen.
+Hier findest zu Informationen zum Rendern einer Karte mit dem .NET WPF SDK.
 
 > [!NOTE]
-> **`Media` mit HTTPS-URLs funktionieren nicht in WPF**
+> **`Media` mit HTTPS-URLs funktioniert nicht in WPF.**
 > 
-> Aufgrund einer [Fehler im WPF-MediaElement-Steuerelement](https://stackoverflow.com/questions/30702505/playing-media-from-https-site-in-media-element-throwing-null-reference-exception) wir sind nicht zum Rendern von Medien, die über HTTPS bereitgestellt werden können. Verwenden Sie HTTP-URLs in die `Media` Element aus, bis dieser behoben wird.  
+> Aufgrund eines [Fehlers im WPF-MediaElement-Steuerelement](https://stackoverflow.com/questions/30702505/playing-media-from-https-site-in-media-element-throwing-null-reference-exception) ist das Rendern von Medien, die über HTTPS übermittelt werden, nicht möglich. Verwende daher HTTP-URLs im `Media`-Element, bis dieses Problem behoben ist.  
 
-## <a name="instantiate-a-renderer"></a>Instanziieren Sie einen renderer
+## <a name="instantiate-a-renderer"></a>Instanziieren eines Renderers
 
-Erstellen Sie eine Instanz der Renderer-Bibliothek. 
+Erstelle eine Instanz der Rendererbibliothek. 
 
 ```csharp
 using AdaptiveCards;
@@ -40,12 +40,12 @@ renderer.UseXceedElementRenderers();
 AdaptiveSchemaVersion schemaVersion = renderer.SupportedSchemaVersion;
 ```
 
-## <a name="render-a-card-to-xaml"></a>Eine Karte für XAML rendern
+## <a name="render-a-card-to-xaml"></a>Rendern einer Karte in XAML
 
 ```csharp
 // Build a simple card
 // In the real world this would probably be provided as JSON
-AdaptiveCard card = new AdaptiveCard()
+AdaptiveCard card = new AdaptiveCard("1.0")
 {
     Body = { new AdaptiveTextBlock() { Text = "Hello World" } }
 };
@@ -61,7 +61,7 @@ try
 
     // (Optional) Check for any renderer warnings
     // This includes things like an unknown element type found in the card
-    // Or the card exceeded the maxmimum number of supported actions, etc
+    // Or the card exceeded the maximum number of supported actions, etc
     IList<AdaptiveWarning> warnings = renderedCard.Warnings;
 }
 catch(AdaptiveException ex)

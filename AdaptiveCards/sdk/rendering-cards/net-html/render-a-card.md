@@ -1,23 +1,23 @@
 ---
-title: Rendern einer Karte - HTML-SDK für .NET
+title: Rendern einer Karte – .NET HTML SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 8dc1baffb91f0755f1955ee02b8a3e820b0d34e4
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 1bc1a225fc731aeb8e66bde1ef21a9443e74c8b1
+ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553102"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67134180"
 ---
-# <a name="render-a-card---net-html"></a>Rendern Sie eine Karte: .NET-HTML.
+# <a name="render-a-card---net-html"></a>Rendern einer Karte – .NET HTML
 
-Hier ist eine Karte mit dem .NET-SDK für HTML zu rendern.
+Hier findest zu Informationen zum Rendern einer Karte mit dem .NET HTML SDK.
 
-## <a name="instantiate-a-renderer"></a>Instanziieren Sie einen renderer
+## <a name="instantiate-a-renderer"></a>Instanziieren eines Renderers
 
-Der nächste Schritt ist die Erstellung eine Instanz des Renderers. 
+Der nächste Schritt besteht darin, eine Instanz des Renderers zu erstellen. 
 
 ```csharp
 using AdaptiveCards;
@@ -32,7 +32,7 @@ AdaptiveCardRenderer renderer = new AdaptiveCardRenderer();
 AdaptiveSchemaVersion schemaVersion = renderer.SupportedSchemaVersion; // 1.0
 ```
 
-## <a name="render-a-card-to-html"></a>Eine Karte wird in HTML gerendert.
+## <a name="render-a-card-to-html"></a>Rendern einer Karte in HTML
 
 ```csharp
 // Build a simple card
@@ -52,7 +52,7 @@ try
 
     // (Optional) Check for any renderer warnings
     // This includes things like an unknown element type found in the card
-    // Or the card exceeded the maxmimum number of supported actions, etc
+    // Or the card exceeded the maximum number of supported actions, etc
     IList<AdaptiveWarning> warnings = renderedCard.Warnings;
 }
 catch(AdaptiveException ex)
