@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 9/24/2018
 ms.topic: article
-ms.openlocfilehash: 6059c354c0b1926d40618c536b5e791f69e71d5e
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 0b48069f86a73bd26340976fcd420a062ce5b890
+ms.sourcegitcommit: eb7e91e8466d511b79068bc537930962abd45024
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67138013"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67815983"
 ---
 # <a name="partners"></a>Partner 
 
@@ -21,7 +21,7 @@ Wenn Sie das Ökosystem mit Adaptive Cards beitreten können, [wenden Sie sich d
 
 Platform | Beschreibung | Dokumentation | Version
 ---------|-------------|---------------|---------
-[Bot Framework WebChat](https://github.com/Microsoft/BotFramework-WebChat)  | Integrierbare Webchat-Steuerelement für das Microsoft Bot Framework | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.0
+[Bot Framework WebChat](https://github.com/Microsoft/BotFramework-WebChat)  | Integrierbare Webchat-Steuerelement für das Microsoft Bot Framework | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.2 (Webchat 4.5)
 [Cortana-Fähigkeiten](https://docs.microsoft.com/en-us/cortana/skills/adaptive-cards) | Ein virtueller Assistenten für Windows 10 | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.0
 [Windows Timeline](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/) | Eine neue Möglichkeit zur nach Aktivitäten, die Sie fortsetzen, die auf diesem PC, andere Windows-PCs und IOS-oder Android-Geräten gestartet werden. | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/windows) | 1.0
 [Aktionen erfordernde Nachrichten für Outlook](https://docs.microsoft.com/en-us/outlook/actionable-messages/)  | Fügen Sie einer Aktionen erfordernden Nachricht an e-Mail | [Erste Schritte](https://docs.microsoft.com/en-us/outlook/actionable-messages/) | 1.0
