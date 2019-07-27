@@ -1,43 +1,44 @@
 ---
-title: Mit Adaptive Cards Medien
+title: Adaptive Cards-Medien
 author: matthidinger
 ms.author: mahiding
 ms.date: 5/14/2018
 ms.topic: article
-ms.openlocfilehash: 15a99a42a997da5c14f52c9aa240f13d2b81ef65
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: d4c9e784fec66d2f3449e5780dda23d72ab2edf2
+ms.sourcegitcommit: f8de9c02b92cd8927a18e59e5650c92b2b78db06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553452"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523863"
 ---
-# <a name="adaptive-cards-media"></a><span data-ttu-id="20aac-102">Mit Adaptive Cards Medien</span><span class="sxs-lookup"><span data-stu-id="20aac-102">Adaptive Cards Media</span></span>
+# <a name="adaptive-cards-media"></a><span data-ttu-id="dbe17-102">Adaptive Cards-Medien</span><span class="sxs-lookup"><span data-stu-id="dbe17-102">Adaptive Cards Media</span></span>
 
-## <a name="introduction-video"></a><span data-ttu-id="20aac-103">Einführungsvideo</span><span class="sxs-lookup"><span data-stu-id="20aac-103">Introduction Video</span></span>
+
+## <a name="introduction-video"></a><span data-ttu-id="dbe17-103">Einführungs Video</span><span class="sxs-lookup"><span data-stu-id="dbe17-103">Introduction Video</span></span>
 
 [!VIDEO https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4]
 
-<span data-ttu-id="20aac-104">Video 2:</span><span class="sxs-lookup"><span data-stu-id="20aac-104">Video 2:</span></span>
+<span data-ttu-id="dbe17-104">Video 2:</span><span class="sxs-lookup"><span data-stu-id="dbe17-104">Video 2:</span></span>
 
 <video controls width="100%" poster="../content/videoposter.png">
     <source src="https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4" type="video/mp4">
 </video>
 
-## <a name="build-2018"></a><span data-ttu-id="20aac-105">Build 2018</span><span class="sxs-lookup"><span data-stu-id="20aac-105">Build 2018</span></span>
+## <a name="build-2018"></a><span data-ttu-id="dbe17-105">Build 2018</span><span class="sxs-lookup"><span data-stu-id="dbe17-105">Build 2018</span></span>
 
 [!VIDEO https://medius.studios.ms/Embed/Video/BRK2401?SFYT=true]
 
-## <a name="windows-developer-day"></a><span data-ttu-id="20aac-106">Windows Developer Day</span><span class="sxs-lookup"><span data-stu-id="20aac-106">Windows Developer Day</span></span>
+## <a name="windows-developer-day"></a><span data-ttu-id="dbe17-106">Windows Developer Day</span><span class="sxs-lookup"><span data-stu-id="dbe17-106">Windows Developer Day</span></span>
 
 [!VIDEO https://www.youtube.com/embed/7BfKcU-7UjA]
 
 [!VIDEO https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Fall-Creators-Update/WinDev003/player]
 
-## <a name="ignite-2017"></a><span data-ttu-id="20aac-107">Ignite 2017</span><span class="sxs-lookup"><span data-stu-id="20aac-107">Ignite 2017</span></span>
+## <a name="ignite-2017"></a><span data-ttu-id="dbe17-107">Ignite 2017</span><span class="sxs-lookup"><span data-stu-id="dbe17-107">Ignite 2017</span></span>
 
 [!VIDEO https://www.youtube.com/embed/v3pOg0EO2t4]
 
-## <a name="build-2017"></a><span data-ttu-id="20aac-108">Build 2017</span><span class="sxs-lookup"><span data-stu-id="20aac-108">Build 2017</span></span> 
+## <a name="build-2017"></a><span data-ttu-id="dbe17-108">Build 2017</span><span class="sxs-lookup"><span data-stu-id="dbe17-108">Build 2017</span></span> 
 
 [!VIDEO https://channel9.msdn.com/Events/Build/2017/B8002/player]
 
