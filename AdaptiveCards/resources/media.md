@@ -1,19 +1,20 @@
 ---
-title: Mit Adaptive Cards Medien
+title: Adaptive Cards-Medien
 author: matthidinger
 ms.author: mahiding
 ms.date: 5/14/2018
 ms.topic: article
-ms.openlocfilehash: 15a99a42a997da5c14f52c9aa240f13d2b81ef65
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: d4c9e784fec66d2f3449e5780dda23d72ab2edf2
+ms.sourcegitcommit: f8de9c02b92cd8927a18e59e5650c92b2b78db06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553452"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523863"
 ---
-# <a name="adaptive-cards-media"></a>Mit Adaptive Cards Medien
+# <a name="adaptive-cards-media"></a>Adaptive Cards-Medien
 
-## <a name="introduction-video"></a>Einführungsvideo
+
+## <a name="introduction-video"></a>Einführungs Video
 
 [!VIDEO https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4]
 

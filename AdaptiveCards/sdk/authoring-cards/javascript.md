@@ -1,64 +1,44 @@
 ---
-title: JavaScript-SDKS für mit Adaptive Cards
+title: JavaScript SDK für Adaptive Karten
 author: matthidinger
 ms.author: mahiding
-ms.date: 06/26/2017
+ms.date: 07/26/2019
 ms.topic: article
-ms.openlocfilehash: 6372f2f23a817ecc4d07d950d6513d14357547b7
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 039171d895fac0975bf9eff4fe84fdf8b6f7e4af
+ms.sourcegitcommit: f8de9c02b92cd8927a18e59e5650c92b2b78db06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552662"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523836"
 ---
-# <a name="javascript-sdk-for-creating-cards"></a>JavaScript-SDK zum Erstellen von Karten
+# <a name="javascript-sdk-for-creating-cards"></a>JavaScript SDK zum Erstellen von Karten
 
 > [!IMPORTANT]
-> Die für das Serialisieren von JSON-Bibliothek befindet sich noch in Entwicklung und Ihre Milage abweichen.
+> Die Bibliothek für die Serialisierung von JSON befindet sich noch in der Entwicklung, und ihre miterlage kann variieren.
 
-Wie wir unter den ersten Schritten im Abschnitt, eine adaptive Card ist lediglich ein serialisiertes JSON-Objekt ein Objektmodell für die Karte.  Zum Bearbeiten des Objektmodells erleichtern haben wir einige Bibliotheken definiert, die eine stark typisierte Klassenhierarchie, die einfach definieren zu serialisieren/Deserialisieren von Json ist.
+Wie [in den ersten](../../authoring-cards/getting-started.md)Schritten beschrieben, ist eine Adaptive Karte nichts anderes als ein serialisiertes JSON-Objekt eines Karten Objektmodells.  Um das Bearbeiten des Objektmodells zu vereinfachen, haben wir einige Bibliotheken definiert, die eine stark typisierte Klassenhierarchie definieren, die einfach serialisieren/deserialisieren von JSON-Code ist.
 
-Sie können alle Tools verwenden, die den adaptive Card JSON-Code erstellt werden soll.
+Sie können ein beliebiges Tool verwenden, mit dem Sie den JSON-Code für die Adaptive Karte erstellen möchten.
 
-Die `adaptivecards` Npm-Paket definiert eine Bibliothek für den Umgang mit adaptive Cards in Javascript
+Das `adaptivecards` NPM-Paket definiert eine Bibliothek zum Arbeiten mit adaptiven Karten in JavaScript.
 
 ## <a name="to-install"></a>So installieren Sie
 ```console
 npm install adaptivecards
 ```
 
-## <a name="example-creating"></a>Beispiel zu erstellen 
-Es gibt Definitionen für Schnittstellen in `schema.d.ts` beschrieben, die die Form des Schemas
+## <a name="example"></a>Beispiel
+
+Die folgende API zeigt, wie Sie eine Adaptive Karte mithilfe des Objektmodells erstellen und in JSON Serialisieren.
 
 ```typescript
-let card = {
-    "type": "AdaptiveCard",
-    "version": "1.0",
-    "body": [
-        {
-            "type": "Container",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Meow!"
-                },
-                {
-                    "type": "Image",
-                    "url": "http://adaptivecards.io/content/cats/1.png"
-                }
-            ]
-        }
-    ]
-};
-```
+let card = new Adaptive.AdaptiveCard();
+card.version = new Adaptive.Version(1, 0);
 
-Es gibt auch ein Objektmodell für das Erstellen von Karten.
+let textBlock = new Adaptive.TextBlock();
+textBlock.text = "Hello World";
 
+card.addItem(textBlock);
 
-```typescript
-let card :IAdaptiveCard =  new AdaptiveCard();
-card.body.add(new TextBlock() 
-{
-    text = "hello world"
-});
+let json = card.toJSON();
 ```
