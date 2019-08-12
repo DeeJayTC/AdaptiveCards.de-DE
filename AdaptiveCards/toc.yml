@@ -38,6 +38,16 @@
       href: sdk/authoring-cards/toc.yml
     - name: Rendern von Karten
       href: sdk/rendering-cards/toc.yml
+- name: Vorlagen (Vorschau)
+  items:
+    - name: Übersicht
+      href: templating/index.md
+    - name: Vorlagensprache
+      href: templating/language.md
+    - name: SDKs
+      href: templating/sdk.md
+    - name: Vorlagendienst
+      href: templating/service.md
 - name: Ressourcen
   items:
     - name: Prinzipien
