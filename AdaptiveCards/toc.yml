@@ -32,19 +32,21 @@
       href: rendering-cards/renderer-status.md
     - name: Einen Renderer implementieren
       href: rendering-cards/implement-a-renderer.md
-- name: SDK
+- name: SDKs
   items:
     - name: Dokumenterstellung von Karten
       href: sdk/authoring-cards/toc.yml
     - name: Rendern von Karten
       href: sdk/rendering-cards/toc.yml
+    - name: Designer SDK
+      href: sdk/designer.md
 - name: Vorlagen (Vorschau)
   items:
     - name: Übersicht
       href: templating/index.md
     - name: Vorlagensprache
       href: templating/language.md
-    - name: SDKs
+    - name: Vorlagen-SDKs
       href: templating/sdk.md
     - name: Vorlagendienst
       href: templating/service.md
