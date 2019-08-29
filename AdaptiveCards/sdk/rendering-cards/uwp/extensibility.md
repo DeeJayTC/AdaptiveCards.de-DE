@@ -1,5 +1,5 @@
 ---
-title: Erweiterbarkeit – UWP-SDK
+title: Erweiterbarkeit-UWP SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553042"
 ---
-# <a name="extensibility---uwp"></a>Erweiterbarkeit – UWP
+# <a name="extensibility---uwp"></a>Erweiterbarkeit-UWP
 
-## <a name="changing-per-element-rendering"></a>Pro Element-Textrendering ändern
+## <a name="changing-per-element-rendering"></a>Ändern des Renderings pro Element
 
-Implementieren einer Rendererklasse, und legen Sie es in den renderer
+Implementieren Sie eine Rendererklasse, und legen Sie Sie im Renderer fest.
 
 ```csharp
 // My custom renderer is going to replace how textblocks should render!

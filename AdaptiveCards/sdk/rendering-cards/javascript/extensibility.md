@@ -1,5 +1,5 @@
 ---
-title: Erweiterbarkeit – JavaScript-SDK
+title: 'Erweiterbarkeit: JavaScript SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,16 +11,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552632"
 ---
-# <a name="extensibility---javascript"></a>Erweiterbarkeit – JavaScript
+# <a name="extensibility---javascript"></a>Erweiterbarkeit: JavaScript
 
-## <a name="implement-and-register-a-custom-element"></a>Implementieren Sie und registrieren Sie ein benutzerdefiniertes element
+## <a name="implement-and-register-a-custom-element"></a>Implementieren und Registrieren eines benutzerdefinierten Elements
 
-Die Schritte zum Erstellen eines benutzerdefinierten Typs von Adaptive Card-Element sind:
-- Erstellen Sie eine neue Klasse, die für aus `CardElement`
-- Implementieren der `getJsonTypeName`, `parse`, `toJSON`, `internalRender` und `renderSpeech` Methoden
-- Registrieren Sie, indem Sie ihn an den Renderer des Elements Registrierung hinzufügen
+Die Schritte zum Erstellen eines benutzerdefinierten Adaptive Card-Elementtyps lauten wie folgt:
+- Erstellen Sie eine neue Klasse, die von`CardElement`
+- Implementieren der `getJsonTypeName`Methoden `parse`, `toJSON`, und`internalRender` `renderSpeech`
+- Registrieren Sie Sie, indem Sie Sie der Element Registrierung des Renderers hinzufügen.
 
-Sehen wir uns ein Beispiel, und implementieren Sie ein einfaches Element der Statusanzeige:
+Sehen wir uns ein Beispiel an, um ein einfaches Statusanzeige Element zu implementieren:
 
 ```typescript
 import * as Adaptive from "adaptivecards";
@@ -136,15 +136,15 @@ export class ProgressBar extends Adaptive.CardElement {
 }
 ```
 
-Das war's. Jetzt nur registrieren Sie die Statusanzeige-Klasse mit dem Renderer:
+Das ist alles. Registrieren Sie nun einfach die Statusanzeige Klasse beim Renderer:
 
 ```typescript
 Adaptive.AdaptiveCard.elementTypeRegistry.registerType("ProgressBar", () => { return new ProgressBar(); });
 ```
 
-## <a name="implement-and-register-a-custom-action"></a>Implementieren Sie und registrieren Sie eine benutzerdefinierte Aktion
+## <a name="implement-and-register-a-custom-action"></a>Implementieren und Registrieren einer benutzerdefinierten Aktion
 
-Die Schritte zum Erstellen einer benutzerdefinierten Aktion für die Adaptive Card sind im Wesentlichen identisch mit denen von benutzerdefinierten Elementen. Hier ist ein einfaches Beispiel für eine Warnungsaktion, die einfach ein Meldungsfeld mit konfigurierbaren Text angezeigt:
+Die Schritte zum Erstellen einer benutzerdefinierten adaptiven kartenaktion sind im Wesentlichen identisch mit denen für benutzerdefinierte Elemente. Im folgenden finden Sie ein einfaches Beispiel für eine Warnungs Aktion, bei der einfach ein Meldungs Feld mit konfigurier barem Text angezeigt wird:
 
 ```typescript
 import * as Adaptive from "adaptivecards";
@@ -184,7 +184,7 @@ Adaptive.AdaptiveCard.actionTypeRegistry.registerType("Action.Alert", () => { re
 
 ## <a name="example"></a>Beispiel
 
-Hier ist eine Beispiel-Karte, die sowohl die AlertAction-Aktion die ProgressBar-Element verwendet:
+Hier sehen Sie eine Beispiel Karte, die sowohl das ProgressBar-Element als auch die alertaction-Aktion verwendet:
 ```
 {
     "type": "AdaptiveCard",
@@ -212,4 +212,4 @@ Hier ist eine Beispiel-Karte, die sowohl die AlertAction-Aktion die ProgressBar-
 }
 ```
 
-Und so sieht es wie gerendert wird: ![Image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)
+Und so wird es gerendert ![: Image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)

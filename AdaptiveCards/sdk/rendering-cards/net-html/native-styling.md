@@ -1,5 +1,5 @@
 ---
-title: Native Stil - HTML-SDK für .NET
+title: 'Native Formatierung: .net html SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,32 +11,32 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552562"
 ---
-# <a name="native-styling---net-html"></a>Native Stil - HTML für .NET
+# <a name="native-styling---net-html"></a>Native Formatierung: .net-html
 
-Während der Host-Konfiguration die meisten haben, erhalten Sie die Art und Weise gibt es auf jeder Plattform, ist es wahrscheinlich, dass Sie einige native Formatierungen auf jeder Plattform zu tun hat. 
+Obwohl die Host Konfiguration den größten Teil der einzelnen Plattformen bietet, ist es wahrscheinlich, dass Sie auf jeder Plattform eine native Formatierung ausführen müssen. 
 
-HTML erleichtert dies, indem Sie jedes Element CSS-Klassen hinzugefügt werden.
+Durch HTML werden jedem Element CSS-Klassen hinzugefügt.
 
 | Element | CSS-Klasse |
 |---|---|
-| AdaptiveCard | ac-adaptivecard |
-| Alle Aktionen | ac-pushButton | 
-| Wählen Sie Aktionen | ac-selectable |
+| AdaptiveCard | AC-adaptivecard |
+| Alle Aktionen | AC-PUSHBUTTON | 
+| Aktionen auswählen | AC-auswählbar |
 | Action.OpenUrl  | ac-action-openUrl |
-| Action.ShowCard | ac-action-showCard |
-| Action.Submit  | ac-action-submit  |
-| ActionSet | ac-actionset |
-| Column | AC-Spalte |
-| ColumnSet | ac-columnset |
-| Container | ac-container |
+| Action. showcard | ac-action-showCard |
+| Aktion. übermitteln  | AC-Action-Submit  |
+| Aktions Satz | AC-Aktions Satz |
+| Spalte | AC-Column |
+| ColumnSet | AC-ColumnSet |
+| Container | AC-Container |
 | Alle Eingaben | AC-Eingabe |
 | Input.ChoiceSet | ac-multichoiceInput  |
-| Input.Date | ac-dateInput |
-| Input.Number | ac-numberInput |
-| Input.Text | ac-textInput |
-| Input.Time | ac-timeInput |
-| Input.Toggle| - |
-| Bild  | AC-image |
-| ImageSet  | ac-imageset |
-| FactSet | ac-factset |
-| TextBlock  | AC-TextBlock-Element |
+| Input. Date | AC-dateinput |
+| Eingabe. Zahl | ac-numberInput |
+| Input.Text | AC-TextInput |
+| Eingabe. Zeit | AC-timeinput |
+| Eingabe. Umschalten| - |
+| Bild  | AC-Image |
+| ImageSet  | AC-ImageSet |
+| FactSet | AC-FactSet |
+| TextBlock  | AC-TextBlock |

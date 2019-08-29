@@ -1,5 +1,5 @@
 ---
-title: iOS-SDK
+title: IOS SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552642"
 ---
-# <a name="getting-started---ios"></a>Erste Schritte – iOS
+# <a name="getting-started---ios"></a>Getting Started (IOS)
 
-Dieser Renderer, das auf iOS native Steuerelemente.
+Dieser Renderer, der für Native IOS-Steuerelemente steht.
 
-## <a name="install-pod"></a>Installieren von Pods
+## <a name="install-pod"></a>Pod installieren
 
-Dieser kann ein Pod.
+Diese ist als Pod verfügbar.
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/AdaptiveCards.svg)](https://cocoapods.org/pods/AdaptiveCards)
 
@@ -25,7 +25,7 @@ Dieser kann ein Pod.
  pod 'AdaptiveCards'
 ```
 
-## <a name="add-header"></a>Header hinzufügen
+## <a name="add-header"></a>Kopfzeile hinzufügen
 
 ```objective-c
 #import "AdaptiveCards/ACFramework.h"
@@ -33,4 +33,4 @@ Dieser kann ein Pod.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie unter [rendern eine Karte](render-a-card.md) für die nächsten Schritte.
+Informationen zu den nächsten Schritten findest du unter [Rendern einer Karte](render-a-card.md).

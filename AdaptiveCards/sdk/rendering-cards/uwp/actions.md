@@ -1,5 +1,5 @@
 ---
-title: Aktionen - UWP-SDK
+title: 'Aktionen: UWP SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552972"
 ---
-# <a name="actions---uwp"></a>Aktionen – UWP
+# <a name="actions---uwp"></a>Aktionen-UWP
 
-Alle **Aktionen** auf der Karte wird als UWP Rendern **Schaltfläche**des, aber es liegt an Ihrer app zu verarbeiten, was geschieht, wenn ein Benutzer (mit Ausnahme von Aktionen ShowCard drückt (Siehe Codeausschnitt für Weitere Informationen).
+Alle **Aktionen** innerhalb der Karte werden als UWP- **Schalt**Flächen gerendet, aber es liegt an Ihrer APP, zu behandeln, was geschieht, wenn ein Benutzer Sie drückt (mit Ausnahme von showcard-Aktionen... Weitere Informationen finden Sie unter Code Ausschnitt.)
 
-Die `RenderedAdaptiveCard` -Objekt ermöglicht eine `Action` -Ereignis für diesen Zweck.
+Das `RenderedAdaptiveCard`-Objekt stellt ein `Action`-Ereignis für diesen Zweck bereit.
 
 ```csharp
 // Render a card (as previously shown)

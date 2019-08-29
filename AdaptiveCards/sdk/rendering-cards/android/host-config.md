@@ -1,5 +1,5 @@
 ---
-title: Hosten von Android SDK-Konfiguration –
+title: Host Konfiguration-Android SDK
 author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553342"
 ---
-# <a name="host-config---android"></a>Host-Konfiguration – Android
+# <a name="host-config---android"></a>Host Konfiguration-Android
 
-Geben Sie zum Anpassen des Renderers eine Instanz des Objekts HostConfig an. (Finden Sie unter [Hosts Config-Schema](../../../rendering-cards/host-config.md) für die vollständige Beschreibung.)
+Zum Anpassen des Renderers geben Sie eine Instanz des hostconfig-Objekts an. (Die vollständige Beschreibung finden Sie unter [Host config Schema](../../../rendering-cards/host-config.md) .)
 
-Verwenden Sie zum Erstellen eines HostConfig-Objekts aus einer Zeichenfolge, die DeserializeFromString-Methode
+Verwenden Sie die deserializefromstring-Methode, um ein hostconfig-Objekt aus einer Zeichenfolge zu erstellen.
 
 ```java
 HostConfig hostConfig = HostConfig.DeserializeFromString(hostConfigText);

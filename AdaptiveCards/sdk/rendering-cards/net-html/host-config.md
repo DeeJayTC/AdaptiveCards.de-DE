@@ -1,5 +1,5 @@
 ---
-title: Host-Konfiguration – HTML-SDK für .NET
+title: 'Host Konfiguration: .net html SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552412"
 ---
-# <a name="host-config---net-html"></a>Hosten von .NET HTML-Konfiguration –
+# <a name="host-config---net-html"></a>Host Konfiguration: .net-html
 
-Ein [Hosts Config](../../../rendering-cards/host-config.md) ist eine Konfiguration für shared-Objekt, das Verstehen von allen Renderern. Dadurch können Sie allgemeine Formatvorlagen (z. B. Schriftfamilie, Schriftgrößen, Abstände Standard) und Verhaltensweisen (z. B. maximale Anzahl von Aktionen), die automatisch mit jeder Plattform Renderer interpretiert werden, zu definieren. 
+Eine [Hostkonfiguration](../../../rendering-cards/host-config.md) ist ein gemeinsam genutztes Konfigurationsobjekt, das von allen Renderern verstanden wird. Dadurch kannst du allgemeine Formatvorlagen (z. B. Schriftfamilie, Schriftgrad, Standardabstand) und Verhaltensweisen (z. B. die maximale Anzahl von Aktionen) definieren, die von jedem Plattformrenderer automatisch interpretiert werden. 
 
-Das Ziel ist, dass von jeder Plattform Renderer generierten systemeigene Benutzeroberfläche sehr ähnlich, mit minimalem Aufwand ihrerseits aussieht.
+Das Ziel besteht darin, dass die von jedem Plattformrenderer generierte native Benutzeroberfläche ähnlich aussieht und dein Aufwand hierfür nur gering ist.
 
 ```csharp
 // Construct programmatically

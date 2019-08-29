@@ -1,5 +1,5 @@
 ---
-title: Erweiterbarkeit – HTML-SDK für .NET
+title: 'Erweiterbarkeit: .net html SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552532"
 ---
-# <a name="extensibility---net-html"></a>Erweiterbarkeit – .NET HTML
+# <a name="extensibility---net-html"></a>Erweiterbarkeit: .net-html
 
-## <a name="custom-element-rendering"></a>Benutzerdefiniertes Element-Textrendering
+## <a name="custom-element-rendering"></a>Benutzerdefiniertes Rendering von Elementen
 
-Für die vollständige Kontrolle über den Renderer können Sie die `ElementRenderers` Eigenschaft **hinzufügen**, **entfernen**, oder **außer Kraft setzen** Standard Renderer.
+Für die vollständige Kontrolle über den Renderer kannst du die `ElementRenderers`-Eigenschaft verwenden, um Standardrenderer **hinzuzufügen**, **zu entfernen** oder **außer Kraft zu setzen**.
 
-Das folgende Beispiel zeigt, wie Sie ein benutzerdefiniertes konnte `"type": "Rating"` Element und zu rendern.
+Das folgende Beispiel zeigt, wie du ein benutzerdefiniertes `"type": "Rating"`-Element definieren und rendern kannst.
 
 ```csharp
 // Register the new type with the JSON parser

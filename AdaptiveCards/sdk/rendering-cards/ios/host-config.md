@@ -1,5 +1,5 @@
 ---
-title: Hosts Config - SDK für iOS
+title: 'Host Konfiguration: IOS SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,23 +11,23 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553702"
 ---
-# <a name="host-config---ios"></a>Host-Konfiguration – iOS
+# <a name="host-config---ios"></a>Host Konfiguration-IOS
 
-Host kann über HostConfig konfiguriert werden, die von JSON-Zeichenfolge generiert werden können
+Der Host kann über die hostconfig konfiguriert werden, die durch eine JSON-Zeichenfolge generiert werden kann.
 
 ```objective-c
 ACOParseResult *hostconfigParseResult = [ACOHostConfig FromJson:self.hostconfig];
 ```
 
-Standard-HostConfig kann instanziiert werden
+Standardhostconfig kann instanziiert werden.
 
 ```objective-c
 ACOHostConfig *defaultConfig = [[ACHostConfig alloc] init];
 ```
 
-## <a name="render-a-card-using-host-config"></a>Rendern Sie eine Karte mit Host-Konfiguration
+## <a name="render-a-card-using-host-config"></a>Rendering einer Karte mithilfe der Host Konfiguration
 
-Rederer dauert adaptive Card und Host-Konfiguration. HostConfig kann NULL sein, und wenn NULL, Standardwert verwendet werden.
+Der Renderer verwendet die adaptive Karte und die Hostkonfiguration. HostConfig kann „nil“ sein. In dem Fall wird der Standardwert verwendet.
 
 ```objective-c
 ACRRenderResult *renderResult;

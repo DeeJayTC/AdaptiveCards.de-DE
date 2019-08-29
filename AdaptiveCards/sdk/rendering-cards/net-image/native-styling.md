@@ -1,5 +1,5 @@
 ---
-title: Native Stil - .NET Image-Rendering-SDK
+title: 'Native Formatierung: .net-Image Rendering SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,6 +11,6 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553142"
 ---
-# <a name="native-styling---net-image"></a>Native erstellen – Images für .NET
+# <a name="native-styling---net-image"></a>Native Formatierung: .net-Image
 
-Finden Sie unter den [WPF-Dokumentation](../net-wpf/getting-started.md) für eine umfassende Sammlung an diesen Optionen.
+Eine vollständige Zusammenführung dieser Optionen finden Sie in der [WPF](../net-wpf/getting-started.md) -Dokumentation.

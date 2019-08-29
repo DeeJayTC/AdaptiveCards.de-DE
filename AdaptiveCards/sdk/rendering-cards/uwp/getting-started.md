@@ -11,15 +11,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552902"
 ---
-# <a name="getting-started---uwp"></a>Erste Schritte – UWP
+# <a name="getting-started---uwp"></a>"Getting Started" (UWP)
 
-Dies ist ein Renderer steuert, welche Ziele UWP systemeigen.
+Dabei handelt es sich um einen Renderer, der auf native UWP-Steuerelemente abzielt
 
-## <a name="install-nuget-package"></a>Installieren von NuGet-Paket
+## <a name="install-nuget-package"></a>Nuget-Paket installieren
 
 **AdaptiveCards.Rendering.Uwp**
 
-[![Installieren von NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Uwp.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Uwp)
+[![Nuget-Installation](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Uwp.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Uwp)
 
 ```console
 Install-Package AdaptiveCards.Rendering.Uwp
@@ -27,7 +27,7 @@ Install-Package AdaptiveCards.Rendering.Uwp
 
 ## <a name="namespace"></a>Namespace
 
-Den Renderer-Namespace zu deklarieren.
+Deklarieren Sie den Renderer-Namespace.
 
 ```csharp
 using AdaptiveCards.Rendering.Uwp;
@@ -35,4 +35,4 @@ using AdaptiveCards.Rendering.Uwp;
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie unter [rendern eine Karte](render-a-card.md) für die nächsten Schritte.
+Informationen zu den nächsten Schritten findest du unter [Rendern einer Karte](render-a-card.md).

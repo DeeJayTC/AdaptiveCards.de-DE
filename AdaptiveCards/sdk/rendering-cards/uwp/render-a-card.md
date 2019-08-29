@@ -1,5 +1,5 @@
 ---
-title: Rendern einer Karte - UWP-SDK
+title: Rendering eines Card-UWP SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552432"
 ---
-# <a name="render-a-card---uwp"></a>Rendern einer Karte – UWP
+# <a name="render-a-card---uwp"></a>Rendering einer Karte (UWP)
 
-Hier ist eine Karte mit dem UWP-SDK darstellen.
+Im folgenden wird beschrieben, wie Sie eine Karte mithilfe des UWP SDK Rendering.
 
-## <a name="create-an-instance-of-your-renderer"></a>Erstellen Sie eine Instanz von Ihrem renderer
+## <a name="create-an-instance-of-your-renderer"></a>Erstellen einer Instanz des Renderers
 
-Erstellen Sie eine Instanz der Renderer-Bibliothek. 
+Erstelle eine Instanz der Rendererbibliothek. 
 
 ```csharp
 using AdaptiveCards.Rendering.Uwp;
@@ -26,13 +26,13 @@ using AdaptiveCards.Rendering.Uwp;
 var renderer = new AdaptiveCardRenderer();
 ```
 
-## <a name="create-a-card-from-a-json-string"></a>Erstellen Sie eine Karte aus einem JSON-Zeichenfolge
+## <a name="create-a-card-from-a-json-string"></a>Erstellen einer Karte aus einer JSON-Zeichenfolge
 
 ```csharp
 var card = AdaptiveCard.FromJsonString(jsonString);
 ```
 
-## <a name="create-a-card-from-a-json-object"></a>Erstellen Sie eine Karte aus einem jsonobjekt
+## <a name="create-a-card-from-a-json-object"></a>Erstellen einer Karte aus einem JSON-Objekt
 
 ```csharp
 var card = AdaptiveCard.FromJson(jsonObject);
@@ -40,7 +40,7 @@ var card = AdaptiveCard.FromJson(jsonObject);
 
 ## <a name="render-a-card"></a>Rendern einer Karte
 
-Eine Karte aus einer Datenquelle abrufen und rendern.
+Erwerben Sie eine Karte aus einer Quelle, und rendersie Sie.
 
 ```csharp
 RenderedAdaptiveCard renderedAdaptiveCard =  renderer.RenderAdaptiveCard(card);
@@ -58,7 +58,7 @@ if (renderedAdaptiveCard.FrameworkElement != null)
 
 ## <a name="example"></a>Beispiel
 
-Hier ist ein Beispiel aus der UWP-Renderer.
+Im folgenden finden Sie ein Beispiel aus dem UWP-Renderer.
 
 ```csharp
 var renderer = new AdaptiveCardRenderer();

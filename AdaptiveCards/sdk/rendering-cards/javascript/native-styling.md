@@ -1,5 +1,5 @@
 ---
-title: Native Stil - JavaScript-SDK
+title: 'Native Formatierung: JavaScript SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,23 +11,23 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552892"
 ---
-# <a name="native-styling---javascript"></a>Native erstellen – JavaScript
+# <a name="native-styling---javascript"></a>Native Formatierung: JavaScript
 
-Mithilfe von CSS für die eine differenzierte Formatierung der HTML-Karte.
+Verwenden Sie CSS für eine differenzierte Formatierung des Karten-HTML.
 
-Die folgenden CSS-Klassen werden verschiedene Elemente hinzugefügt werden.
+Die folgenden CSS-Klassen werden verschiedenen Elementen hinzugefügt.
 
 | CSS-Klasse | Verwendung |
 |---|---|
-| .ac-container | Container |
-| .ac-selectable  | Elemente mit `selectAction` |
-| .AC-image | image |
-| .ac-pushButton | Aktionen, die gerendert wird, wie Schaltflächen |
-| .ac-linkButton  | Aktionen, die gerendert wird, wie links |
-| .AC-Eingabe | Benutzereingabe-Steuerelemente|
-| .AC-textInput| Texteingabe |
-| .AC mehrzeiligen | Mehrzeilige Texteingabe |
-| .ac-numberInput | eingegebene Wert|
-| .ac-dateInput | die Datumseingabe|
-| .ac-timeInput | Time-Eingabe |
-| .ac-multichoiceInput | Auswahlfelder Eingabe|
+| . AC-Container | Schütt |
+| . AC-auswählbar  | Elemente mit`selectAction` |
+| . AC-Image | image |
+| . AC-PUSHBUTTON | Aktionen gerendert wie Schaltflächen |
+| . AC-LinkButton  | Aktionen gerendert wie Links |
+| . AC-Eingabe | Eingabe Steuerelemente|
+| . AC-TextInput| Texteingabe |
+| . AC-Multiline | mehrzeilige Texteingabe |
+| . AC-anzahleingabe | Zahlen Eingabe|
+| . AC-dateinput | Datums Eingabe|
+| . AC-timeinput | Uhrzeit Eingabe |
+| .ac-multichoiceInput | Eingabe für mehr Wahl|

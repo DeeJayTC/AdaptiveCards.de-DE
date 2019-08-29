@@ -1,5 +1,5 @@
 ---
-title: Rendern einer Karte – .NET Image-Rendering-SDK
+title: 'Rendern einer Karte: .net-Image Rendering SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552492"
 ---
-# <a name="render-a-card---net-image"></a>Rendern einer Karte - Images für .NET
+# <a name="render-a-card---net-image"></a>Rendering einer Karte: .net-Image
 
-Hier ist wie eine Karte mit dem .NET-SDK-Bild gerendert.
+Im folgenden wird beschrieben, wie Sie eine Karte mit dem .net-Image-SDK Rendering.
 
 ```csharp
 try

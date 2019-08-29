@@ -1,5 +1,5 @@
 ---
-title: Native Stil - UWP-SDK
+title: 'Native Formatierung: UWP SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/15/2018
@@ -11,33 +11,33 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552522"
 ---
-# <a name="native-styling---uwp"></a>Native formatieren – UWP
+# <a name="native-styling---uwp"></a>Native Formatierung-UWP
 
-Während der Host-Konfiguration die meisten haben, erhalten Sie die Art und Weise gibt es auf jeder Plattform, ist es wahrscheinlich, dass Sie einige native Formatierungen auf jeder Plattform zu tun hat. 
+Obwohl die Host Konfiguration den größten Teil der einzelnen Plattformen bietet, ist es wahrscheinlich, dass Sie auf jeder Plattform eine native Formatierung ausführen müssen. 
 
-UWP vereinfacht, sodass Sie einem ResourceDictionary für detaillierte Formatierung, Verhalten, Animationen usw. zu übergeben.
+UWP vereinfacht dies, indem es Ihnen ermöglicht wird, ein ResourceDictionary für differenzierte Formatierung, Verhalten, Animationen usw. zu übergeben.
 
-| Element | Namen |
+| Element | Stilnamen |
 |---|---|
 | AdaptiveCard | Adaptive.Card| 
 | Action.OpenUrl  | Adaptive.Action.OpenUrl  |
-| Action.ShowCard | Adaptive.Action.ShowCard |
-| Action.Submit  | Adaptive.Action.Submit  |
-| Column | Adaptive.Column, Adaptive.Action.Tap |
+| Action. showcard | Adaptive.Action.ShowCard |
+| Aktion. übermitteln  | Adaptive.Action.Submit  |
+| Spalte | Adaptive. Column, Adaptive. Action. Tap |
 | ColumnSet | Adaptive.ColumnSet, Adaptive.VerticalSeparator |
-| Container | Adaptive.Container|
+| Container | Adaptive. Container|
 | Input.ChoiceSet | Adaptive.Input.ChoiceSet,  Adaptive.Input.ChoiceSet.ComboBox, Adaptive.Input.ChoiceSet.CheckBox,  Adaptive.Input.ChoiceSet.Radio,  Adaptive.Input.ChoiceSet.ComboBoxItem |
-| Input.Date | Adaptive.Input.Text.Date
-| Input.Number | Adaptive.Input.Text.Number |
-| Input.Text | Adaptive.Input.Text |
-| Input.Time | Adaptive.Input.Text.Time |
-| Input.Toggle| Adaptive.Input.Toggle|
-| Bild  | Adaptive.Image |
+| Input. Date | Adaptive.Input.Text.Date
+| Eingabe. Zahl | Adaptive.Input.Text.Number |
+| Input.Text | Adaptive. Input. Text |
+| Eingabe. Zeit | Adaptive.Input.Text.Time |
+| Eingabe. Umschalten| Adaptive.Input.Toggle|
+| Bild  | Adaptive. Image |
 | ImageSet  | Adaptive.ImageSet |
 | FactSet | Adaptive.FactSet, Adaptive.Fact.Title, Adaptive.Fact.Value |
 | TextBlock  | Adaptive.TextBlock |
 
-Dieses Beispiel XAML Ressourcenverzeichnis, das den Hintergrund des TextBlocks mit allen auf Hellblau festgelegt. Es ist sinnvoll, dass als dieser fortgeschrittene 😁
+Dieses Beispiel-XAML-Ressourcen Wörterbuch, das den Hintergrund aller Textblöcke auf Aqua festlegt. Wahrscheinlich möchten Sie etwas höher als dieses😁
 
 ```xml
 <ResourceDictionary

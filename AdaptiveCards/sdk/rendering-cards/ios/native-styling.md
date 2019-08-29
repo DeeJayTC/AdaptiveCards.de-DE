@@ -1,5 +1,5 @@
 ---
-title: Native Stil - SDK für iOS
+title: 'Native Formatierung: IOS SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,6 +11,6 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553302"
 ---
-# <a name="native-styling---ios"></a>Native formatieren – iOS
+# <a name="native-styling---ios"></a>Native Formatierung (IOS)
 
 Nicht unterstützt.

@@ -1,5 +1,5 @@
 ---
-title: Erweiterbarkeit – SDK für iOS
+title: 'Erweiterbarkeit: IOS SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
@@ -11,12 +11,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553562"
 ---
-# <a name="extensibility---ios"></a>Erweiterbarkeit – iOS
+# <a name="extensibility---ios"></a>Erweiterbarkeit-IOS
 
-## <a name="changing-per-element-rendering"></a>Pro Element-Textrendering ändern
+## <a name="changing-per-element-rendering"></a>Ändern des Renderings pro Element
 
-Entwickler können das Aussehen der Renderred AdaptiveCards Elemente wie z. B. TextBlock anpassen.
-Folgende Beispiel zeigt, wie eine Hintergrundfarbe des NumberInput ändern kann.
+Entwickler können das Aussehen von renderred adaptivecards-Elementen, z. b. TextBlock, anpassen.
+Im folgenden Beispiel wird gezeigt, wie die Hintergrundfarbe von "numinput" geändert werden kann.
 
 ```objective-c
 ACRRegistration *registration = [ACRRegistration getInstance];
@@ -53,8 +53,8 @@ ACRRegistration *registration = [ACRRegistration getInstance];
 
  ## <a name="additional-property"></a>Zusätzliche Eigenschaft
 
- Entwickler können auch in zusätzlichen Eigenschaften als Teil des JSON-Nutzlast senden.
-Beispielsweise kann zusätzlich zu "Abstand" und "Id" der JSON-Nutzlast für BaseCardElement, eine Radius für Ecken des TextBlock dessen JSON-Nutzlast hinzufügen.
+ Entwickler können auch zusätzliche Eigenschaften als Teil der JSON-Nutzlast senden.
+Beispielsweise kann neben "Abstand" und "ID" der JSON-Nutzlast für basecardelta "Radius" für Ecken von TextBlock der JSON-Nutzlast hinzugefügt werden.
 
  ```objective-c
  "type":"TextBlock",
@@ -70,10 +70,10 @@ Beispielsweise kann zusätzlich zu "Abstand" und "Id" der JSON-Nutzlast für Bas
               radiusForMyTextBlock = dictionary[@"radius"];
           ...
 ```
- ## <a name="custom-parsing"></a>Benutzerdefinierte Analyse
+ ## <a name="custom-parsing"></a>Benutzerdefinierte Verarbeitung
 
-Entwickler können auch haben benutzerdefinierte Analyse und neues UI-Element Adpative-Karte wie z. B. Statusanzeige hinzugefügt. Finden Sie CustomProgressBarRenderer.mm Details.
-Benutzerdefinierter Parser muss ACOIBaseCardElementParser-Protokoll implementieren. DeserializeToCustomElement-Methode analysiert, die JSON-Nutzlast, die als NSData erhalten soll, und geben einen Zeiger auf UIView-Objekt, das gerendert AdaptiveCard-Objekt hinzugefügt wird.
+Entwickler können auch eine benutzerdefinierte Verarbeitung haben und ein neues Benutzeroberflächen Element zur Adpative Karte hinzugefügt haben, z. b. die Statusanzeige. Weitere Informationen finden Sie in der CustomProgressBarRenderer.mm.
+Der benutzerdefinierte Parser muss das acoibasecardelta-Parser-Protokoll implementieren. die deserializetocustomelement-Methode muss die angegebene JSON-Nutzlast, die als NSData angegeben ist, analysieren und einen Zeiger auf das UIView-Objekt zurückgeben, das dem gerenderten adaptivecard-Objekt hinzugefügt
 
 ```objective-c
       CustomProgressBarRenderer *progressBarRenderer = [[CustomProgressBarRenderer alloc] init];

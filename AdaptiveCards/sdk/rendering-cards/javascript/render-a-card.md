@@ -1,5 +1,5 @@
 ---
-title: Rendern einer Karte - JavaScript-SDK
+title: Rendering a Card-JavaScript SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553122"
 ---
-# <a name="render-a-card---javascript"></a>Rendern einer Karte – JavaScript
+# <a name="render-a-card---javascript"></a>Rendering einer Karte: JavaScript
 
-Hier ist eine Karte mit dem JavaScript SDK darstellen.
+Im folgenden wird beschrieben, wie Sie eine Karte mithilfe des JavaScript SDK Rendering.
 
 ## <a name="usage"></a>Verwendung
 
-### <a name="import-the-module"></a>Importieren Sie das Modul
+### <a name="import-the-module"></a>Importieren des Moduls
 
 ```js
 // import the module

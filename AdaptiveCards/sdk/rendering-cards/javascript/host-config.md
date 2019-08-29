@@ -1,5 +1,5 @@
 ---
-title: Hosten der JavaScript-SDK-Konfiguration –
+title: Host Konfiguration-JavaScript SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553602"
 ---
-# <a name="host-config---javascript"></a>Host-Konfiguration – JavaScript
+# <a name="host-config---javascript"></a>Host Konfiguration-JavaScript
 
 ```js
 // Create an AdaptiveCard instance
@@ -30,16 +30,16 @@ var renderedCard = adaptiveCard.render();
 
 ## <a name="customization"></a>Anpassung
 
-Es gibt 3 Möglichkeiten, um das Rendering adaptive Karte anpassen: 
-1. Host-Konfiguration
-2. CSS-Stile
-3. Benutzerdefiniertes Element-Textrendering
+Es gibt drei Möglichkeiten, das Rendering von adaptiven Karten anzupassen: 
+1. Hostkonfiguration
+2. CSS-Formatvorlagen
+3. Benutzerdefiniertes Element Rendering
 
 ### <a name="hostconfig"></a>HostConfig 
 
-Ein [Hosts Config](../../../rendering-cards/host-config.md) ist eine Konfiguration für shared-Objekt, das Verstehen von allen Renderern. Dadurch können Sie allgemeine Formatvorlagen (z. B. Schriftfamilie, Schriftgrößen, Abstände Standard) und Verhaltensweisen (z. B. maximale Anzahl von Aktionen), die automatisch mit jeder Plattform Renderer interpretiert werden, zu definieren. 
+Eine [Hostkonfiguration](../../../rendering-cards/host-config.md) ist ein gemeinsam genutztes Konfigurationsobjekt, das von allen Renderern verstanden wird. Dadurch kannst du allgemeine Formatvorlagen (z. B. Schriftfamilie, Schriftgrad, Standardabstand) und Verhaltensweisen (z. B. die maximale Anzahl von Aktionen) definieren, die von jedem Plattformrenderer automatisch interpretiert werden. 
 
-Das Ziel ist, dass von jeder Plattform Renderer generierten systemeigene Benutzeroberfläche sehr ähnlich, mit minimalem Aufwand ihrerseits aussieht.
+Das Ziel besteht darin, dass die von jedem Plattformrenderer generierte native Benutzeroberfläche ähnlich aussieht und dein Aufwand hierfür nur gering ist.
 
 ```javascript
 var renderOptions = {
