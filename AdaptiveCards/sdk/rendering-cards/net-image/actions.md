@@ -1,5 +1,5 @@
 ---
-title: Aktionen – .NET Image-Rendering-SDK
+title: 'Aktionen: .net-Image Rendering SDK'
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,6 +11,6 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552402"
 ---
-# <a name="actions---net-image"></a><span data-ttu-id="fb9ab-102">Aktionen – Images für .NET</span><span class="sxs-lookup"><span data-stu-id="fb9ab-102">Actions - .NET Image</span></span>
+# <a name="actions---net-image"></a><span data-ttu-id="fdbd3-102">Aktionen: .net-Image</span><span class="sxs-lookup"><span data-stu-id="fdbd3-102">Actions - .NET Image</span></span>
 
-<span data-ttu-id="fb9ab-103">Aktionen werden nicht unterstützt, in Betracht ziehen, dass dies zu einem Bild rendert.</span><span class="sxs-lookup"><span data-stu-id="fb9ab-103">Actions are unsupported, considering this renders to an image.</span></span>
+<span data-ttu-id="fdbd3-103">Aktionen werden nicht unterstützt. Dies wird in Erwägung gezogen.</span><span class="sxs-lookup"><span data-stu-id="fdbd3-103">Actions are unsupported, considering this renders to an image.</span></span>

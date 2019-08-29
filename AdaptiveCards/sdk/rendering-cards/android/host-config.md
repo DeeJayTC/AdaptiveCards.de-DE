@@ -1,5 +1,5 @@
 ---
-title: Hosten von Android SDK-Konfiguration –
+title: Host Konfiguration-Android SDK
 author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553342"
 ---
-# <a name="host-config---android"></a><span data-ttu-id="2ccbb-102">Host-Konfiguration – Android</span><span class="sxs-lookup"><span data-stu-id="2ccbb-102">Host config - Android</span></span>
+# <a name="host-config---android"></a><span data-ttu-id="b7f12-102">Host Konfiguration-Android</span><span class="sxs-lookup"><span data-stu-id="b7f12-102">Host config - Android</span></span>
 
-<span data-ttu-id="2ccbb-103">Geben Sie zum Anpassen des Renderers eine Instanz des Objekts HostConfig an.</span><span class="sxs-lookup"><span data-stu-id="2ccbb-103">To customize the renderer you provide an instance of the HostConfig object.</span></span> <span data-ttu-id="2ccbb-104">(Finden Sie unter [Hosts Config-Schema](../../../rendering-cards/host-config.md) für die vollständige Beschreibung.)</span><span class="sxs-lookup"><span data-stu-id="2ccbb-104">(See [Host Config Schema](../../../rendering-cards/host-config.md) for the full description.)</span></span>
+<span data-ttu-id="b7f12-103">Zum Anpassen des Renderers geben Sie eine Instanz des hostconfig-Objekts an.</span><span class="sxs-lookup"><span data-stu-id="b7f12-103">To customize the renderer you provide an instance of the HostConfig object.</span></span> <span data-ttu-id="b7f12-104">(Die vollständige Beschreibung finden Sie unter [Host config Schema](../../../rendering-cards/host-config.md) .)</span><span class="sxs-lookup"><span data-stu-id="b7f12-104">(See [Host Config Schema](../../../rendering-cards/host-config.md) for the full description.)</span></span>
 
-<span data-ttu-id="2ccbb-105">Verwenden Sie zum Erstellen eines HostConfig-Objekts aus einer Zeichenfolge, die DeserializeFromString-Methode</span><span class="sxs-lookup"><span data-stu-id="2ccbb-105">To Create a HostConfig object from a string, use the DeserializeFromString method</span></span>
+<span data-ttu-id="b7f12-105">Verwenden Sie die deserializefromstring-Methode, um ein hostconfig-Objekt aus einer Zeichenfolge zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="b7f12-105">To Create a HostConfig object from a string, use the DeserializeFromString method</span></span>
 
 ```java
 HostConfig hostConfig = HostConfig.DeserializeFromString(hostConfigText);
