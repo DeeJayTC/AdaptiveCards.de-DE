@@ -1,50 +1,50 @@
 ---
-title: Mit Adaptive Cards-Roadmap
+title: Roadmap für adaptive Karten
 author: matthidinger
 ms.author: mahiding
 ms.date: 05/16/2018
 ms.topic: article
 ms.openlocfilehash: f879c164b3471347ba8fa058827b3d79b09be4cd
 ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67138003"
 ---
-# <a name="future-work"></a>Zukünftige Arbeit
+# <a name="future-work"></a>Die Zukunft
 
-Während wir hervorragende Bearbeitung mit adaptive Cards definieren vorgenommen haben, ist immer noch viel zu tun. Unser Anliegen ist es, über aktive entwicklercommunitys wie Botness, und hervorragende Partner Wie Slack und Kik, wir eine hervorragende Ökosystem von Cross-Platform-Karten erstellen können.
+Wir haben zwar bereits großartige Fortschritte beim Definieren von adaptiven Karten erzielt, aber es ist immer noch sehr viel zu tun. Wir hoffen, dass wir durch die Unterstützung aktiver Entwicklercommunitys wie Botness und toller Partner wie Slack und Kik ein herausragendes Ökosystem aus plattformübergreifenden Karten aufbauen können.
 
 ## <a name="roadmap"></a>Roadmap
 
-Sehen Sie unsere [aktuellen (nicht endgültige) Roadmap für die hier](https://portal.productboard.com/adaptivecards/1-adaptive-cards-portal/tabs/1-backlog). Beachten Sie, dass alles hier unterliegt ist keine Garantie der Lieferung.
+[Hier](https://portal.productboard.com/adaptivecards/1-adaptive-cards-portal/tabs/1-backlog) findest du unsere aktuelle (nicht endgültige) Roadmap. Beachte bitte, dass sich alle Elemente dieser Roadmap ändern können und dass für kein Element garantiert werden kann, dass es tatsächlich ausgeliefert wird.
 
-## <a name="future-ideas"></a>Zukünftige Ideen
+## <a name="future-ideas"></a>Ideen für die Zukunft
 
-Im folgenden werden einige zukünftigen Ideen, die wir erhalten haben, die einfach in der Phase Brainstorming sind. Wenn Sie eines dieser interessiert sind, informieren Sie uns in einem Kommentar.
+Im Folgenden findest du einige unserer Ideen für die Zukunft – alles noch in der Brainstormingphase. Wenn dich eine dieser Ideen interessiert, freuen wir uns über einen Kommentar.
 
-### <a name="great-looking-cards-from-data"></a>Hervorragende aussehende Karten aus Daten
+### <a name="great-looking-cards-from-data"></a>Optimal entworfene Karten aus Daten
 
-Wir wissen viele Karte-Autoren, die bereits über gut definierte Daten hinter ihren Karten verfügen. Ist unsere Absicht, die eine Vorlagenmodell zu durchsuchen, die ermöglichen Karten generiert werden (serverseitige oder clientseitige) anhand der Daten und ein Repository mit klar definierten und anpassbare Vorlagen.
+Wir wissen, dass viele Kartenersteller bereits über klar definierte Daten hinter ihren Karten verfügen. Wir möchten ein Vorlagenmodell erkunden, das es ermöglicht, Karten (server- oder clientseitig) basierend auf solchen Daten und einem Repository mit klar definierten und anpassbaren Vorlagen zu generieren.
 
-### <a name="make-cards-responsive"></a>Stellen Sie Karten reagiert
+### <a name="make-cards-responsive"></a>Reaktionsfähiges Layout für Karten
 
-Kartenlayouts sollte auf den verfügbaren Platz reagieren. Mit Adaptive Cards sind anwendbar, die auf verschiedenen Geräten, Ux-Stile und und Benutzeroberflächen-Frameworks, aber sie sind reaktiv noch nicht. Für Elemente die Producer Karte, um die erforderlichen Hinweise an, der Rendering-Bibliotheken bieten, sodass sie auf intelligente Weise das Layout auf eine Weise ändern können, die und die Absicht der Karte verwaltet zu ermöglichen, müssen zusätzliche Eigenschaften definiert werden.
+Das Kartenlayout sollte sich dem verfügbaren Platz anpassen können. Adaptive Karten können sich auf viele verschiedene Geräte, Benutzeroberflächen und UI-Frameworks anpassen, sind aber noch nicht reaktionsfähig. Es müssen zusätzliche Eigenschaften für Elemente definiert werden, die es Kartenerstellern ermöglichen, die notwendigen Hinweise an die Renderingbibliotheken zu übermitteln, sodass diese das Layout auf intelligente Weise anpassen können und die Absicht der Karte erhalten bleibt.
 
-### <a name="responsive-exploration"></a>Reaktionsfähige durchsuchen
+### <a name="responsive-exploration"></a>Reaktionsschnelle Erkundung
 
-* Hinzufügen einer **Wichtigkeit** Eigenschaft, die Wichtigkeit des Inhalts kommentiert. Weniger wichtig, dass der Inhalt gelöscht werden kann, um den verfügbaren Platz angepasst
-* Hinzufügen **Einschränkungen** und **Richtlinie** Eigenschaften, die beschreibt, wie reagieren, wenn Einschränkungen nicht erfüllt werden können. 
-  * Ausblenden von Inhalt, oder Inhalte auf kleinere Größe zu reduzieren.
-  * Fügen Sie einen Schwellenwert, wenn überschritten, ändert sich `columnSet` , Karussell von Spalten.
+* Eine **importance**-Eigenschaft liefert Hinweise zur Wichtigkeit des Inhalts. Weniger wichtige Inhalte können verworfen werden, um den verfügbaren Platz für wichtige Inhalte zu nutzen.
+* **constraints**- und **policy**-Eigenschaften beschreiben, was passieren soll, wenn Einschränkungen nicht erfüllt werden können. 
+  * Inhalt kann ausgeblendet oder auf eine kleinere Größe reduziert werden.
+  * Bei Überschreitung eines bestimmten Schwellenwerts kann `columnSet` in ein Spaltenkarussell geändert werden.
 
 ### <a name="new-element-types"></a>Neue Elementtypen
 
-* Maps? -eine Zuordnung in eine Karte mit Interaktivität oder Fallback auf die Bitmap einbetten
-* *Welche Elemente Sie möchten oder müssen*?
+* Landkarten/Stadtpläne – Einbetten einer Landkarte oder eines Stadtplans mit interaktiven Funktionen oder Fallback auf eine Bitmap
+* *Welche Elemente benötigst du oder hättest du gerne?*
 
-### <a name="new-rendering-libraries"></a>Neue Rendering-Bibliotheken
+### <a name="new-rendering-libraries"></a>Neue Renderingbibliotheken
 
-* Reagieren?
+* React?
 * Xamarin?
-* *Welche Frameworks sollen?*
+* *Mit welchen Frameworks möchtest du arbeiten?*

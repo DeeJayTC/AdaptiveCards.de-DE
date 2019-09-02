@@ -6,164 +6,164 @@ ms.date: 09/15/2017
 ms.topic: article
 ms.openlocfilehash: b39493f82f3378e5a554abc6df890d6821869671
 ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67138023"
 ---
-# <a name="adaptive-card-renderer-specification"></a>Adaptive Card Renderer-Spezifikation
+# <a name="adaptive-card-renderer-specification"></a>Spezifikation eines Renderers für adaptive Karten
 
-Die folgende Spezifikation wird beschrieben, wie eine Adaptive Card-Renderer auf alle UI-Plattform implementieren.
+Die folgende Spezifikation beschreibt die Implementierung eines Renderers für adaptive Karten auf einer beliebigen Benutzeroberflächenplattform.
 
 > [!IMPORTANT]
 > 
-> Dieser Inhalt ist noch nicht abgeschlossen. Später wieder.
+> Dieser Inhalt ist noch nicht final. Schau später wieder rein.
 
-## <a name="sdk-versioning"></a>SDK-Versionskontrolle
+## <a name="sdk-versioning"></a>SDK-Versionsverwaltung
 
-1. Die SDK-Version für Haupt- und Nebenversionsnummern **sollte** entsprechen den `schema` Version. 
-1. Patch/Build **sollte** für Renderer müssen Updates, die schemaänderungen nicht verwendet werden.
+1. Haupt- und Nebenversion des SDKs **SOLLTEN** der `schema`-Version entsprechen. 
+1. Patch und Build **SOLLTEN** für Rendererupdates angegeben werden, die keine Schemaänderungen umfassen.
 
-## <a name="parsing-json"></a>JSON-Analyse
+## <a name="parsing-json"></a>Analysieren von JSON
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
-1. Ein Parser **müssen** überprüfen Sie, dass es sich um gültigen JSON-Inhalt ist
-1. Ein Parser **müssen** überprüfen mithilfe des Schemas (erforderlichen Eigenschaften usw.)
-1. Die oben genannten Fehler **müssen** gemeldet werden, für die Host-app (Ausnahme oder Äquivalent)
+1. Ein Parser **MUSS** prüfen, ob es sich um gültigen JSON-Inhalt handelt.
+1. Ein Parser **MUSS** eine Überprüfung anhand des Schemas (erforderliche Eigenschaften usw.) ausführen.
+1. Die oben genannten Fehler **MÜSSEN** der Host-App gemeldet werden (als Ausnahme oder eine entsprechende Angabe).
 
 ### <a name="unknown-types"></a>Unbekannte Typen
-1. Wenn unbekannte "Typen" auftreten, werden sie **müssen gelöscht werden,** aus dem Ergebnis
-1. Alle Änderungen der Nutzlast (wie weiter oben) **sollte** als Warnungen an, die Host-app gemeldet werden
+1. Wenn unbekannte „Typen“ ermittelt werden, **MÜSSEN DIESE AUS DEM ERGEBNIS GELÖSCHT** werden.
+1. Alle Änderungen der Nutzlast (wie oben) **SOLLTEN** der Host-App als Warnungen gemeldet werden.
 
-### <a name="unknown-properties"></a>Eigenschaften von Unbekannter
-1. Ein Parser **müssen** enthalten **zusätzliche** Eigenschaften für Elemente
+### <a name="unknown-properties"></a>Unbekannte Eigenschaften
+1. Ein Parser **MUSS** **zusätzliche** Eigenschaften in Elementen einschließen.
 
 ### <a name="additional-considerations"></a>Weitere Aspekte
-1. Die `speak` -Eigenschaft kann die SSML-Code enthalten und **müssen** zurückgegeben werden, für die Host-app, die als angegeben
+1. Die Eigenschaft `speak` kann SSML-Markup enthalten und **MUSS** wie angegeben an die Host-App zurückgegeben werden.
 
-## <a name="parsing-host-config"></a>Analysieren der Host-Konfiguration
+## <a name="parsing-host-config"></a>Analyse der Hostkonfiguration
 1. TODO
 
-## <a name="versioning"></a>Versionskontrolle
+## <a name="versioning"></a>Versionsverwaltung
 
-1. Ein Renderer **müssen** implementieren Sie eine bestimmte Version des Schemas. 
-1. Die `AdaptiveCard` Konstruktor **müssen** geben die `version` Eigenschaft ein Standardwert auf der aktuellen Schemaversion basierend 
-1. Wenn ein Renderer auftritt ein `version` -Eigenschaft in der `AdaptiveCard` ist höher als die unterstützte Version, es **müssen** Zurückgeben der `fallbackText` stattdessen.
+1. Ein Renderer **MUSS** eine bestimmte Version des Schemas implementieren. 
+1. Der `AdaptiveCard`-Konstruktor **MUSS** der Eigenschaft `version` einen Standardwert basierend auf der aktuellen Schemaversion zuweisen. 
+1. Wenn ein Renderer eine `version`-Eigenschaft in einer `AdaptiveCard` findet, die höher ist als die unterstützte Version, **MUSS** er stattdessen den `fallbackText` zurückgeben.
 
 ## <a name="rendering"></a>Rendering
 
-Ein `AdaptiveCard` besteht aus einem `body` und `actions`. Die `body` ist eine Sammlung von `CardElement`s, die ein Renderer aufgelistet und in der Reihenfolge gerendert. 
+Eine `AdaptiveCard` besteht aus einem `body`- und einem `actions`-Element. Der `body` ist eine Sammlung von `CardElement`-Elementen, die von einem Renderer enumeriert und in der entsprechenden Reihenfolge gerendert werden. 
 
-1. Jedes Element **müssen** Stretch der Breite seines übergeordneten Elements (denken `display: block` im HTML-Format).
-1. Ein Renderer **müssen** unbekannte Elementtypen ignorieren und fortfahren, Rendern den Rest der Nutzlast.
+1. Jedes Element **MUSS** auf die Breite des übergeordneten Elements gestreckt werden (ähnlich wie bei `display: block` in HTML).
+1. Ein Renderer **MUSS** unbekannte Elementtypen ignorieren und mit dem Rest der Nutzlast fortfahren.
 
-### <a name="spacing-and-separators"></a>Abstand und Trennzeichen
+### <a name="spacing-and-separators"></a>Abstände und Trennzeichen
 
-1. Die `spacing` Eigenschaft für jedes Element wirkt sich auf den Abstand zwischen den **aktuelle** -Element und der **vor** es.
-1. Der Abstand **muss nur** angewendet, wenn tatsächlich ein Element mit dem vorhergehenden. (Z. B. nicht auf das erste Element in einem Array anwenden)
-1. Ein Renderer **müssen** suchen Sie die Menge des Speicherplatzes für die Verwendung von der `hostConfig` Abstand für den Enum-Wert, der auf das aktuelle Element angewendet.
-1. Wenn das Element verfügt ein `separator` Wert `true`, klicken Sie dann eine sichtbare Zeile **müssen** zwischen dem aktuellen Element und vor es gezeichnet werden.
-1. Trennlinie **müssen** werden gezeichnet wird, mit der `container.style.default.foregroundColor`.
-1. Ein Trennzeichen **muss nur** gezeichnet werden, wenn das Element **IS NOT** die zuerst im Array.
+1. Die `spacing`-Eigenschaft jedes Elements wirkt sich darauf aus, wie viel Abstand zwischen dem **AKTUELLEN** Element und dem Element **DAVOR** vorhanden ist.
+1. Ein Abstand **DARF NUR DANN** angewendet werden, wenn vor dem Element tatsächlich ein anderes Element vorhanden ist. (Diese Eigenschaft gilt also nicht für das erste Element in einem Array).
+1. Ein Renderer **MUSS** den zu verwendenden Abstand aus `hostConfig` für den Enumerationswert ablesen, der auf das aktuelle Element angewendet wird.
+1. Wenn das Element den `separator`-Wert `true` aufweist, **MUSS** eine sichtbare Linie zwischen dem aktuellen Element und dem Element davor gezeichnet werden.
+1. Die Trennlinie **MUSS** mithilfe der Eigenschaft `container.style.default.foregroundColor` gezeichnet werden.
+1. Eine Trennlinie **DARF NUR** gezeichnet werden, wenn das Element **NICHT** das erste Element im Array ist.
 
 ### <a name="columns"></a>Spalten
 
-1. `Column` `width` **MUSS** von "Auto", "stretch" oder ein Verhältnis von gewichteten interpretiert werden.
+1. `Column` `width` **MUSS** als „auto“, „stretch“ oder als gewichtetes Verhältnis interpretiert werden.
 
 ### <a name="textblock"></a>TextBlock
 
-1. Ein TextBlock-Element **müssen** dauern, bis eine einzelne Zeile, wenn die `wrap` Eigenschaft `true`. 
-1. Der TextBlock **sollte** überschüssige Text mit einem Auslassungszeichen (...) kürzen
+1. Ein TextBlock **MUSS** eine einzelne Zeile aufnehmen, sofern die `wrap`-Eigenschaft nicht `true` lautet. 
+1. Der Textblock **SOLLTE** überschüssigen Text abschneiden und Auslassungspunkte (...) anzeigen.
 
 #### <a name="markdown"></a>Markdown
 
-1. Mit Adaptive Cards können für eine Teilmenge von Markdown und **sollte** in unterstützt `TextBlock`. 
-1. Siehe vollständige [Markdown-Anforderungen](../authoring-cards/text-features.md)
+1. Adaptive Karten lassen eine Teilmenge von Markdown zu und **SOLLTEN** in `TextBlock` unterstützt werden. 
+1. Weitere Informationen findest du unter [Markdownanforderungen](../authoring-cards/text-features.md).
 
-#### <a name="formatting-functions"></a>Formatierungsoptionen
+#### <a name="formatting-functions"></a>Formatierungsfunktionen
 
-1. `TextBlock` ermöglicht das [DATUMS-und UHRZEITFORMATIERUNG Funktionen](../authoring-cards/text-features.md) , **müssen** auf jeder Renderer unterstützt werden.
-1. **ALLE Fehler müssen** die unformatierte Zeichenfolge in der Karte angezeigt. Keine Meldung versucht. (Das Ziel, die mit den Entwickler es sofort aufmerksam zu machen ist ein Problem aufgetreten.)
+1. `TextBlock` ermöglicht [Formatierungsfunktionen für DATUM und UHRZEIT](../authoring-cards/text-features.md), die in jedem Renderer unterstützt werden **MÜSSEN**.
+1. **BEI ALLEN FEHLERN MUSS** die unformatierte Zeichenfolge auf der Karte angezeigt werden. Es wird keine benutzerfreundliche Meldung angezeigt. (Ziel hierbei ist es, den Entwickler sofort darauf aufmerksam zu machen, dass ein Problem vorliegt).
 
-1. TODO: Einschließen von regex
+1. TODO: Einschließen von regulären Ausdrücken
 
 ### <a name="images"></a>Abbilder
 
-1. Ein Renderer **sollte** können Sie apps hosten, wissen Sie, wenn alle HTTP-Images heruntergeladen wurden, und die Karte "vollständig gerendert wird"
-1. Ein Renderer **müssen** überprüfen Sie die Hosts Config `maxImageSize` Param beim Herunterladen von HTTP-Images
-1. Ein Renderer **müssen** unterstützen `.png` und `.jpeg`
-1. Ein Renderer **sollte** unterstützen `.gif` Images
+1. Ein Renderer **SOLLTE** Host-Apps informieren, wenn alle HTTP-Bilder heruntergeladen wurden und die Karte „vollständig gerendert“ ist.
+1. Ein Renderer **MUSS** beim Herunterladen von HTTP-Bildern den Hostkonfigurationsparameter `maxImageSize` überprüfen.
+1. Ein Renderer **MUSS** `.png` und `.jpeg` unterstützen.
+1. Ein Renderer **SOLLTE** `.gif`-Bilder unterstützen.
 
 ### <a name="host-config"></a>Hostkonfiguration
 
-* TODO: Was sollten folgende Standardwerte verwendet werden? Sollten sie sie freigeben? Sollten wir eine gemeinsame hostConfig.json-Datei in den Binärdateien einbetten?
-* TODO: Ich denke, dass HostConfig sowie für die Analyse mit Versionsangaben versehen werden muss?
+* TODO: Wie sollten die Standardwerte lauten? Sollten diese überall freigegeben werden? Sollten wir eine gemeinsame hostConfig.json-Datei in den Binärdateien einbetten?
+* TODO: Ich denke, HostConfig sollte auch für die Analyse versioniert werden?
 
-[`HostConfig`](host-config.md) ist eine Konfiguration für shared-Objekt, das angibt, wie eine Adaptive Card Renderer UI generiert.  
+[`HostConfig`](host-config.md) ist ein gemeinsam genutztes Konfigurationsobjekt, das angibt, wie ein Renderer für adaptive Karten eine Benutzeroberfläche generiert.  
 
-Dadurch können die Eigenschaften, die plattformunabhängig von Renderern, die auf verschiedenen Plattformen und Geräten gemeinsam verwendet werden. Darüber hinaus können Tools erstellt werden, wodurch Sie sich ein Überblick über das Aussehen und Verhalten, die Karte müssten für eine bestimmte Umgebung.
+So können plattformunabhängige Eigenschaften für Renderer auf verschiedenen Plattformen und Geräten freigegeben werden. Zudem können Tools erstellt werden, die dir eine Vorstellung vom Aussehen und Verhalten einer Karte in einer bestimmten Umgebung vermitteln.
 
-1. Renderer **müssen** verfügbar zu machen eine **Hosts Config** Parameter zum Hosten von apps
-1. Alle Elemente **müssen** formatiert werden, entsprechend ihrer jeweiligen Einstellungen für die Host-Konfiguration
+1. Renderer **MÜSSEN** einen **HostConfig**-Parameter für Host-Apps verfügbar machen.
+1. Alle Elemente **MÜSSEN** entsprechend ihren jeweiligen HostConfig-Einstellungen formatiert werden.
 
-### <a name="native-platform-styling"></a>Systemeigene Plattform erstellen
+### <a name="native-platform-styling"></a>Native Plattformformatierung
 
-1. Der Typ jedes Elements **sollte** fügen Sie einen native Plattform-Stil mit dem generierten UI-Element. Z. B. in HTML wir eine CSS-Klasse hinzugefügt, um den Elementtypen, und in XAML, die wir weisen eines bestimmten Format.
+1. Jeder Elementtyp **SOLLTE** eine native Plattformformatierung mit dem generierten Benutzeroberflächenelement anfügen. In HTML haben wir beispielsweise eine CSS-Klasse zu den Elementtypen hinzugefügt, und in XAML weisen wir einen bestimmten Stil zu.
 
-## <a name="extensibility"></a>Erweiterungen 
+## <a name="extensibility"></a>Erweiterbarkeit 
 
-1. Ein Renderer **müssen** Host Apps Zugriff auf Standard-Element-Renderer zu überschreiben. Ersetzen Sie z. B. `TextBlock` rendering mit ihrer eigenen Logik.
-1. Ein Renderer **müssen** Host Apps Zugriff auf benutzerdefinierte Elementtypen zu registrieren. Z. B. Hinzufügen von Unterstützung für eine benutzerdefinierte `Rating` Element
-1. Ein Renderer **müssen** ermöglichen apps hosten, um Unterstützung für eine Default-Element zu entfernen. Entfernen Sie z. B. `Action.Submit` bei Bedarf unterstützt nicht.
+1. Ein Renderer **MUSS** es Host-Apps ermöglichen, standardmäßige Elementrenderer zu überschreiben. Beispiel: Ersetzen des Renderns von `TextBlock` durch eigene Logik.
+1. Ein Renderer **MUSS** es Host-Apps ermöglichen, benutzerdefinierte Elementtypen zu registrieren. Beispiel: Hinzufügen von Unterstützung für ein benutzerdefiniertes `Rating`-Element.
+1. Ein Renderer **MUSS** es Host-Apps ermöglichen, Unterstützung für ein Standardelement zu entfernen. Beispiel: Entfernen von `Action.Submit`, wenn die Unterstützung nicht gewünscht ist.
 
 ## <a name="actions"></a>Aktionen
 
-1. Wenn HostConfig `supportsInteractivity` ist `false`, einen Renderer **darf keinen** Maßnahmen, die zu rendern.
-1. Die `actions` Eigenschaft **müssen** als Schaltflächen in einer Art Aktionsleiste in der Regel am unteren Rand der Karte gerendert werden. 
-1. Wenn eine Schaltfläche getippt wird es **müssen** ermöglichen die Host-app zum Behandeln des Ereignisses. 
-1. Das Ereignis **müssen** Bahn entlang allen zugehörigen Eigenschaften mit der Aktion
-1. Das Ereignis **müssen** übergibt die `AdaptiveCard` die ausgeführt wurde
+1. Ein Renderer **DARF KEINE** Aktionen rendern, wenn das `supportsInteractivity`-Element in der HostConfig `false` ist.
+1. Die `actions`-Eigenschaft **MUSS** als Schaltflächen auf einer Form von Aktionsleiste gerendert werden, üblicherweise am unteren Rand der Karte. 
+1. Wenn eine Schaltfläche aktiviert wird, **MUSS** die Host-App das Ereignis verarbeiten können. 
+1. Das Ereignis **MUSS** alle zugeordneten Eigenschaften mit der Aktion übergeben.
+1. Das Ereignis **MUSS** die ausgeführte `AdaptiveCard` übergeben.
 
 Aktion | Verhalten
 --- | ---
-**Action.OpenUrl** | Öffnen Sie eine externe URL für die Anzeige
-**Action.ShowCard** | Fordert eine untergeordnete Karte, die dem Benutzer angezeigt werden.
-**Action.Submit** | Stellen Sie für alle Elemente mit der Eingabe in ein Objekt gesammelt werden, um die über eine Methode, die von der hostanwendung definiert dann an Sie gesendet wird.
+**Action.OpenUrl** | Öffnet eine externe URL zur Anzeige.
+**Action.ShowCard** | Fordert eine untergeordnete Karte an, die dem Benutzer angezeigt werden soll.
+**Action.Submit** | Fordert an, dass alle Eingabeelemente in einem Objekt zusammengefasst werden, das dir anschließend über eine von der Hostanwendung definierte Methode gesendet wird.
 
 ### <a name="actionopenurl"></a>Action.OpenUrl
-1. `Action.OpenUrl` **SOLLTE** öffnen Sie eine URL mit der nativen Plattform-Mechanismus
-1. Wenn dies nicht möglich ist es **müssen** Auslösen eines Ereignisses für die Host-app, behandeln Sie die URL öffnen. Dieses Ereignis **müssen** Host-app das Standardverhalten außer Kraft setzen können. Beispielsweise können sie die URL in ihre eigene app zu öffnen.
+1. `Action.OpenUrl` **SOLLTE** mithilfe des nativen Plattformmechanismus eine URL öffnen.
+1. Wenn dies nicht möglich ist, **MUSS** die Aktion ein Ereignis auslösen, damit die Host-App das Öffnen der URL verarbeitet. Dieses Ereignis **MUSS** es der Host-App ermöglichen, das Standardverhalten zu überschreiben, beispielsweise durch Öffnen der URL innerhalb der eigenen App.
 
 ### <a name="actionshowcard"></a>Action.ShowCard
 
-1. `Action.ShowCard` **MUSS** in irgendeiner Form, die entsprechend der HostConfig unterstützt werden. Es gibt zwei Modi: Inline, und den popupausrichtungspunkt. Inline-Karten **sollte** ein-oder ausblenden, Karte automatisch. Im Modus "Popup" ein Ereignis **sollte** ausgelöst werden, für die Host-app auf die Karte auf irgendeine Weise anzeigen.
+1. `Action.ShowCard` **MUSS** auf irgendeine Weise unterstützt werden, basierend auf der HostConfig-Einstellung. Es gibt zwei Modi: Inline und Popup. Inlinekarten **SOLLTEN** die Sichtbarkeit der Karte automatisch umschalten. Im Popupmodus **SOLLTE** ein Ereignis ausgelöst werden, damit die Host-App die Karte auf irgendeine Weise anzeigt.
 
 ### <a name="actionsubmit"></a>Action.Submit
 
-Die Aktion senden verhält sich wie ein HTML-Formular übermitteln, mit dem Unterschied, dass, in dem HTML in der Regel HTTP Post auf, mit Adaptive Cards löst sie bis zu verlassen jeder Host-app, um zu bestimmen, was "Absenden" bedeutet, dass sie. 
+Die Submit-Aktion verhält sich wie eine Übermittlungsaktion in einem HTML-Formular, mit einer Ausnahme: In HTML wird typischerweise eine HTTP-POST-Aktion ausgelöst, bei adaptiven Karten dagegen bleibt der Host-App die Entscheidung überlassen, wie „submit“ zu interpretieren ist. 
 
-1. Wenn dies **müssen** Auslösen eines Ereignisses, das der Benutzer tippt auf die Aktion aufgerufen wird.  
-1. Die `data` Eigenschaft **müssen** in die Rückruf-Nutzlast enthalten sein.
-1. Für `Action.Submit`, einen Renderer **müssen** sammeln Sie alle Eingaben auf der Karte und deren Werte abrufen. 
+1. Wenn ein Ereignis ausgelöst werden **MUSS**, tippt der Benutzer auf die aufgerufene Aktion.  
+1. Die `data`-Eigenschaft **MUSS** in der Rückrufnutzlast enthalten sein.
+1. Bei `Action.Submit` **MUSS** ein Renderer alle Eingaben auf der Karte erfassen und die zugehörigen Werte abrufen. 
 
 ### <a name="selectaction"></a>selectAction
 
-1. Wenn Hosts Config `supportedInteractivity` ist `false` ein `selectAction` **darf nicht** als Touch-Ziel gerendert.
-1. `Image`, `ColumnSet`, und `Column` bieten eine `selectAction` -Eigenschaft, die **sollte** ausgeführt werden, wenn der Benutzer, z. B. ruft durch Tippen auf das Element.
+1. Eine `selectAction` **DARF NICHT** als Berührungsziel gerendert werden, wenn das `supportedInteractivity`-Element der Hostkonfiguration `false` ist.
+1. `Image`, `ColumnSet` und `Column` bieten eine `selectAction`-Eigenschaft, die ausgeführt werden **SOLLTE**, wenn sie von einem Benutzer z. B. durch Tippen auf das Element aufgerufen wird.
 
 ## <a name="inputs"></a>Eingaben
 
-1. Wenn HostConfig `supportsInteractivity` ist `false` einen Renderer **darf keinen** Eingaben zu rendern.
-2. Eingaben **sollte** Rendern mit der höchsten Genauigkeit möglich. Z. B. eine `Input.Date` würde im Idealfall eine Datumsauswahl für einem Benutzer, aber wenn ist dies nicht möglich für Ihre UI-Stack, und klicken Sie dann auf den Renderer bieten **müssen** ein Fallback auf das ein normales Textfeld zu rendern.
-3. Ein Renderer **sollte** Anzeigen der `placeholderText` möglichst
-4. Ein Renderer **nicht** Validierungen der Eingabe zu implementieren. Benutzer mit Adaptive Cards müssen planen, um alle empfangenen Daten auf ihrer Seite überprüfen.
-5. Geben Sie die wertbindung **müssen** ordnungsgemäß mit Escapezeichen versehen werden
+1. Ein Renderer **DARF KEINE** Eingaben rendern, wenn das `supportsInteractivity`-Element der HostConfig `false` ist.
+2. Eingaben **SOLLTEN** mit der höchstmöglichen Genauigkeit gerendert werden. Ein `Input.Date`-Element beispielsweise sollte dem Benutzer idealerweise eine Datumsauswahl bieten. Wenn dies jedoch in deinem UI-Stapel nicht möglich ist, **MUSS** der Renderer ein Standardtextfeld rendern.
+3. Ein Renderer **SOLLTE** nach Möglichkeit `placeholderText` anzeigen.
+4. Ein Renderer **MUSS KEINE** Überprüfung der Eingabe implementieren. Benutzer von adaptiven Karten müssen die Überprüfung empfangener Daten auf ihrer Seite selbst planen.
+5. Die Bindung von Eingabewerten **MUSS** ordnungsgemäß mit Escapezeichen versehen werden.
 
-6. Das Objekt **müssen** an den Host-app wie folgt zurückgegeben:
+6. Das Objekt **MUSS** folgendermaßen an die Host-App zurückgegeben werden:
 
-   Wir machen Versprechen, die Überprüfung der Eingabe nicht in mit adaptive Cards, ist es also an die empfangende Partei, ordnungsgemäß Analysieren der Antwort. Z. B. eine Input.Number konnte "hello" zurück, und sie dafür vorbereitet werden müssen.
+   Wir können keinerlei Zusagen hinsichtlich der Eingabeüberprüfung in adaptiven Karten machen, daher obliegt es dem Empfänger, Antworten ordnungsgemäß zu analysieren. „Input.Number“ könnte beispielsweise „Hallo“ zurückgeben, und die Empfänger müssen darauf vorbereitet sein.
 
 
-## <a name="events"></a>Ereignisse
+## <a name="events"></a>Veranstaltungen
 
-1. Ein Renderer **sollte** ein Ereignis, wenn die Sichtbarkeit eines Elements geändert wurde, ermöglicht es der Host-app in die Position die Karte zu scrollen, ausgelöst.
+1. Ein Renderer **SOLLTE** ein Ereignis auslösen, wenn sich die Sichtbarkeit eines Elements geändert hat, sodass die Host-App die Karte an die richtige Position verschieben kann.

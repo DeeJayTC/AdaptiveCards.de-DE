@@ -1,99 +1,99 @@
 ---
-title: Motivation und Prinzipien
+title: Beweggründe und Prinzipien
 author: matthidinger
 ms.author: mahiding
 ms.date: 5/14/2018
 ms.topic: article
 ms.openlocfilehash: 78fe44463c4ddb832ba0cc72d456b6d21518bac4
 ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553152"
 ---
-# <a name="motivations-and-principles"></a>Motivation und Prinzipien
+# <a name="motivations-and-principles"></a>Beweggründe und Prinzipien
 
-Unten sind die Motivation und Prinzipien Govering die Weiterentwicklung von Adaptive Card Format.
+Im Folgenden findest du die Beweggründe und Prinzipien, die die Entwicklung der adaptiven Karten prägen.
 
-## <a name="motivations-behind-the-format"></a>Motivation hinter das format
+## <a name="motivations-behind-the-format"></a>Beweggründe für das Format
 
-Anfang 2016 haben mehrere Teams bei Microsoft (einschließlich Outlook, Windows und der Bot-Framework) feststellen, dass sie alle wollten etwas sehr ähnliche ("Karten") und wurden jeweils ihre eigenen Lösungen unabhängig voneinander entwerfen:
+Anfang 2016 wurde verschiedenen Teams bei Microsoft (u. a. den Teams für Outlook, Windows und das Bot Framework) bewusst, dass sie alle etwas sehr Ähnliches („Karten“) wünschten und dass jedes Team unabhängig von den anderen seine eigene Lösung entwarf:
 
-- Windows weist ein eigenen Live-Kacheln und Benachrichtigungen-format
--  Das Bot Framework wurde eine Reihe von vordefinierten Karte Vorlagen verwenden, die Entwickler beim Senden von Nachrichten von Bot auswählen können
-- Outlook wurde ein eigene MessageCard-Format für das Feature für Aktionen erfordernde Nachrichten verwenden.
+- Windows verfügte über ein eigenes Format mit Livekacheln und Benachrichtigungen.
+-  Das Bot Framework verwendete eine Reihe vordefinierter Kartenvorlagen, aus denen Entwickler beim Senden von Botnachrichten auswählen konnten.
+- In Outlook kam ein eigenes MessageCard-Format für das Feature „Aktionen erfordernde Nachrichten“ zum Einsatz.
 
-Zur gleichen Zeit wurden andere Plattformen wie z. B. Linie, FaceBook Messenger, Slack und mehr eigenen proprietären "Karte"-Format definieren. Einige Microsoft-Mitarbeiter sich gesammelt und Schritte zu einem Kartenformat aus einer einzigen, öffnen und einen Satz von SDKs zu definieren, die:
+Gleichzeitig wurde auch für Plattformen wie LINE, Facebook Messenger, Slack und viele weitere ein jeweils eigenes, proprietäres „Kartenformat“ definiert. Also haben sich ein paar Microsoft-Mitarbeiter zusammengesetzt und damit begonnen, ein einzelnes, offenes Kartenformat sowie eine Reihe von SDKs zu definieren. Folgende Anforderungen sollten erfüllt werden:
 
-- Den Austausch von Karten zwischen Hosts würde erleichtern.
-- Jedem Host, um die Steuerung des Designs von Karten, um sicherzustellen, dass visuelle Konsistenz beibehalten können
-- Würde eine hostanwendung zum Anzeigen von Karten mit minimalem Aufwand über bereit zu verwendenden SDKs erleichtern
-- Wert würde auch an Drittanbieter bereitstellen und schließlich erhalten übernommen weit von der Branche
+- Der Austausch von Karten zwischen Hosts sollte erleichtert werden.
+- Jeder Host sollte die Kontrolle über die Formatierung der Karten erhalten, um visuelle Konsistenz sicherzustellen.
+- Mit einsatzbereiten SDKs sollte es Hostanwendungen erleichtert werden, Karten mit minimalem Aufwand anzuzeigen.
+- So sollte auch ein Mehrwert für Drittanbieter entstehen, damit das Format letztendlich branchenweit übernommen würde.
 
-## <a name="principles-governing-adaptive-cards"></a>Grundregeln für mit Adaptive Cards
+## <a name="principles-governing-adaptive-cards"></a>Die Prinzipien hinter adaptiven Karten
 
-1.  **Adaptive Karte ist eine _einfache_ und _deklarative_ Kartenformat**
+1.  **Adaptive Karten sind ein _einfaches_ und _deklaratives_ Kartenformat.**
 
-    1.  Es ist nicht als HTML- oder XAML ersetzen/Alternative vorgesehen.
-    2.  Es gibt **keine "Code hinter"** mit Adaptive Cards
-        1. Autoren von Karte können nicht benutzerdefinierte/beliebigen Code einbetten, mit deren Nutzlasten, und ein Adaptive Card-Host muss daher nie zum Ausführen von Code von Dritten
-        2. Informationstechnologie und die Interaktivität werden ausschließlich über deklaratives Markup erreicht.
-    3.  Dadurch wird sichergestellt, dass der Aufwand erforderlich, erstellen Sie eine Adaptive Card-SDK für eine neue Plattform angemessene bleibt
+    1.  Sie sind nicht als Ersatz oder Alternative für HTML oder XAML gedacht.
+    2.  Bei adaptiven Karten gibt es **kein CodeBehind**.
+        1. Kartenersteller können keinen benutzerdefinierten oder beliebigen Code in ihre Nutzlasten einbetten, daher muss ein Host für adaptive Karten niemals Drittanbietercode ausführen.
+        2. Dynamik und Interaktivität werden ausschließlich über deklaratives Markup erzielt.
+    3.  So ist sichergestellt, dass der Aufwand für die Erstellung eines SDKs für adaptive Karten für eine neue Plattform in angemessenem Rahmen bleibt.
 
-2.  **Die Adaptive Card-Format kann nicht die Verwendung der eine bestimmte zugrunde liegende Technologie erzwingen.**
+2.  **Das Format der adaptiven Karten kann nicht die Verwendung einer bestimmten zugrunde liegenden Technologie vorschreiben.**
 
-    1.  Das Format für die Adaptive Card basiert nicht auf JavaScript C#, Python oder einer anderen Sprache
-    2.  Auf ähnliche Weise abhängig nicht sie HTML oder XAML oder ein anderes Grafik/UI-framework
-    3.  Auf diese Weise kann mit Adaptive Cards systemintern auf jeder Plattform für gerendert werden, solange ein Renderer vorhanden ist.
+    1.  Das Format der adaptiven Karten basiert nicht auf JavaScript, C#, Python oder einer anderen Sprache.
+    2.  Es ist auch nicht von HTML, XAML oder einem anderen grafischen oder Benutzeroberflächenformat abhängig.
+    3.  So können adaptive Karten nativ auf jeder Plattform gerendert, sofern ein Renderer vorhanden ist.
 
-3.  **Das Adaptive Card-Format ist ein _freigegebene Eigenschaft_**
+3.  **Das Format der adaptiven Karten ist eine _freigegebene Eigenschaft_.**
 
-    1.  Zusammen mit der SDKs zur Verfügung ist das Format open Source- und seine Community; hier Evolution gesteuert werden.
-    2.  Das Format ist daher nicht im Besitz oder durch ein ein-Team gesteuert
+    1.  Das Format sowie die zugehörigen SDKs ist Open Source, und die Entwicklung erfolgt in der Community.
+    2.  Daher ist das Format nicht im Besitz eines bestimmten Teams und wird von keinem Team gesteuert.
 
-4.  **Das Format für die Adaptive Card dient nicht "nur für die Verwendung der von Microsoft"**
+4.  **Adaptive Karten sind nicht „nur zur Verwendung durch Microsoft“ konzipiert.**
 
-    1.  Stattdessen dient er dem entsprechend der Anforderungen einer Vielzahl von Anwendungen und Anwendungsfällen
+    1.  Stattdessen erfüllt es die Anforderungen einer Vielzahl von Anwendungen und Anwendungsfällen.
 
-5.  **Die _Adaptive Card Working Group_ steuert die Entwicklung des Formats**
+5.  **Die _Adaptive Card Working Group_ steuert die Weiterentwicklung des Formats.**
 
-    1.  Diese Arbeitsgruppe besteht aus einer Reihe von Microsoft-Mitarbeitern, die alle intensiv in den Erfolg des Formats
-    2.  Die Arbeitsgruppe überprüft wöchentlichen Besprechungen (derzeit am Montag) während welches, die Feature Vorschläge überprüft, offenen Probleme sind erläutert und selektiert und Gesamtfortschritt für vNext-Arbeitselemente wird nachverfolgt.
-    3.  Der Arbeitsgruppe verwendet aus dem Feedback von der Community insgesamt, einschließlich der internen Microsoft-Teams, um zu entscheiden, wie das Format entwickelt
-        1. Jeder Benutzer kann in der Arbeitsgruppe durch Öffnen von Problemen auf GitHub (siehe unten) teilnehmen.
-        2. Probleme und Feature-Anforderungen, die auf tatsächlichen Verbrauch von Framework mit Adaptive Cards (entweder als Host oder als der Autor einer Karte) haben die größten Auswirkungen auf die Zukunft des Formats
-    4.  Von der Arbeitsgruppe, vorgeschlagene neue Features genehmigt werden:
-        1. Muss durch reale Anwendungsfälle gerechtfertigt sein
-        2. Eine Funktionsspezifikation benötigen
-    5.  Genehmigtes neues Feature zum Backlog hinzugefügt und als für vNext
-        1. Die Kriterien zum Priorisieren von neuen Features gehören die Bandbreite der Szenarien, die die Funktion ermöglicht, seine Komplexität/Verwaltbarkeit und vieles mehr
-        2. Halten Sie im Zweifelsfall es heraus! Es ist viel einfacher, eine gut entworfene Funktion liegt, live mit einem Fehler immer einzuführen.
-    6.  Alle neuen Features sind in allen unterstützten SDKs implementiert.
-    7.  Alle neuen Features sind dokumentiert und eine Test-Karte, die im Ordner Samples veröffentlicht zugeordnet
-    8.  Neue Versionen des Formats und der SDKs durchlaufen eine Betaphase
-    9.  Den Zeitplan für die Adaptive Card-Schema und die SDK-Versionen die Version wird von der Qualität, die nicht Datum gesteuert.
+    1.  Diese Arbeitsgruppe besteht aus einer Reihe von Microsoft-Mitarbeitern, die maßgeblich zum Erfolg des Formats beitragen.
+    2.  Die Arbeitsgruppe trifft sich einmal in der Woche (zurzeit montags). Während dieser Meetings werden Featurevorschläge geprüft, offene Probleme diskutiert und selektiert, und es wird der Gesamtfortschritt bei vNext-Arbeitselementen nachverfolgt.
+    3.  Die Arbeitsgruppe nutzt das Feedback aus der gesamten Community, einschließlich interner Microsoft-Teams, um zu entscheiden, wie sich das Format weiterentwickelt.
+        1. Jeder kann sich durch Eröffnen von Issues in GitHub an der Arbeitsgruppe beteiligen (siehe unten).
+        2. Issues bzw. Featureanforderungen, die der tatsächlichen Nutzung des Formats entspringen (entweder als Host oder als Ersteller von Karten) haben den größten Einfluss auf die Zukunft des Formats.
+    4.  Vorgeschlagene neue Features müssen folgende Anforderungen erfüllen, um von der Arbeitsgruppe berücksichtigt zu werden:
+        1. Sie müssen durch reale Anwendungsfälle gerechtfertigt sein.
+        2. Sie müssen eine funktionale Spezifikation aufweisen.
+    5.  Genehmigte neue Features werden zum Backlog hinzugefügt und für vNext in Betracht gezogen.
+        1. Neue Features werden anhand verschiedener Kriterien priorisiert. Hierzu gehören der Umfang der Szenarien, die durch dieses Feature ermöglicht werden, die Komplexität, die Verwaltungsfreundlichkeit und einige weitere.
+        2. Wenn du nicht sicher bist, lass es sein! Es ist viel einfacher, ein gut konzipiertes Feature zu einem späteren Zeitpunkt einzuführen, als für immer mit einem Fehler zu leben.
+    6.  Alle neuen Features werden in allen unterstützten SDKs implementiert.
+    7.  Alle neuen Features werden dokumentiert und mit einer Testkarte verknüpft, die im Ordner mit Beispielen veröffentlicht wird.
+    8.  Neue Versionen des Formats und der SDKs durchlaufen eine Betaphase.
+    9.  Der Releasezeitplan für Schema- und SDK-Versionen einer adaptiven Karte basiert auf der Qualität, nicht auf einem bestimmten Datum.
 
 6.  **Interoperabilität**
-    1.  Karten in Übereinstimmung mit das dokumentierte Format (z. B. nicht mit jedem Host-spezifische Erweiterungen) erstellt werden in einem beliebigen Adaptive Card-fähigen Host ordnungsgemäß gerendert.
-    2.  Die einzigen Ausnahmen von dieser Prinzipien sind:
-        1.  Einige Hosts lassen möglicherweise keine Interaktivität und werden daher nicht gerendert, Eingaben und Aktionen
-        2.  Ausführung von Aktionen für Action.Submit liegt im Ermessen des Hosts, und nicht alle Hosts alle Action.Submit Nutzlasten unbedingt ordnungsgemäß ausführt. Darüber hinaus können einige Hosts nicht Action.Submit überhaupt unterstützt
+    1.  Karten, die anhand eines dokumentierten Formats erstellt werden (also nicht mithilfe von hostspezifischen Erweiterungen), werden auf jedem Host ordnungsgemäß gerendert, der adaptive Karten unterstützt.
+    2.  Für diese Prinzipien gelten nur folgende Ausnahmen:
+        1.  Einige Hosts erlauben möglicherweise keine Interaktivität und rendern daher weder Eingaben noch Aktionen.
+        2.  Die Ausführung von Action.Submit-Aktionen erfolgt nur über den Host, und nicht alle Hosts verarbeiten notwendigerweise alle Action.Submit-Nutzlasten. Darüber hinaus unterstützen einige Hosts möglicherweise überhaupt keine Action.Submit-Aktionen.
 
-7.  **Das Format muss zu erweiterbar**
+7.  **Das Format muss erweiterbar sein.**
 
-    1.  Hosts müssen die Freiheit, Hinzufügen von Unterstützung für benutzerdefinierte Elemente oder benutzerdefinierte Aktionen, die hinausgehen, was das Format kann
-    2.  Dies ist besonders wichtig für Aktionen, wie verschiedene Hosts nicht unbedingt den gleichen Satz von Aktionen unterstützen
-    3.  Diese Hinzufügungen sind nach dem Ermessen des Hosts
-        1. Sind sie keine *facto* Ergänzung für die Adaptive Card-Spezifikation
-        2. Daher stellen sie eine Nutzlast, die sie verwendet nicht kompatibel mit dem grundlegenden Adaptive Card-format
-        3. Sie können jedoch werden der Gruppe "Arbeit" präsentiert und vorgeschlagenen als neue Features für eine zukünftige Version des Formats, wie in erster #5 beschrieben
+    1.  Hosts müssen die Möglichkeit haben, Unterstützung für benutzerdefinierte Elemente oder Aktionen hinzuzufügen, die die Funktionalität des Formats übersteigen.
+    2.  Dies ist besonders wichtig bei Aktionen, da verschiedene Hosts nicht unbedingt den gleichen Satz Aktionen unterstützen.
+    3.  Diese Hinzufügungen werden über den Host gesteuert.
+        1. Sie sind keine *De-facto*-Hinzufügung zur Spezifikation von adaptiven Karten.
+        2. Daher ist eine Nutzlast, die diese Karten verwendet, mit dem normalen Format der adaptiven Karten nicht kompatibel.
+        3. Sie können jedoch der Arbeitsgruppe vorgestellt und als neue Features für eine zukünftige Version des Formats vorgeschlagen werden, wie in Punkt 5 beschrieben.
 
-8.  **Autoren von Karte besitzen, den Inhalt, Host-apps besitzen, das Aussehen und Verhalten**
+8.  **Kartenersteller besitzen den Inhalt, Host-App das Erscheinungsbild und Verhalten.**
 
-    1.  Hosten von apps zu erzwingen, deren formatieren, sodass Karten gesucht werden und wie sie native Erweiterungen der app-Erfahrung sind
-    2.  Smartcard-Autoren können weiterhin Formatierung, jedoch nur über die semantische Ausdrücke von Farben, Größen usw. angeben.
+    1.  Host-Apps erzwingen ihren Stil, daher sehen Karten so aus und verhalten sich so, als seien sie native Erweiterungen der App-Funktionalität.
+    2.  Kartenersteller können den Stil zwar angeben, aber nur über semantische Ausdrücke wie Farben, Größen usw.
 
-9.  **SDKs werden für die am häufigsten verwendeten Entwicklerplattformen angegeben werden**
+9.  **Für die beliebtesten Entwicklerplattformen werden SDKs bereitgestellt.**
 
-    1.  SDKs vereinfachen das Adaptive Card-Nutzlasten in einem beliebigen Host zu rendern.
-    2.  Dadurch wird sichergestellt, dass die Einstiegsschwelle so gering wie möglich für Entwickler von Drittanbietern und Microsoft Teams ist.
+    1.  SDKs vereinfachen das Rendern von Nutzlasten von adaptiven Karten auf jedem Host.
+    2.  So wird sowohl für Entwickler von Drittanbietern als auch für Microsoft-Teams ein möglichst einfacher Einstieg sichergestellt.

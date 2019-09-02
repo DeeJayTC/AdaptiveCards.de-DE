@@ -1,24 +1,24 @@
 ---
-title: Adaptive Cards-Medien
+title: Medien für adaptive Karten
 author: matthidinger
 ms.author: mahiding
 ms.date: 5/14/2018
 ms.topic: article
 ms.openlocfilehash: d4c9e784fec66d2f3449e5780dda23d72ab2edf2
 ms.sourcegitcommit: f8de9c02b92cd8927a18e59e5650c92b2b78db06
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/26/2019
 ms.locfileid: "68523863"
 ---
-# <a name="adaptive-cards-media"></a>Adaptive Cards-Medien
+# <a name="adaptive-cards-media"></a>Medien für adaptive Karten
 
 
-## <a name="introduction-video"></a>Einführungs Video
+## <a name="introduction-video"></a>Video zur Einführung
 
 [!VIDEO https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4]
 
-Video 2:
+Video 2:
 
 <video controls width="100%" poster="../content/videoposter.png">
     <source src="https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4" type="video/mp4">
