@@ -4,35 +4,25 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 9684b96bba5168a1f07549468274ce5d74c01820
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 4a6030dda12ab8d9a1e5c387cec63d45e84660d8
+ms.sourcegitcommit: aa044167fd0b32b485ea2ce014afcf0b332bf1a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553462"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529844"
 ---
-# <a name="getting-started---javascript"></a>Erste Schritte – JavaScript
+# <a name="getting-started---javascript"></a>Getting Started (JavaScript)
 
-Wie wir im beschrieben [Einstieg](../../../authoring-cards/getting-started.md) Seite eine Adaptive Card ist ein JSON-serialisierten Karte-Objektmodell. Dies ist eine JavaScript-SDK für die Generierung der clientseitigen HTML im Browser.
-
-> [!IMPORTANT]
-> **Wichtige Änderungen gegenüber v0.5**
-> 
-> 1. Paket umbenannt `microsoft-adaptivecards` auf `adaptivecards`
-> 1. Die statische `AdaptiveCards.setHostConfig()` wurde in einen Instanzmember `AdaptiveCard`. E.g., `myCard.hostConfig = {}` 
-> 1. `HostConfig` ist aufgetreten, obwohl verschiedene umbenennen und verschieben. Finden Sie unter den [sample.json](https://github.com/Microsoft/AdaptiveCards/blob/master/samples/HostConfig/sample.json) Host-Konfiguration für die aktuelle Struktur
-> 1. Es wurden außerdem einige schemaänderungen in der Vorschau v0.5 sind [die nachfolgend beschrieben](https://github.com/Microsoft/AdaptiveCards/pull/633)
-> 1. Die statische `renderCard()` wie redundante mit Methoden der Klasse-Funktion wurde entfernt. Verwendung `adaptiveCard.render()` wie unten beschrieben. 
-
+Wie auf der Seite mit den ersten Schritten beschrieben, handelt es sich bei einer adaptiven [Karte um ein](../../../authoring-cards/getting-started.md) JSON-serialisiertes Karten Objektmodell. Dies ist ein JavaScript-SDK zum Erstellen von Client seitigem HTML im Browser.
 
 ## <a name="install"></a>Installieren
 
 ### <a name="node"></a>Knoten
 
-[![Npm-Installation](https://img.shields.io/npm/v/adaptivecards.svg)](https://www.npmjs.com/package/adaptivecards)
+[![npm-Installation](https://img.shields.io/npm/v/adaptivecards.svg)](https://www.npmjs.com/package/adaptivecards)
 
 ```console
-npm install adaptivecards --save
+npm install adaptivecards
 ```
 
 ### <a name="cdn"></a>CDN
@@ -43,7 +33,7 @@ npm install adaptivecards --save
 
 ## <a name="usage"></a>Verwendung
 
-### <a name="import-the-module"></a>Importieren Sie das Modul
+### <a name="import-the-module"></a>Importieren des Moduls
 
 ```js
 // import the module
@@ -58,4 +48,4 @@ AdaptiveCards.renderCard(...);
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie unter [rendern eine Karte](render-a-card.md) für die nächsten Schritte.
+Informationen zu den nächsten Schritten findest du unter [Rendern einer Karte](render-a-card.md).

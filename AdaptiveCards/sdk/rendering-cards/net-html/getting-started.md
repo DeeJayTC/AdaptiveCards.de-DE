@@ -1,5 +1,5 @@
 ---
-title: .NET HTML SDK
+title: .NET-HTML-SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552602"
 ---
-# <a name="getting-started---net-html"></a>Erste Schritte – .NET HTML
+# <a name="getting-started---net-html"></a>Getting Started (.net-html)
 
-Wie wir im beschrieben [Einstieg](../../../authoring-cards/getting-started.md) Seite eine Adaptive Card ist ein JSON-serialisierten Karte-Objektmodell. Dies ist eine .NET Bibliothek für das Generieren von HTML-Markup in der Regel von einem Server.
+Wie auf der Seite mit den ersten Schritten beschrieben, handelt es sich bei einer adaptiven [Karte um ein](../../../authoring-cards/getting-started.md) JSON-serialisiertes Karten Objektmodell. Dabei handelt es sich um eine .NET-Bibliothek zum Erstellen von HTML-Markup, normalerweise von einem Server.
 
-## <a name="nuget-install"></a>Installieren von NuGet
+## <a name="nuget-install"></a>Nuget-Installation
 
-[![Installieren von NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Html.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Html)
+[![NuGet-Installation](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Html.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Html)
 
 ```console
 Install-Package AdaptiveCards.Rendering.Html -IncludePrerelease
@@ -25,4 +25,4 @@ Install-Package AdaptiveCards.Rendering.Html -IncludePrerelease
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie unter [rendern eine Karte](render-a-card.md) für die nächsten Schritte.
+Informationen zu den nächsten Schritten findest du unter [Rendern einer Karte](render-a-card.md).

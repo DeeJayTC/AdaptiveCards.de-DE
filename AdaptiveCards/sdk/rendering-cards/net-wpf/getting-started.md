@@ -1,5 +1,5 @@
 ---
-title: .NET WPF SDK
+title: .NET WPF-SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,34 +11,34 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59553622"
 ---
-# <a name="getting-started---net-wpf"></a>Erste Schritte – WPF für .NET
+# <a name="getting-started---net-wpf"></a>Getting Started (.net WPF)
 
-Wie wir im beschrieben [Einstieg](../../../authoring-cards/getting-started.md) Seite eine Adaptive Card ist ein JSON-serialisierten Karte-Objektmodell. Diese Bibliothek erleichtert es, diesen JSON-Code in WPF-UI zu rendern, die Sie in Ihrer app verwenden können.
+Wie auf der Seite mit den ersten Schritten beschrieben, handelt es sich bei einer adaptiven [Karte um ein](../../../authoring-cards/getting-started.md) JSON-serialisiertes Karten Objektmodell. Diese Bibliothek erleichtert das Rendering dieses JSON-Code in der WPF-Benutzeroberfläche, die Sie in Ihrer APP verwenden können.
 
-## <a name="nuget-install"></a>Installieren von NuGet
+## <a name="nuget-install"></a>Nuget-Installation
 
-[![Installieren von NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf)
+[![NuGet-Installation](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf)
 
 ```console
 Install-Package AdaptiveCards.Rendering.Wpf
 ```
 
-### <a name="xceed-enhanced-input-package"></a>Verbesserte Eingabepaket für Xceed
+### <a name="xceed-enhanced-input-package"></a>Xceed Enhanced Input Package
 
-Diese optionale Paket verbessert die Adaptive Card-Input-Steuerelemente über die WPF standardmäßig bietet. Es besteht eine Abhängigkeit `Extended.Wpf.Toolkit`
+Mithilfe dieses optionalen Pakets werden die Eingabesteuerelemente der adaptiven Karte erweitert, die über die Standard-WPF hinausgehen. Sie hat eine Abhängigkeit von`Extended.Wpf.Toolkit`
 
-[![Installieren von NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.Xceed.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf.Xceed)
+[![NuGet-Installation](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.Xceed.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf.Xceed)
 
 ```console
 Install-Package AdaptiveCards.Rendering.Wpf.Xceed
 ```
 
-## <a name="wpf-visualizer-sample"></a>Beispiel für WPF-Schnellansicht
+## <a name="wpf-visualizer-sample"></a>Beispiel: WPF-Visualisierer
 
-![Screenshot der Schnellansicht](../../../resources/media/tools/wpfvisualizer.png)
+![Bildschirm Abbildung von Visualisierungen](../../../resources/media/tools/wpfvisualizer.png)
 
-Die [WPF-Schnellansicht Beispiel](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/WPFVisualizer) können Sie Karten mit WPF visuell darstellen.  Ein `Host Config` Editor zum Bearbeiten und Anzeigen von Host-Konfigurationseinstellungen integriert ist. Speichern Sie diese Einstellungen als JSON, sie in das Rendering in Ihrer Anwendung verwenden.
+Mit dem Beispiel für eine [WPF](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet/Samples/WPFVisualizer) -Schnellansicht können Sie Karten mithilfe von WPF visualisieren.  Ein `Host Config`-Editor ist zum Bearbeiten und Anzeigen von Hostkonfigurationseinstellungen integriert. Speichere diese Einstellungen als JSON, um sie zum Rendern in deiner Anwendung zu verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie unter [rendern eine Karte](render-a-card.md) für die nächsten Schritte.
+Informationen zu den nächsten Schritten findest du unter [Rendern einer Karte](render-a-card.md).

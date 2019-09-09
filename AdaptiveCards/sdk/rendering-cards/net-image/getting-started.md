@@ -1,5 +1,5 @@
 ---
-title: .NET Image-Rendering-SDK
+title: .Net-Image Rendering-SDK
 author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
@@ -11,15 +11,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59552862"
 ---
-# <a name="getting-started---net-image"></a>Erste Schritte – Images für .NET
+# <a name="getting-started---net-image"></a>Getting Started (.net-Image)
 
-Wie wir im beschrieben [Einstieg](../../../authoring-cards/getting-started.md) Seite eine Adaptive Card ist ein JSON-serialisierten Karte-Objektmodell. Diese Bibliothek erleichtert es, diesen JSON-Code in in ein PNG-Bild zu rendern.
+Wie auf der Seite mit den ersten Schritten beschrieben, handelt es sich bei einer adaptiven [Karte um ein](../../../authoring-cards/getting-started.md) JSON-serialisiertes Karten Objektmodell. Diese Bibliothek vereinfacht das Rendering dieses JSON-Code in ein PNG-Bild.
 
-Dieses Paket kann sogar auf einem Server zum Generieren von Images verwendet werden, und alle "Magic-STA-Thread" weiterer Informationen für Sie implementiert. 
+Dieses Paket kann sogar auf einem Server verwendet werden, um Images zu generieren, und implementiert alle "Magic STA Thread"-Goo für Sie. 
 
-## <a name="nuget-install"></a>Installieren von NuGet
+## <a name="nuget-install"></a>Nuget-Installation
 
-[![Installieren von NuGet](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf)
+[![NuGet-Installation](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf)
 
 ```console
 Install-Package AdaptiveCards.Rendering.Wpf -IncludePrerelease
@@ -27,4 +27,4 @@ Install-Package AdaptiveCards.Rendering.Wpf -IncludePrerelease
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie unter [rendern eine Karte](render-a-card.md) für die nächsten Schritte.
+Informationen zu den nächsten Schritten findest du unter [Rendern einer Karte](render-a-card.md).
