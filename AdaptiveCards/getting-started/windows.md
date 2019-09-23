@@ -4,22 +4,20 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 20b324c12cd7cec10f2142fc2cf76039b5c329de
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 65494ed437303d26a202c9a5b95f88255147cbd0
+ms.sourcegitcommit: 48838a50b5f0316e15b48d740a7dd0a5f96ebae4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "59552852"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923077"
 ---
 # <a name="adaptive-cards-for-windows-developers"></a>Adaptive Karten für Windows-Entwickler
 
-
-
-## <a name="timeline"></a>Chronik
+## <a name="timeline"></a>Zeitrahmen
 
 Die erste Windows-Oberfläche, die adaptive Karten unterstützt, ist die Chronik, die in Windows 10 1803 eingeführt wurde. 
 
-![Chronik](media/windows/timeline.png)
+![Zeitrahmen](media/windows/timeline.png)
 
 ### <a name="useractivity-api"></a>UserActivity-API
 
@@ -34,6 +32,12 @@ userActivity.DisplayText = article.Title; //used for details tile text
 userActivity.VisualElements.Content = AdaptiveCardBuilder.CreateAdaptiveCardFromJson(jsonString);
 await userActivity.SaveAsync();
 ```
+
+### <a name="learning-module"></a>Lernmodul
+
+Diese Schritte werden vollständig in einem hervorragenden, 45-minütigen Lernmodul behandelt.
+
+[Adaptive Karten in die Windows 10-Zeitachse integrieren](https://docs.microsoft.com/en-us/learn/modules/integrate-app-into-windows-10-timeline/)
 
 ### <a name="learn-more"></a>Mehr erfahren
 
