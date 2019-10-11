@@ -1,15 +1,15 @@
 ---
-title: Vorlagen für sdche
+title: Vorlagen-SDKs
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 5f60a458af99f1b88e8ee428a8f29f1849be9b62
-ms.sourcegitcommit: a16f53ba10a8607deacde5c8cc78927cac58657c
+ms.openlocfilehash: 3a9bfcd1bf8f87959a747997e04f5c5ad2a79980
+ms.sourcegitcommit: 90afb3729931b0e4cae19b17ef9e49453c2d2bf6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68878877"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163614"
 ---
 # <a name="adaptive-card-templating-sdks"></a>Adaptive Smartcardvorlagen-sdche
 
@@ -19,7 +19,7 @@ Mithilfe der Vorlagen für Adaptive Karten-Vorlagen können Sie ganz einfach ein
 
 > [!IMPORTANT] 
 > 
-> Diese Features befinden sich **in der Vorschau Phase und können geändert**werden. Ihr Feedback ist nicht nur willkommen, sondern wichtig, um sicherzustellen, dass wir die benötigten Features bereitstellen.
+> Diese Features befinden sich **in der Vorschauphase und können geändert werden**. Ihr Feedback ist nicht nur willkommen, sondern wichtig, um sicherzustellen, dass **wir** Ihnen die benötigten Features bieten.
 > 
 > Während der ersten Vorschauversion ist nur das JavaScript SDK verfügbar, aber in Kürze sollte ein .NET SDK eintreffen.
 
@@ -43,7 +43,7 @@ npm install adaptivecards-templating
 
 Im folgenden Beispiel wird davon ausgegangen, dass Sie auch die [adaptivecards](https://www.npmjs.com/package/adaptivecards) -Bibliothek installiert haben, um die Karte zu Rendering. 
 
-Wenn Sie das Rendering der Karte nicht planen, können Sie den- `parse` und `render` den-Code entfernen. 
+Wenn Sie die Karte nicht rendern möchten, können Sie den Code "`parse`" und "`render`" entfernen. 
 
 ```js
 import * as ACData from "adaptivecards-templating";
@@ -82,10 +82,42 @@ adaptiveCard.parse(card);
 var htmlElement = adaptiveCard.render();
 ```
 
-## <a name="net-coming-soon"></a>.Net (*bald*verfügbar)
-
-NOCH NICHT FUNKTIONIERT: 
+## <a name="net"></a>.NET 
 
 ```console
-nuget install AdaptiveCards.Templating
+dotnet add package AdaptiveCards.Templating --version 0.1.0-alpha1
+```
+
+> [!NOTE]
+>
+> Ändern Sie ggf. die obige Version in die neueste veröffentlichte Version.
+
+Importieren der Bibliothek 
+
+```cs
+using AdaptiveCards.Templating
+```
+
+Verwenden Sie die Vorlagen-Engine, indem Sie Ihre Vorlagen-JSON und Data JSON übergeben.
+
+```cs
+var templateJson = @"
+{
+    ""type"": ""AdaptiveCard"",
+    ""version"": ""1.0"",
+    ""body"": [
+        {
+            ""type"": ""TextBlock"",
+            ""text"": ""Hello {name}""
+        }
+    ]
+}";
+
+var dataJson = @"
+{
+    ""name"": ""Mickey Mouse""
+}";
+
+var transformer = new AdaptiveTransformer();
+var cardJson = transformer.Transform(templateJson, dataJson);
 ```

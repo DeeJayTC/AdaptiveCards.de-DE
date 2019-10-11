@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 487acab86d80d563210abe07968520ea7669498a
-ms.sourcegitcommit: 8c8067206f283d97a5aa4ec65ba23d3fe18962f1
+ms.openlocfilehash: 27c7d5ac7da3ae182667cbf8efa90d29f110d1d3
+ms.sourcegitcommit: ef03c0eff3272a36cfa88daf99c4d57e4bae9599
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299538"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72042532"
 ---
 # <a name="adaptive-cards-overview"></a>Adaptive Karten: Übersicht 
 
@@ -76,8 +76,8 @@ Durch den Schwerpunkt auf Einfachheit und Aussagekraft hat Markdown eine einfach
 Es ist einfacher, etwas nachträglich hinzuzufügen, als mit einem Fehler zu leben. Wenn wir darüber diskutiert haben, ob wir etwas hinzufügen sollten oder nicht, haben wir uns entschieden, es wegzulassen.  Es ist immer einfacher, eine Eigenschaft hinzuzufügen, als mit einer Vorgängerversion zu leben, von der wir uns wünschen, dass wir sie nicht unterstützen müssten.
 
 
-## <a name="build-2018-session"></a>Build 2018-Sitzung
+## <a name="build-2019-session"></a>Build 2019-Sitzung
 
-Die folgende Sitzung auf der Build 2018 stellt Adaptive Karten in Bots, Cortana, Outlook und Windows vor. 
+In der folgenden Sitzung auf der Microsoft Build-Konferenz werden Adaptive Karten in einer Vielzahl von Anwendungsfällen präsentiert. 
 
-<iframe src="https://medius.studios.ms/Embed/Video/BRK2401?SFYT=true" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wT1yFr_j6IM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
