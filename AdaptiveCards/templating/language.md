@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 993618ed94eaea1a004c7893a5a3927c0d818cd6
-ms.sourcegitcommit: a16f53ba10a8607deacde5c8cc78927cac58657c
+ms.openlocfilehash: b99a2905fb000653b7ee75204221b832a2b5a907
+ms.sourcegitcommit: ce044dc969d9b9c47a52bd361bfe2b746071913b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68878897"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917127"
 ---
 # <a name="adaptive-cards-template-language"></a>Vorlagen Sprache für Adaptive Karten
 
@@ -19,19 +19,19 @@ Durch Vorlagen wird die Trennung von **Daten** vom **Layout** in der adaptiven K
 
 > [!IMPORTANT] 
 > 
-> Diese Features befinden sich **in der Vorschau Phase und können geändert**werden. Ihr Feedback ist nicht nur willkommen, sondern wichtig, um sicherzustellen, dass wir die benötigten Features bereitstellen.
+> Diese Features befinden sich **in der Vorschauphase und können geändert werden**. Ihr Feedback ist nicht nur willkommen, sondern wichtig, um sicherzustellen, dass **wir** Ihnen die benötigten Features bieten.
 
 Beim Erstellen einer Vorlage können Sie die Daten Inline mit der `AdaptiveCard` Nutzlast oder zur Laufzeit mithilfe der Vorlagen- [sdche](sdk.md)angeben.
 
 ## <a name="specify-data-within-the-card"></a>Daten innerhalb der Karte angeben
 
-Wenn Sie Daten direkt innerhalb der Karten Nutzlast bereitstellen möchten, `$data` fügen Sie einfach `AdaptiveCard` ein-Attribut zu (siehe unten).
+Um Daten direkt innerhalb der Karten Nutzlast bereitzustellen, fügen Sie Ihrem `AdaptiveCard` einfach ein `$data` Attribut hinzu (siehe unten).
 
 ## <a name="binding-to-the-data"></a>Binden an die Daten
 
-Sie können eine Bindung an die Daten in `body` der `actions` oder der Karte herstellen.
+Sie können eine Bindung an die Daten innerhalb der `body` oder `actions` der Karte herstellen.
 
-* Die Bindungs Syntax beginnt `{` mit und endet `}`mit. Z. b.`{myProperty}`
+* Die Bindungs Syntax beginnt mit `{` und endet mit `}`. Beispielsweise `{myProperty}`
 * Punkt Schreibweise für den Zugriff auf untergeordnete Objekte
 * Indexer-Syntax zum Abrufen von Eigenschaften nach Schlüsseln oder Elementen in einem Array
 * Ordnungsgemäße NULL-Behandlung für Deep-Hierarchien
@@ -76,7 +76,7 @@ Sie können eine Bindung an die Daten in `body` der `actions` oder der Karte her
 
 Alternativ (und wahrscheinlicher) erstellen Sie eine wiederverwendbare Karte "Template", ohne die Daten einzubeziehen. Diese Vorlage kann als Datei gespeichert und der Quell Code Verwaltung hinzugefügt werden.
 
-**Mitarbeiter Template. JSON**
+**EmployeeCardTemplate.json**
 
 ```json
 {
@@ -135,9 +135,9 @@ var card = template.expand(dataContext);
 
 Der adaptiver Karten-Designer wurde aktualisiert, um Vorlagen zu unterstützen. 
 
-> Testen Sie die Vorschauversion "vNext" unter: **[https://vnext.adaptivecards.io/designer](https://vnext.adaptivecards.io/designer)**
+> Testen Sie die Vorschauversion "vNext" unter:  **[https://vnext.adaptivecards.io/designer](https://vnext.adaptivecards.io/designer)**
 
-[![Klang](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](http://vnext.adaptivecards.io/designer)
+[Bild![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](http://vnext.adaptivecards.io/designer)
 
  
 Diese "vNext"-URL weist Fehler auf und wird häufig bereitgestellt. **Löschen Sie Ihren Cache** , um sicherzustellen, dass Sie über die neuesten verfügen, und wenn Sie Fehler finden, informieren Sie uns bitte!
@@ -167,7 +167,7 @@ Für den Zugriff auf verschiedene Bindungs Bereiche sind einige reservierte Schl
 
 ### <a name="assigning-a-data-context-to-elements"></a>Zuweisen eines Daten Kontexts zu Elementen
 
-Fügen Sie dem-Element ein `$data` -Attribut hinzu, um einem-Element einen "Datenkontext" zuzuweisen.
+Wenn Sie einem Element einen "Datenkontext" zuweisen möchten, fügen Sie dem-Element ein `$data`-Attribut hinzu.
 
 ```json
 {
@@ -190,10 +190,10 @@ Fügen Sie dem-Element ein `$data` -Attribut hinzu, um einem-Element einen "Date
 
 Dieser Teil ist ein wenig "dunkle Magie". Feedback willkommen.
 
-* Wenn die Eigenschaft " `$data` Objects" auf ein **Array**festgelegt ist, **wird das Objekt selbst für jedes Element im Array wiederholt.** 
-* Wenn es wiederholt wird, `$data` wird die Verwendung in Eigenschafts Bindungen auf das **einzelne Element** innerhalb des Arrays beschränkt.
+* Wenn die `$data`-Eigenschaft der Objekte auf ein **Array**festgelegt ist, **wird das Objekt selbst für jedes Element im Array wiederholt.** 
+* Wenn Sie wiederholt werden, werden `$data`, die in Eigenschafts Bindungen verwendet werden, auf das **einzelne Element** innerhalb des Arrays festgelegt.
 
-Der `TextBlock` folgende Code wird beispielsweise dreimal wiederholt, da `$data` es sich um ein Array handelt. Beachten Sie, `text` dass die-Eigenschaft an `name` die-Eigenschaft eines einzelnen Objekts innerhalb des-Arrays gebunden ist. 
+Beispielsweise wird das unten angegebene `TextBlock` dreimal wiederholt, da es `$data` ein Array ist. Beachten Sie, dass die `text`-Eigenschaft an die `name`-Eigenschaft eines einzelnen Objekts innerhalb des Arrays gebunden ist. 
 
 ```json
 {
@@ -244,7 +244,7 @@ Die hier verwendete Syntax ist immer noch in der Luft, also schauen Sie es bald 
 
 * substr
 * IndexOf *(noch nicht funktioniert)*
-* ToUpper( *noch nicht funktioniert)*
+* *ToUpper(noch nicht funktioniert)*
 * ToLower *(noch nicht funktioniert)*
 
 ### <a name="number-functions"></a>Number-Funktionen
@@ -260,12 +260,12 @@ Die hier verwendete Syntax ist immer noch in der Luft, also schauen Sie es bald 
 
 * if (*Ausdruck*, *TrueValue*, *FalseValue*)
 
-**`if`Beispiel**
+**`if` Beispiel**
 
 ```json
 {
     "type": "TextBlock",
-    "color": "if(priceChange >= 0, 'good', 'attention')"
+    "color": "{if(priceChange >= 0, 'good', 'attention')}"
 }
 ```
 
@@ -273,9 +273,9 @@ Die hier verwendete Syntax ist immer noch in der Luft, also schauen Sie es bald 
 
 * JSON. Analyse-Möglichkeit zum Analysieren einer JSON-Zeichenfolge 
 
-**`JSON.parse`Beispiel**
+**`JSON.parse` Beispiel**
 
-Dies ist eine Azure devops-Antwort, `message` bei der die Eigenschaft eine JSON-serialisierte Zeichenfolge ist. Um auf Werte innerhalb der Zeichenfolge zuzugreifen, muss die `JSON.parse` -Funktion in der Vorlage verwendet werden.
+Dies ist eine Azure devops-Antwort, bei der die `message`-Eigenschaft eine JSON-serialisierte Zeichenfolge ist. Um auf Werte innerhalb der Zeichenfolge zuzugreifen, muss die `JSON.parse`-Funktion in der Vorlage verwendet werden.
 
 **Daten** 
 
@@ -290,7 +290,7 @@ Dies ist eine Azure devops-Antwort, `message` bei der die Eigenschaft eine JSON-
 }
 ```
 
-**Verwendung**
+**Nutzung**
 
 ```json
 {
@@ -314,7 +314,7 @@ Wir möchten sicherstellen, dass Hosts benutzerdefinierte Funktionen hinzufügen
 
 ## <a name="conditional-layout"></a>Bedingtes Layout
 
-Wenn Sie ein gesamtes Element löschen möchten, wenn eine Bedingung erfüllt ist `$when` , verwenden Sie die-Eigenschaft. Wenn `$when` das- `false` Element ausgewertet wird, wird der Benutzer nicht angezeigt.
+Wenn Sie ein gesamtes Element löschen möchten, wenn eine Bedingung erfüllt ist, verwenden Sie die `$when`-Eigenschaft. Wenn `$when` ausgewertet wird `false` wird das Element dem Benutzer nicht angezeigt.
 
 ```json
 {

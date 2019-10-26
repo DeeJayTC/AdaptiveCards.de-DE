@@ -4,21 +4,21 @@ author: bekao
 ms.author: bekao
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: ca92f0a2b6ef8a36c5394e4dd9853df59fef22b2
-ms.sourcegitcommit: 8c8067206f283d97a5aa4ec65ba23d3fe18962f1
+ms.openlocfilehash: 9e13ebad04c780db83d25129a9f5829a9d43ef69
+ms.sourcegitcommit: ce044dc969d9b9c47a52bd361bfe2b746071913b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299553"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917119"
 ---
 # <a name="extensibility---android"></a>Erweiterbarkeit – Android
 
 Der Android-Renderer kann erweitert werden, um mehrere Szenarien zu unterstützen, darunter:
 * [Benutzerdefinierte Verarbeitung von Karten Elementen](#custom-parsing-of-card-elements)
 * [Benutzerdefiniertes Rendering von Karten Elementen](#custom-rendering-of-card-elements)
-* [Benutzerdefiniertes Rendering von Aktionen](#custom-rendering-of-actions) (Seit v 1.2)
-* [Laden von benutzerdefinierten Images](#custom-image-loading) (Seit v 1.0.1)
-* [Laden benutzerdefinierter Medien](#custom-media-loading) (Seit v 1.1)
+* [Benutzerdefiniertes Rendering von Aktionen](#custom-rendering-of-actions) (seit v 1.2)
+* [Laden benutzerdefinierter Images](#custom-image-loading) (seit v 1.0.1)
+* [Benutzerdefiniertes Laden von Medien](#custom-media-loading) (seit v 1.1)
 
 ## <a name="custom-parsing-of-card-elements"></a>Benutzerdefinierte Analyse von Kartenelementen
 
@@ -91,7 +91,7 @@ Als Nächstes wird das benutzerdefinierte Element gerendert.
 >
 > [Wichtige Änderungen für v1.2](#breaking-changes-for-v12)
 
-Um unseren eigenen benutzerdefinierten Renderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen, ```BaseCardElementRenderer```die sich von erstreckt:
+Um unseren eigenen benutzerdefinierten Renderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen, die sich von ```BaseCardElementRenderer```erstreckt:
 ```java
 public class MyCardElementRenderer extends BaseCardElementRenderer
 {
@@ -122,7 +122,7 @@ RenderedAdaptiveCard renderedCard = AdaptiveCardRenderer.getInstance().render(co
 
 ### <a name="breaking-changes-for-v12"></a>Wichtige Änderungen für v 1.2
 
-Die ```render``` -Methode wurde so geändert, ```RenderedAdaptiveCard``` dass Sie ```ContainerStyle``` den-Parameter enthält, und wurde für eine renderargs geändert, in der das ContainerStyle jetzt enthalten ist, sodass eine Klasse, die den basecardelta-entrenderer erweitert, wie folgt aussehen sollte:
+Die ```render```-Methode wurde geändert, um den ```RenderedAdaptiveCard```-Parameter einzuschließen, und ```ContainerStyle``` wurde für ein renderargs geändert, in dem das ContainerStyle jetzt enthalten ist, sodass eine Klasse, die den basecardelta-entrenderer erweitert, wie folgt aussehen sollte.
 
 ```
 public class MyCardElementRenderer extends BaseCardElementRenderer
@@ -144,7 +144,7 @@ public class MyCardElementRenderer extends BaseCardElementRenderer
 }
 ```
 
-Anschließend zeigen die folgenden Zeilen, wie Sie Sie in ein "aktionelement" analysieren können, ```BaseActionElement```das sich von erstreckt:
+Anschließend zeigen die folgenden Zeilen, wie Sie Sie in ein "aktionelement" analysieren können, das sich vom ```BaseActionElement```erstreckt:
 ```java
 public class MyActionElement extends BaseActionElement
 {
@@ -216,7 +216,7 @@ Nächste Schritte zum Rendern der benutzerdefinierten Aktion
 
 ## <a name="custom-rendering-of-actions"></a>Benutzerdefiniertes Rendering von Aktionen
 
-Um einen eigenen benutzerdefinierten aktionsrenderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen ```BaseActionElementRenderer```, die sich von erstreckt:
+Um einen eigenen benutzerdefinierten aktionsrenderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen, die sich von ```BaseActionElementRenderer```erstreckt:
 ```java
 public class MyActionRenderer extends BaseActionElementRenderer
 {
@@ -255,7 +255,7 @@ RenderedAdaptiveCard renderedCard = AdaptiveCardRenderer.getInstance().render(co
 
 ## <a name="custom-rendering-of-actions"></a>Benutzerdefiniertes Rendern von Aktionen
 
-[!IMPORTANT]
+> [!IMPORTANT]
 > Änderungen am benutzerdefinierten Rendering von Aktionen sind für v1.2 geplant, aber noch nicht abgeschlossen.
 
 ## <a name="custom-image-loading"></a>Laden benutzerdefinierter Bilder
@@ -380,13 +380,13 @@ Das Transformieren eines IOnlineImageLoader in einen IResourceResolver ist eine 
 
 Wie du siehst, sind dies die größten Änderungen:
 
-* ```loadOnlineImage(String, GenericImageLoaderAsync)```wurde umbenannt in```resolveImageResource(String, GenericImageLoaderAsync)```
-* eine Überladung ```resolveImageResource(String, GenericImageLoaderAsync)``` für wurde ```resolveImageResource(String, GenericImageLoaderAsync, int)``` hinzugefügt, um Szenarios zu unterstützen, in denen die maximale Breite erforderlich ist.
+* ```loadOnlineImage(String, GenericImageLoaderAsync)``` wurde in ```resolveImageResource(String, GenericImageLoaderAsync)``` umbenannt.
+* eine Überladung für ```resolveImageResource(String, GenericImageLoaderAsync)``` wurde als ```resolveImageResource(String, GenericImageLoaderAsync, int)``` hinzugefügt, um Szenarios zu unterstützen, in denen die maximale Breite erforderlich ist.
 
 ## <a name="custom-media-loading"></a>Laden benutzerdefinierter Medien
 
 > [!IMPORTANT]
-> **Beachten Sie ```IOnlineMediaLoader```,dass die API-Ebene 23 oder Android M hinzugefügt wurde. ```MediaDataSource```**
+> **Beachten Sie, dass ```IOnlineMediaLoader``` ```MediaDataSource```, die auf API-Ebene 23 oder Android M hinzugefügt wurde.**
 
 Zusammen mit der Einbeziehung des Medienelements wurde auch die IOnlineMediaLoader-Benutzeroberfläche einbezogen, die es Entwicklern ermöglicht, das [MediaDataSource](https://developer.android.com/reference/android/media/MediaDataSource)-Element außer Kraft zu setzen, das für das zugrunde liegende mediaPlayer-Element verwendet wurde. **(Erfordert Android M)**
 
