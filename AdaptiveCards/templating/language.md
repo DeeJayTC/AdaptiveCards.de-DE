@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: b99a2905fb000653b7ee75204221b832a2b5a907
-ms.sourcegitcommit: ce044dc969d9b9c47a52bd361bfe2b746071913b
+ms.openlocfilehash: 42a1f43fbcfe1416820637af750acc960b9effde
+ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917127"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750398"
 ---
 # <a name="adaptive-cards-template-language"></a>Vorlagen Sprache für Adaptive Karten
 
@@ -135,12 +135,9 @@ var card = template.expand(dataContext);
 
 Der adaptiver Karten-Designer wurde aktualisiert, um Vorlagen zu unterstützen. 
 
-> Testen Sie die Vorschauversion "vNext" unter:  **[https://vnext.adaptivecards.io/designer](https://vnext.adaptivecards.io/designer)**
+> Probieren Sie es aus:  **[https://adaptivecards.io/designer](https://adaptivecards.io/designer)**
 
-[Bild![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](http://vnext.adaptivecards.io/designer)
-
- 
-Diese "vNext"-URL weist Fehler auf und wird häufig bereitgestellt. **Löschen Sie Ihren Cache** , um sicherzustellen, dass Sie über die neuesten verfügen, und wenn Sie Fehler finden, informieren Sie uns bitte!
+[Bild ![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](https://adaptivecards.io/designer)
 
 * **Beispiel Daten-Editor** : Geben Sie hier Beispiel Daten an, um die Daten gebundene Karte im Vorschaumodus anzuzeigen. In diesem Bereich gibt es eine kleine Schaltfläche, um die Datenstruktur aus den vorhandenen Beispiel Daten aufzufüllen.
 * **Datenstruktur** : Dies ist die Struktur der Beispiel Daten. Felder können auf die Entwurfs Oberfläche gezogen werden, um eine Bindung an Sie zu erstellen. 
@@ -346,7 +343,4 @@ Derzeit wird das Zusammenstellen von Vorlagen "Parts" nicht unterstützt. Wir un
 
 ## <a name="examples"></a>Beispiele
 
-Bisher wurde nur eine begrenzte Anzahl von Beispielen erstellt, aber sehen Sie sich hier die ersten Schritte an.
-
-* Laden von Beispielen innerhalb des [Designers](http://vnext.adaptivecards.io/designer) durch Klicken auf " **Beispiel öffnen** "
-* Oder einfach direkt [ein Verzeichnis durchsuchen](https://github.com/Microsoft/AdaptiveCards/tree/js/template-engine/samples/v2.0/Scenarios)
+Durchsuchen Sie die aktualisierte Beispiel [Seite](https://adaptivecards.io/samples) , um alle möglichen neuen, auf Vorlagen basierenden Karten zu untersuchen.
