@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 07/29/2019
 ms.topic: article
-ms.openlocfilehash: fdfe7b46614f046155ab84a5a487105d55afd7cb
-ms.sourcegitcommit: ef03c0eff3272a36cfa88daf99c4d57e4bae9599
+ms.openlocfilehash: 11ade4c2a41111f372873ea9a0677fe823c5b0ab
+ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72042537"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750424"
 ---
 # <a name="adaptive-cards-templating-preview"></a>Vorlagen für adaptive Karten (Vorschau)
 
@@ -57,13 +57,13 @@ Die Vorlagensprache ist die Syntax, die zum Erstellen einer Vorlage einer adapti
 > 
 > Führen Sie das folgende Beispiel aus, um hier eine neue Registerkarte zu öffnen
 >
-> **https://vnext.adaptivecards.io/designer**
+> **https://adaptivecards.io/designer**
 > 
 > Klicken Sie auf die Schaltfläche **Preview Mode** (Vorschaumodus), um zwischen Entwurfs- und Vorschaumodus zu wechseln.
 
 ![Screenshot des Designers](content/2019-08-01-13-58-27.png)
 
-Der [vNext Designer](https://vnext.adaptivecards.io/designer) fügt Unterstützung für das Erstellen von Vorlagen und das Bereitstellen von **Beispieldaten** für die Vorschau der Karte zur Entwurfszeit hinzu.
+Der neu aktualisierte Designer fügt Unterstützung für das Erstellen von Vorlagen und das Bereitstellen von **Beispieldaten** für die Vorschau der Karte zur Entwurfszeit hinzu.
 
 Fügen Sie das folgende Beispiel in den Bereich **Card Payload Editor** (Editor für die Kartennutzlast) ein: 
 
