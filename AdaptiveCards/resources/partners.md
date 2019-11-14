@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 9/24/2018
 ms.topic: article
-ms.openlocfilehash: ea662d3c3906c9c83de306d82d2c9e0d4997e6ad
-ms.sourcegitcommit: 48838a50b5f0316e15b48d740a7dd0a5f96ebae4
+ms.openlocfilehash: 92b334a237c56c453a15a8a4a5f1a516c73abc57
+ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923057"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750410"
 ---
 # <a name="partners"></a>Partner 
 
@@ -21,7 +21,7 @@ Wenn du dich am Ökosystem für adaptive Karten beteiligen möchtest, [kannst du
 
 Plattform | Beschreibung | Dokumentation | Version
 ---------|-------------|---------------|---------
-[Bot Framework WebChat](https://github.com/Microsoft/BotFramework-WebChat)  | Einbettbares Webchat-Steuerelement für das Microsoft Bot Framework | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.2 (Web Chat 4.5)
+[Bot Framework Web Chat](https://github.com/Microsoft/BotFramework-WebChat)  | Einbettbares Webchat-Steuerelement für das Microsoft Bot Framework | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.2 (Web Chat 4.6)
 [Cortana Skills](https://docs.microsoft.com/en-us/cortana/skills/adaptive-cards) | Virtueller Assistent für Windows 10 | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots) | 1.0
 [Windows Timeline](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/) | Neue Möglichkeit zum Fortsetzen von auf diesem PC, anderen Windows-PCs und iOS- oder Android-Geräten gestarteten Aktivitäten | [Erste Schritte](https://docs.microsoft.com/en-us/adaptive-cards/get-started/windows) | 1.0
 [Outlook Actionable Messages](https://docs.microsoft.com/en-us/outlook/actionable-messages/)  | Anfügen einer umsetzbaren Nachricht an eine E-Mail | [Erste Schritte](https://docs.microsoft.com/en-us/outlook/actionable-messages/) | 1.0
