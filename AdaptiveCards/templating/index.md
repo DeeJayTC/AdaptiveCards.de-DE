@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 07/29/2019
 ms.topic: article
-ms.openlocfilehash: 11ade4c2a41111f372873ea9a0677fe823c5b0ab
-ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
+ms.openlocfilehash: 6a818e5009a0ec65e7e17fe47cc0172d2e34ae31
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73750424"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145550"
 ---
 # <a name="adaptive-cards-templating-preview"></a>Vorlagen für adaptive Karten (Vorschau)
 
@@ -177,10 +177,10 @@ Die Vorlagen-SDKs ermöglichen es, eine Vorlage mit echten Daten aufzufüllen.
 >
 > In der ersten Vorschauphase steht nur eine begrenzte Anzahl von SDKs zur Verfügung. Nach der Veröffentlichung wird es Vorlagenbibliotheken für jede unterstützte Plattform für adaptive Karten geben.
 
-Plattform | Installieren | Dokumentation
+Plattform | Installation | Dokumentation
 --- | --- | ---
 JavaScript | `npm install adaptivecards-templating` | [Dokumentation](https://www.npmjs.com/package/adaptivecards-templating)
-.NET | `nuget install AdaptiveCards.Templating` | [Dokumentation](https://docs.microsoft.com/en-us/adaptive-cards/templating/sdk#net)
+.NET | `nuget install AdaptiveCards.Templating` | [Dokumentation](https://docs.microsoft.com/adaptive-cards/templating/sdk#net)
 
 ### <a name="javascript-example"></a>JavaScript-Beispiel
 
