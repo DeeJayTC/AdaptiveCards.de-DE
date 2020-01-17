@@ -1,15 +1,15 @@
 ---
 title: Android SDK
-author: bekao
-ms.author: bekao
+author: almedina-ms
+ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: b5f1279317e6b34d2e3bccee2625d972ac185e04
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: d15e0963427babe045a4db6f93800e09e0d95da9
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134274"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145500"
 ---
 # <a name="getting-started---android"></a>Erste Schritte – Android
 
@@ -19,7 +19,7 @@ Dies ist ein Renderer für native Android-Steuerelemente.
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.adaptivecards/adaptivecards-android.svg)](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22adaptivecards-android%22)
 
-Die veröffentlichten Pakete findest du ![hier](https://search.maven.org/search?q=g:io.adaptivecards)
+Die veröffentlichten Pakete findest du ![hier.](https://search.maven.org/search?q=g:io.adaptivecards)
 
 Damit du die Bibliothek in dein Projekt einbeziehen kannst, musst du im Abschnitt mit den Abhängigkeiten diese Zeile in gradle.build deines Projekts einbeziehen.
 

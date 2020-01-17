@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 42a1f43fbcfe1416820637af750acc960b9effde
-ms.sourcegitcommit: 16a274ce5596001a1c5ab252d9d2a3db6a5a9a0d
+ms.openlocfilehash: 2c583f774451e60f825cd8fd2c38f2ea34c2f8de
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73750398"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145400"
 ---
 # <a name="adaptive-cards-template-language"></a>Vorlagen Sprache für Adaptive Karten
 
@@ -187,8 +187,9 @@ Wenn Sie einem Element einen "Datenkontext" zuweisen möchten, fügen Sie dem-El
 
 Dieser Teil ist ein wenig "dunkle Magie". Feedback willkommen.
 
-* Wenn die `$data`-Eigenschaft der Objekte auf ein **Array**festgelegt ist, **wird das Objekt selbst für jedes Element im Array wiederholt.** 
-* Wenn Sie wiederholt werden, werden `$data`, die in Eigenschafts Bindungen verwendet werden, auf das **einzelne Element** innerhalb des Arrays festgelegt.
+* Wenn die `$data`-Eigenschaft eines adaptiven Karten Elements an ein **Array**gebunden ist, **wird das Element selbst für jedes Element im Array wiederholt.** 
+* Alle Bindungs Ausdrücke (`{myProperty}`), die in Eigenschafts Werten verwendet werden, werden auf das **einzelne Element** innerhalb des Arrays festgelegt.
+* Wenn Sie an ein Array von Zeichen folgen binden, verwenden Sie `{$data}`, um auf das einzelne Zeichen folgen Element zuzugreifen. Beispielsweise `"text": "{$data}"`
 
 Beispielsweise wird das unten angegebene `TextBlock` dreimal wiederholt, da es `$data` ein Array ist. Beachten Sie, dass die `text`-Eigenschaft an die `name`-Eigenschaft eines einzelnen Objekts innerhalb des Arrays gebunden ist. 
 
@@ -237,7 +238,7 @@ Keine Vorlagen Sprache ist ohne einige Hilfsfunktionen fertiggestellt. Wir werde
 
 Die hier verwendete Syntax ist immer noch in der Luft, also schauen Sie es bald an, aber hier ist ein Einstieg in das, was wir planen:
 
-### <a name="string-functions"></a>Zeichen folgen Funktionen
+### <a name="string-functions"></a>Zeichenfolgenfunktionen
 
 * substr
 * IndexOf *(noch nicht funktioniert)*
@@ -266,7 +267,7 @@ Die hier verwendete Syntax ist immer noch in der Luft, also schauen Sie es bald 
 }
 ```
 
-### <a name="data-manipulation"></a>Datenbearbeitung
+### <a name="data-manipulation"></a>Datenmanipulation
 
 * JSON. Analyse-Möglichkeit zum Analysieren einer JSON-Zeichenfolge 
 

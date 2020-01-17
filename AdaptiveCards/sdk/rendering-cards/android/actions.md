@@ -1,15 +1,15 @@
 ---
 title: Aktionen – Android SDK
-author: bekao
-ms.author: bekao
+author: almedina-ms
+ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: 49b0b45abeb54381bd7b4b548219a09ad5da10c1
-ms.sourcegitcommit: 8c8067206f283d97a5aa4ec65ba23d3fe18962f1
+ms.openlocfilehash: 680aab595123ce35654d760f0e1dbbe406c8f29d
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299523"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145520"
 ---
 # <a name="actions---android"></a>Aktionen – Android
 
@@ -19,7 +19,7 @@ ms.locfileid: "68299523"
 > [Wichtige Änderungen in v 1.1](#breaking-changes-in-v11)
 > 
 
-Wenn eine Cards-Aktion ausgeführt wird, wird die Klasse aufgerufen, die an den Rendering-Aufruf ```ICardActionHandler``` , der die-Schnittstelle implementiert, übermittelt wurde. So wird ein Aktionshandler definiert:
+Wenn eine Cards-Aktion ausgeführt wird, wird die-Klasse aufgerufen, die an den Rendering-Aufruf übermittelt wurde, der die ```ICardActionHandler```-Schnittstelle implementiert. So wird ein Aktionshandler definiert:
 
 ```java
 public class ActionHandler implements ICardActionHandler
@@ -118,10 +118,10 @@ public class ActionHandler implements ICardActionHandler
 
 ## <a name="breaking-changes-in-v11"></a>Wichtige Änderungen in v 1.1
 
-Das in dieser Version enthaltene Medien Element erfordert, dass zwei neue Methoden von den Klassen implementiert werden, ```ICardActionHandler```die implementieren. diese Methoden lauten wie folgt:
+Das in dieser Version enthaltene Medien Element erfordert, dass zwei neue Methoden von den Klassen implementiert werden, die ```ICardActionHandler```implementieren. diese Methoden lauten wie folgt:
 
-* ```onMediaPlay```wird aufgerufen, wenn die Wiedergabe Schaltfläche zum ersten Mal in einem beliebigen Medien Element gedrückt wird.
-* ```onMediaStop```wird aufgerufen, wenn das Medium das Ende erreicht.
+* ```onMediaPlay``` wird aufgerufen, wenn die Wiedergabe Schaltfläche zum ersten Mal in einem beliebigen Medien Element gedrückt wird.
+* ```onMediaStop``` wird aufgerufen, wenn das Medium das Ende erreicht hat.
 
 Die Signaturen für diese Methoden lauten wie folgt:
 
