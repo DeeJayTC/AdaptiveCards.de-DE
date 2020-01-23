@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 65494ed437303d26a202c9a5b95f88255147cbd0
-ms.sourcegitcommit: 48838a50b5f0316e15b48d740a7dd0a5f96ebae4
+ms.openlocfilehash: 39bdc64ed3244aca68d36c886a9562d964ded217
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923077"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145390"
 ---
 # <a name="adaptive-cards-for-windows-developers"></a>Adaptive Karten für Windows-Entwickler
 
@@ -21,7 +21,7 @@ Die erste Windows-Oberfläche, die adaptive Karten unterstützt, ist die Chronik
 
 ### <a name="useractivity-api"></a>UserActivity-API
 
-Die [`Windows.ApplicationModel.UserActivities.UserActivity`](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.useractivities.useractivity)-API füllt die Chronik mit Aktivitäten.
+Die [`Windows.ApplicationModel.UserActivities.UserActivity`](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity)-API füllt die Chronik mit Aktivitäten.
 
 Die adaptive Karte wird über die Eigenschaft `Content` von `VisualElement` bereitgestellt (s. u.):
 
@@ -37,9 +37,9 @@ await userActivity.SaveAsync();
 
 Diese Schritte werden vollständig in einem hervorragenden, 45-minütigen Lernmodul behandelt.
 
-[Adaptive Karten in die Windows 10-Zeitachse integrieren](https://docs.microsoft.com/en-us/learn/modules/integrate-app-into-windows-10-timeline/)
+[Adaptive Karten in die Windows 10-Zeitachse integrieren](https://docs.microsoft.com/learn/modules/integrate-app-into-windows-10-timeline/)
 
-### <a name="learn-more"></a>Mehr erfahren
+### <a name="learn-more"></a>Weitere Informationen
 
 Diese Sitzung auf der Build 2017 behandelt Benutzeraktivitäten im Detail.
 

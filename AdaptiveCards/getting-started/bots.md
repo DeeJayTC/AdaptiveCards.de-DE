@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 05/30/2018
 ms.topic: article
-ms.openlocfilehash: 1acc30c0347ea5527de2af1fe74e605c7589cbc6
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 1c3ad2a4588244a8bd30011a4b6e25e37062624a
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "59553282"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145380"
 ---
 # <a name="adaptive-cards-for-bot-developers"></a>Adaptive Karten für Bot-Entwickler
 
@@ -18,7 +18,7 @@ Adaptive Karten eignen sich hervorragend für Bots. Damit kannst du eine Karte e
 > [!NOTE]
 > Skype wird in der aktuellen Vorschauversion nicht unterstützt. Aktuelle Informationen findest du auf der Seite [Partner](../resources/partners.md).
 
-## <a name="try-it-out"></a>Jetzt testen
+## <a name="try-it-out"></a>Testen
 
 Klicke auf den folgenden Link und [sprich mit unserem Scuba-Bot](http://contososcubademo.azurewebsites.net/). Sage `I'm looking for scuba`, und er hilft dir dabei, den Tauchurlaub deines Lebens zu buchen.  
 
@@ -100,7 +100,7 @@ Im Folgenden fügen wir eine adaptive Karte hinzu, die benutzerdefinierten Text 
 
 Adaptive Karten bieten viel mehr als nur anpassbaren Text. 
 
-Du hast folgende Möglichkeiten: 
+Sie haben folgende Möglichkeiten: 
 
 * Füge `Images` zu deiner Karte hinzu.
 * Organisiere deine Inhalte mit `Containers` und `Columns`.
@@ -113,10 +113,10 @@ Du hast folgende Möglichkeiten:
 
 Wenn dein Bot mit .NET oder NodeJS entwickelt wurde, haben wir Bibliotheken, die das Erstellen adaptiver Karten noch einfacher macht.
 
-Plattform|Installieren|Mehr erfahren
+Plattform|Installation|Weitere Informationen
 --------|-------|----------
-.NET | `Install-Package AdaptiveCards -IncludePrerelease` | [Bot Framework-Dokumentation für .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-NodeJS | `npm install adaptivecards` | [Bot Framework-Dokumentation für NodeJS](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
+.NET | `Install-Package AdaptiveCards -IncludePrerelease` | [Bot Framework-Dokumentation für .NET](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
+NodeJS | `npm install adaptivecards` | [Bot Framework-Dokumentation für NodeJS](https://docs.microsoft.com/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
 
 
 ## <a name="channel-status"></a>Kanalstatus

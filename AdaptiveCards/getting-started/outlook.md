@@ -4,12 +4,12 @@ author: dclaux
 ms.author: dclaux
 ms.date: 5/10/2018
 ms.topic: article
-ms.openlocfilehash: 6fc3687edd2a1770f7611473c3e02d0e01a26eef
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 3bf8f04307e0ad65cae609e56295269254ca1e06
+ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "59552422"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145420"
 ---
 # <a name="adaptive-cards-for-outlook-actionable-message-developers"></a>Adaptive Karten für Entwickler von Outlook-Nachrichten, die Aktionen erfordern
 
@@ -24,8 +24,8 @@ Jetzt kannst du adaptive Karten verwenden, um deine Aktionen erfordernden Outloo
 ![Aktionen erfordernde GitHub-Nachricht](media/outlook/Limeade.jpg)
 
 
-# <a name="ready-to-start"></a>Bist du bereit?
+## <a name="ready-to-start"></a>Bist du bereit?
 
-- Unter https://docs.microsoft.com/en-us/outlook/actionable-messages/ findest du die Schritte zum Erstellen deines ersten Szenarios für Aktionen erfordernden Nachrichten.
+- Unter https://docs.microsoft.com/outlook/actionable-messages/ findest du die Schritte zum Erstellen deines ersten Szenarios für Aktionen erfordernden Nachrichten.
 - Verwende das Actionable Message Card Playground-Tool, um Kartenbeispiele zu sehen, deine eigenen Karten zu erstellen, sie an dein Office 365-Konto zu senden und in [Outlook im Web](https://outlook.office.com) anzuzeigen.
 - Möchtest du JSON lieber nicht manuell schreiben? Der [Adaptive Card Designer (Vorschau)](https://acdesignerbeta.azurewebsites.net) ermöglicht es dir, adaptive Karten zu erstellen, ohne eine einzige JSON-Codezeile zu schreiben.
