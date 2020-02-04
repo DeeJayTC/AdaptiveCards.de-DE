@@ -17,7 +17,7 @@ Verwenden Sie XIb für differenzierte Formatierungen.
 
 Die folgenden xisb sind vorhanden.
 
-| XIb | Usage |
+| XIb | Verwendung |
 |---|---|
 | Acrbutton. XIb | Parab |
 | Acrcellforcompactmode. XIb   | Choiceset Compact-Modus|
@@ -28,7 +28,7 @@ Die folgenden xisb sind vorhanden.
 | Acrpickerview. XIb | Choiceset |
 | Acrquickaktionmultilineview. XIb  | Schnelle Aktionen mit mehreren Zeilen |
 | Acrquickaktionview. XIb | Schnelle Aktionen |
-| Acrtextfield. XIb | Input |
+| Acrtextfield. XIb | Eingabe |
 
 XIb kann über Xcode IB bearbeitet werden.
 Nachdem xisb an der Spezifikation bearbeitet wurden.
