@@ -1,29 +1,29 @@
 ---
-title: Adaptive Cards Designer SDK
+title: Designer-SDK für adaptive Karten
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/15/2019
 ms.topic: article
 ms.openlocfilehash: 285f02be2bc45b280461ff39a0c64b70d7029fc5
 ms.sourcegitcommit: aa044167fd0b32b485ea2ce014afcf0b332bf1a2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/16/2019
 ms.locfileid: "69536819"
 ---
-# <a name="adaptive-cards-designer-sdk"></a>Adaptive Cards Designer SDK
+# <a name="adaptive-cards-designer-sdk"></a>Designer-SDK für adaptive Karten
 
-Der adaptiver Karten-Designer bietet eine umfassende, interaktive Entwurfszeit Funktion zum Erstellen von adaptiven Karten.
+Der Designer für adaptive Karten bietet eine umfassende, interaktive Entwurfszeitumgebung zum Erstellen von adaptiven Karten.
 
-Probieren Sie es unter https://adaptivecards.io/designer
+Jetzt testen unter https://adaptivecards.io/designer
 
 ![Screenshot des Designers](../content/designer.png)
 
-Mit diesem SDK können Sie den adaptiven Karten-Designer problemlos in Ihre eigenen Erfahrungen integrieren.
+Mit diesem SDK können Sie den Designer für adaptive Karten problemlos in Ihre eigenen Umgebung integrieren.
 
 > [!NOTE]
 > 
-> Das Designer SDK befindet sich derzeit in der Vorschau Phase und kann wichtige Änderungen in der öffentlichen API aufweisen, da wir Feedback erhalten.
+> Das Designer-SDK befindet sich derzeit in der Vorschauphase und kann bis zur öffentlichen API wesentlichen Änderungen aufgrund des empfangenen Feedbacks unterzogen werden.
 
 ## <a name="get-started"></a>Erste Schritte
 
@@ -41,4 +41,4 @@ npm install adaptivecards-designer
 
 ## <a name="documentation"></a>Dokumentation 
 
-[Vollständige Dokumentation](https://www.npmjs.com/package/adaptivecards-designer) zu NPM lesen
+Lesen Sie die [vollständige Dokumentation](https://www.npmjs.com/package/adaptivecards-designer) auf npm.

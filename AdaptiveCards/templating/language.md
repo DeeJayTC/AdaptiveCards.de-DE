@@ -1,40 +1,40 @@
 ---
-title: Vorlagen Sprache für Adaptive Karten
+title: Vorlagensprache für adaptive Karten
 author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
 ms.openlocfilehash: 2c583f774451e60f825cd8fd2c38f2ea34c2f8de
 ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/16/2020
 ms.locfileid: "76145400"
 ---
-# <a name="adaptive-cards-template-language"></a>Vorlagen Sprache für Adaptive Karten
+# <a name="adaptive-cards-template-language"></a>Vorlagensprache für adaptive Karten
 
-Durch Vorlagen wird die Trennung von **Daten** vom **Layout** in der adaptiven Karte ermöglicht. Die Vorlagen Sprache ist die Syntax, die zum Erstellen einer Vorlage verwendet wird. 
+Durch Vorlagen wird die Trennung von **Daten** und **Layout** auf Ihrer adaptiven Karte ermöglicht. Die Vorlagensprache ist die Syntax, die zum Erstellen einer Vorlage verwendet wird. 
 
-> Eine Übersicht über die Vorlagen für [Adaptive Karten](index.md) finden Sie unter.
+> Hier finden Sie einen [Überblick über Vorlagen für adaptive Karten](index.md).
 
 > [!IMPORTANT] 
 > 
 > Diese Features befinden sich **in der Vorschauphase und können geändert werden**. Ihr Feedback ist nicht nur willkommen, sondern wichtig, um sicherzustellen, dass **wir** Ihnen die benötigten Features bieten.
 
-Beim Erstellen einer Vorlage können Sie die Daten Inline mit der `AdaptiveCard` Nutzlast oder zur Laufzeit mithilfe der Vorlagen- [sdche](sdk.md)angeben.
+Wenn Sie eine Vorlage erstellen, können Sie die Daten inline mit der `AdaptiveCard`-Nutzlast oder zur Laufzeit mithilfe der [Vorlagen-SDKs](sdk.md) angeben.
 
 ## <a name="specify-data-within-the-card"></a>Daten innerhalb der Karte angeben
 
-Um Daten direkt innerhalb der Karten Nutzlast bereitzustellen, fügen Sie Ihrem `AdaptiveCard` einfach ein `$data` Attribut hinzu (siehe unten).
+Um Daten direkt innerhalb der Kartennutzlast bereitzustellen, fügen Sie Ihrer `AdaptiveCard` einfach ein `$data`-Attribut hinzu (siehe unten).
 
-## <a name="binding-to-the-data"></a>Binden an die Daten
+## <a name="binding-to-the-data"></a>Bindung an Daten
 
-Sie können eine Bindung an die Daten innerhalb der `body` oder `actions` der Karte herstellen.
+Sie können eine Bindung an Daten innerhalb von `body` oder `actions` der Karte herstellen.
 
-* Die Bindungs Syntax beginnt mit `{` und endet mit `}`. Beispielsweise `{myProperty}`
-* Punkt Schreibweise für den Zugriff auf untergeordnete Objekte
-* Indexer-Syntax zum Abrufen von Eigenschaften nach Schlüsseln oder Elementen in einem Array
-* Ordnungsgemäße NULL-Behandlung für Deep-Hierarchien
+* Die Bindungssyntax beginnt mit `{` und endet mit `}`. Beispiel: `{myProperty}`
+* Punkt-Notation für den Zugriff auf untergeordnete Objekte
+* Indexersyntax zum Abrufen von Eigenschaften nach Schlüsseln oder Elementen in einem Array
+* Ordnungsgemäße NULL-Behandlung für tiefen Hierarchien
 * *Dokumentation zur Escapesyntax in Kürze verfügbar*
 
 ```json
@@ -72,9 +72,9 @@ Sie können eine Bindung an die Daten innerhalb der `body` oder `actions` der Ka
 }
 ```
 
-## <a name="separating-the-template-from-the-data"></a>Trennen der Vorlage von den Daten
+## <a name="separating-the-template-from-the-data"></a>Trennen von Vorlage und Daten
 
-Alternativ (und wahrscheinlicher) erstellen Sie eine wiederverwendbare Karte "Template", ohne die Daten einzubeziehen. Diese Vorlage kann als Datei gespeichert und der Quell Code Verwaltung hinzugefügt werden.
+Alternativ (und wahrscheinlicher) erstellen Sie eine wiederverwendbare Karte „Vorlage“ ohne Daten. Diese Vorlage kann als Datei gespeichert und dem Quellsteuerelement hinzugefügt werden.
 
 **EmployeeCardTemplate.json**
 
@@ -98,11 +98,11 @@ Alternativ (und wahrscheinlicher) erstellen Sie eine wiederverwendbare Karte "Te
 }
 ```
 
-Anschließend können Sie die Daten mit den Vorlagen- [sdchen](sdk.md)laden und zur Laufzeit bereitstellen.
+Laden Sie die Daten dann zur Laufzeit, und stellen Sie sie mithilfe des [Vorlagen-SDKs](sdk.md) bereit.
 
 **JavaScript-Beispiel**
 
-Verwenden des Pakets [adaptivecards-](https://npmjs.com/package/adaptivecards-templating) Vorlagen.
+Verwenden des Pakets [adaptivecards-templating](https://npmjs.com/package/adaptivecards-templating).
 
 ```js
 var template = new ACData.Template({ 
@@ -131,26 +131,26 @@ var card = template.expand(dataContext);
 // Now you have an AdaptiveCard ready to render!
 ```
 
-## <a name="designer-support"></a>Designer Unterstützung
+## <a name="designer-support"></a>Designerunterstützung
 
-Der adaptiver Karten-Designer wurde aktualisiert, um Vorlagen zu unterstützen. 
+Der Designer für adaptive Karten wurde aktualisiert, um Vorlagen zu unterstützen. 
 
-> Probieren Sie es aus:  **[https://adaptivecards.io/designer](https://adaptivecards.io/designer)**
+> Jetzt testen unter: **[https://adaptivecards.io/designer](https://adaptivecards.io/designer)**
 
-[Bild ![](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](https://adaptivecards.io/designer)
+[![Abbildung](https://user-images.githubusercontent.com/1432195/53214462-88d46980-3601-11e9-908d-253a1bb940a8.png)](https://adaptivecards.io/designer)
 
-* **Beispiel Daten-Editor** : Geben Sie hier Beispiel Daten an, um die Daten gebundene Karte im Vorschaumodus anzuzeigen. In diesem Bereich gibt es eine kleine Schaltfläche, um die Datenstruktur aus den vorhandenen Beispiel Daten aufzufüllen.
-* **Datenstruktur** : Dies ist die Struktur der Beispiel Daten. Felder können auf die Entwurfs Oberfläche gezogen werden, um eine Bindung an Sie zu erstellen. 
-* **Vorschaumodus** : Klicken Sie auf die Symbolleisten Schaltfläche, um zwischen den Funktionen "Bearbeiten" und "Sample-Data-Preview" zu wechseln.
-* **Sample öffnen** : Klicken Sie auf diese Schaltfläche, um verschiedene Beispiel Nutzlasten zu öffnen.
+* **Beispieldaten-Editor** – Geben Sie hier Beispieldaten an, um die datengebundene Karte im Vorschaumodus anzuzeigen. In diesem Bereich gibt es eine kleine Schaltfläche, zum Auffüllen der Datenstruktur mit den vorhandenen Beispieldaten.
+* **Datenstruktur** – Dies ist die Struktur der Beispieldaten. Felder können auf die Entwurfsoberfläche gezogen werden, um eine Bindung zu erstellen. 
+* **Vorschaumodus** – Klicken Sie auf die Symbolleistenschaltfläche, um zwischen der „edit-experience“ und der „sample-data-preview“ zu wechseln.
+* **Beispiel öffnen** – Klicken Sie auf diese Schaltfläche, um verschiedene Beispielnutzlasten zu öffnen.
 
 ## <a name="advanced-binding"></a>Erweiterte Bindung
 
-### <a name="binding-scopes"></a>Bindungs Bereiche
+### <a name="binding-scopes"></a>Bindungsbereiche
 
-Für den Zugriff auf verschiedene Bindungs Bereiche sind einige reservierte Schlüsselwörter verfügbar. 
+Für den Zugriff auf verschiedene Bindungsbereiche sind einige reservierte Schlüsselwörter verfügbar. 
 
-*Hinweis:* nicht alle in der Vorschauversion sind implementiert.
+*Hinweis:* Nicht alle diese Schlüsselwörter sind in der Vorschau implementiert.
 
 ```json
 {
@@ -162,9 +162,9 @@ Für den Zugriff auf verschiedene Bindungs Bereiche sind einige reservierte Schl
 }
 ```
 
-### <a name="assigning-a-data-context-to-elements"></a>Zuweisen eines Daten Kontexts zu Elementen
+### <a name="assigning-a-data-context-to-elements"></a>Zuweisen eines Datenkontexts zu Elementen
 
-Wenn Sie einem Element einen "Datenkontext" zuweisen möchten, fügen Sie dem-Element ein `$data`-Attribut hinzu.
+Wenn Sie einem Element einen „Datenkontext“ zuweisen möchten, fügen Sie dem-Element ein `$data`-Attribut hinzu.
 
 ```json
 {
@@ -185,13 +185,13 @@ Wenn Sie einem Element einen "Datenkontext" zuweisen möchten, fügen Sie dem-El
 
 ## <a name="repeating-items-in-an-array"></a>Wiederholen von Elementen in einem Array
 
-Dieser Teil ist ein wenig "dunkle Magie". Feedback willkommen.
+Dieser Teil hat etwas von „dunkler Magie“. Feedback willkommen.
 
-* Wenn die `$data`-Eigenschaft eines adaptiven Karten Elements an ein **Array**gebunden ist, **wird das Element selbst für jedes Element im Array wiederholt.** 
-* Alle Bindungs Ausdrücke (`{myProperty}`), die in Eigenschafts Werten verwendet werden, werden auf das **einzelne Element** innerhalb des Arrays festgelegt.
-* Wenn Sie an ein Array von Zeichen folgen binden, verwenden Sie `{$data}`, um auf das einzelne Zeichen folgen Element zuzugreifen. Beispielsweise `"text": "{$data}"`
+* Wenn die `$data`-Eigenschaft eines „Adaptive Karte“-Elements an ein **-Array** gebunden ist, dann wird das **-Element selbst für jedes Element im Array wiederholt.** 
+* Alle in Eigenschaftswerten verwendeten Bindungsausdrücke (`{myProperty}`) werden auf das **einzelne Element** innerhalb des Arrays festgelegt.
+* Wenn Sie eine Bindung an ein Array von Zeichenfolgen herstellen, verwenden Sie `{$data}`, um auf das einzelne Zeichenfolgenelement zuzugreifen. Beispiel: `"text": "{$data}"`
 
-Beispielsweise wird das unten angegebene `TextBlock` dreimal wiederholt, da es `$data` ein Array ist. Beachten Sie, dass die `text`-Eigenschaft an die `name`-Eigenschaft eines einzelnen Objekts innerhalb des Arrays gebunden ist. 
+Der `TextBlock` unten wird beispielsweise dreimal wiederholt, da sein `$data`-Objekt ein Array ist. Beachten Sie, dass die `text`-Eigenschaft an die `name`-Eigenschaft eines einzelnen Objekts innerhalb des Arrays gebunden ist. 
 
 ```json
 {
@@ -234,31 +234,31 @@ Beispielsweise wird das unten angegebene `TextBlock` dreimal wiederholt, da es `
 
 ## <a name="functions"></a>Funktionen
 
-Keine Vorlagen Sprache ist ohne einige Hilfsfunktionen fertiggestellt. Wir werden einen Standardsatz von Funktionen bereitstellen, die für jedes SDK funktionieren. 
+Keine Vorlagensprache kommt ohne einige Hilfsfunktionen aus. Wir werden einen Standardsatz von Funktionen bereitstellen, die mit jedem SDK verwendet werden können. 
 
-Die hier verwendete Syntax ist immer noch in der Luft, also schauen Sie es bald an, aber hier ist ein Einstieg in das, was wir planen:
+Die hier verwendete Syntax ist noch in der Schwebe, also kehren Sie bald zurück. Hier ist aber schon ein erster Einstieg in das, was wir planen:
 
 ### <a name="string-functions"></a>Zeichenfolgenfunktionen
 
 * substr
-* IndexOf *(noch nicht funktioniert)*
-* *ToUpper(noch nicht funktioniert)*
-* ToLower *(noch nicht funktioniert)*
+* indexOf *(noch nicht funktionsfähig)*
+* toUpper *(noch nicht funktionsfähig)*
+* toLower *(noch nicht funktionsfähig)*
 
 ### <a name="number-functions"></a>Number-Funktionen
 
-* Formatierung (Currency, Decimal usw.) *(noch nicht funktioniert)*
+* Formatierung (Währung, Dezimal usw.) *(noch nicht funktionsfähig)*
 
 ### <a name="date-functions"></a>Datumsfunktionen
 
-* Die Verarbeitung von bekannten Datums Zeichen folgen Formaten *(noch nicht funktioniert)*
-* Formatierung für bekannte Datums-/uhrzeitanstellungen *(noch nicht funktioniert)*
+* Parsen bekannter Datumszeichenfolgen-Formate *(noch nicht funktionsfähig)*
+* Formatierung für bekannte Datums-/Uhrzeitdarstellungen *(noch nicht funktionsfähig)*
 
 ### <a name="conditional-functions"></a>Bedingte Funktionen
 
-* if (*Ausdruck*, *TrueValue*, *FalseValue*)
+* if(*expression*, *trueValue*, *falseValue*)
 
-**`if` Beispiel**
+**`if`-Beispiel**
 
 ```json
 {
@@ -267,13 +267,13 @@ Die hier verwendete Syntax ist immer noch in der Luft, also schauen Sie es bald 
 }
 ```
 
-### <a name="data-manipulation"></a>Datenmanipulation
+### <a name="data-manipulation"></a>Datenbearbeitung
 
-* JSON. Analyse-Möglichkeit zum Analysieren einer JSON-Zeichenfolge 
+* JSON.parse – Möglichkeit, eine JSON-Zeichenfolge zu parsen 
 
 **`JSON.parse` Beispiel**
 
-Dies ist eine Azure devops-Antwort, bei der die `message`-Eigenschaft eine JSON-serialisierte Zeichenfolge ist. Um auf Werte innerhalb der Zeichenfolge zuzugreifen, muss die `JSON.parse`-Funktion in der Vorlage verwendet werden.
+Dies ist eine Azure DevOps-Antwort, bei der die `message`-Eigenschaft eine serialisierte JSON-Zeichenfolge ist. Um auf Werte innerhalb der Zeichenfolge zuzugreifen, muss die Funktion `JSON.parse` in der Vorlage verwendet werden.
 
 **Daten** 
 
@@ -308,11 +308,11 @@ Dies ist eine Azure devops-Antwort, bei der die `message`-Eigenschaft eine JSON-
 
 ### <a name="custom-functions"></a>Benutzerdefinierte Funktionen
 
-Wir möchten sicherstellen, dass Hosts benutzerdefinierte Funktionen hinzufügen können. das bedeutet, dass wir eine robuste Unterstützung für die Ausweich Unterstützung benötigen, wenn eine Funktion nicht unterstützt wird Wir bewerten dies noch einmal.
+Wir möchten sicherstellen, dass Hosts benutzerdefinierte Funktionen hinzufügen können. Daher wird eine robuste Fallbackunterstützung für nicht unterstützte Funktionen benötigt. Dies wird derzeit noch untersucht.
 
 ## <a name="conditional-layout"></a>Bedingtes Layout
 
-Wenn Sie ein gesamtes Element löschen möchten, wenn eine Bedingung erfüllt ist, verwenden Sie die `$when`-Eigenschaft. Wenn `$when` ausgewertet wird `false` wird das Element dem Benutzer nicht angezeigt.
+Um ein komplettes Element zu entfernen, wenn eine Bedingung erfüllt ist, verwenden Sie die `$when`-Eigenschaft. Wird `$when` zu `false` ausgewertet, wird das Element dem Benutzer nicht angezeigt.
 
 ```json
 {
@@ -337,11 +337,11 @@ Wenn Sie ein gesamtes Element löschen möchten, wenn eine Bedingung erfüllt is
 }
 ```
 
-### <a name="composing-templates"></a>Verfassen von Vorlagen
+### <a name="composing-templates"></a>Zusammensetzen von Vorlagen
 
-Derzeit wird das Zusammenstellen von Vorlagen "Parts" nicht unterstützt. Wir untersuchen jedoch die Optionen und hoffen, dass Sie bald mehr freigeben können. Hier sind alle Gedanken Willkommen!
+Derzeit wird das Zusammenstellen von Vorlagenteilen nicht unterstützt. Wir untersuchen jedoch Optionen und hoffen, bald mehr berichten zu können. Alle Ideen sind willkommen!
 
 
 ## <a name="examples"></a>Beispiele
 
-Durchsuchen Sie die aktualisierte Beispiel [Seite](https://adaptivecards.io/samples) , um alle möglichen neuen, auf Vorlagen basierenden Karten zu untersuchen.
+Durchsuchen Sie die aktualisierte [Beispielseite](https://adaptivecards.io/samples), um alle möglichen neuen Kartenvorlagen zu erkunden.
