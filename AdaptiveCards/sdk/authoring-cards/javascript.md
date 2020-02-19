@@ -4,32 +4,32 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 07/26/2019
 ms.topic: article
-ms.openlocfilehash: 039171d895fac0975bf9eff4fe84fdf8b6f7e4af
-ms.sourcegitcommit: f8de9c02b92cd8927a18e59e5650c92b2b78db06
+ms.openlocfilehash: 4ddff841ec073c60a8aa6184f309e94052cb002d
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523836"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454803"
 ---
-# <a name="javascript-sdk-for-creating-cards"></a><span data-ttu-id="60d51-102">JavaScript SDK zum Erstellen von Karten</span><span class="sxs-lookup"><span data-stu-id="60d51-102">JavaScript SDK for creating cards</span></span>
+# <a name="javascript-sdk-for-creating-cards"></a><span data-ttu-id="5d8b8-102">JavaScript SDK zum Erstellen von Karten</span><span class="sxs-lookup"><span data-stu-id="5d8b8-102">JavaScript SDK for creating cards</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="60d51-103">Die Bibliothek für die Serialisierung von JSON befindet sich noch in der Entwicklung, und ihre miterlage kann variieren.</span><span class="sxs-lookup"><span data-stu-id="60d51-103">The library for serializing JSON is still in development and your milage may vary.</span></span>
+> <span data-ttu-id="5d8b8-103">Die Bibliothek für die Serialisierung von JSON befindet sich noch in der Entwicklung, und ihre miterlage kann variieren.</span><span class="sxs-lookup"><span data-stu-id="5d8b8-103">The library for serializing JSON is still in development and your milage may vary.</span></span>
 
-<span data-ttu-id="60d51-104">Wie [in den ersten](../../authoring-cards/getting-started.md)Schritten beschrieben, ist eine Adaptive Karte nichts anderes als ein serialisiertes JSON-Objekt eines Karten Objektmodells.</span><span class="sxs-lookup"><span data-stu-id="60d51-104">As we described in the [Getting Started](../../authoring-cards/getting-started.md), an Adaptive Card is nothing more than a serialized JSON object of a card object model.</span></span>  <span data-ttu-id="60d51-105">Um das Bearbeiten des Objektmodells zu vereinfachen, haben wir einige Bibliotheken definiert, die eine stark typisierte Klassenhierarchie definieren, die einfach serialisieren/deserialisieren von JSON-Code ist.</span><span class="sxs-lookup"><span data-stu-id="60d51-105">To make it easy to manipulate the object model we have defined some libraries which define a strongly typed class hierarchy that is easy to serialize/deserialize json.</span></span>
+<span data-ttu-id="5d8b8-104">Wie [in den ersten](../../authoring-cards/getting-started.md)Schritten beschrieben, ist eine Adaptive Karte nichts anderes als ein serialisiertes JSON-Objekt eines Karten Objektmodells.</span><span class="sxs-lookup"><span data-stu-id="5d8b8-104">As we described in the [Getting Started](../../authoring-cards/getting-started.md), an Adaptive Card is nothing more than a serialized JSON object of a card object model.</span></span>  <span data-ttu-id="5d8b8-105">Um das Bearbeiten des Objektmodells zu vereinfachen, haben wir einige Bibliotheken definiert, die eine stark typisierte Klassenhierarchie definieren, die einfach serialisieren/deserialisieren von JSON-Code ist.</span><span class="sxs-lookup"><span data-stu-id="5d8b8-105">To make it easy to manipulate the object model we have defined some libraries which define a strongly typed class hierarchy that is easy to serialize/deserialize json.</span></span>
 
-<span data-ttu-id="60d51-106">Sie können ein beliebiges Tool verwenden, mit dem Sie den JSON-Code für die Adaptive Karte erstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="60d51-106">You can use any tooling that you want to create the adaptive card json.</span></span>
+<span data-ttu-id="5d8b8-106">Sie können ein beliebiges Tool verwenden, mit dem Sie den JSON-Code für die Adaptive Karte erstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="5d8b8-106">You can use any tooling that you want to create the adaptive card json.</span></span>
 
-<span data-ttu-id="60d51-107">Das `adaptivecards` NPM-Paket definiert eine Bibliothek zum Arbeiten mit adaptiven Karten in JavaScript.</span><span class="sxs-lookup"><span data-stu-id="60d51-107">The `adaptivecards` npm package defines a library for working with adaptive cards in javascript</span></span>
+<span data-ttu-id="5d8b8-107">Das `adaptivecards` NPM-Paket definiert eine Bibliothek zum Arbeiten mit adaptiven Karten in JavaScript.</span><span class="sxs-lookup"><span data-stu-id="5d8b8-107">The `adaptivecards` npm package defines a library for working with adaptive cards in javascript</span></span>
 
-## <a name="to-install"></a><span data-ttu-id="60d51-108">So installieren Sie</span><span class="sxs-lookup"><span data-stu-id="60d51-108">To install</span></span>
+## <a name="to-install"></a><span data-ttu-id="5d8b8-108">So installieren Sie</span><span class="sxs-lookup"><span data-stu-id="5d8b8-108">To install</span></span>
 ```console
 npm install adaptivecards
 ```
 
-## <a name="example"></a><span data-ttu-id="60d51-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="60d51-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5d8b8-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5d8b8-109">Example</span></span>
 
-<span data-ttu-id="60d51-110">Die folgende API zeigt, wie Sie eine Adaptive Karte mithilfe des Objektmodells erstellen und in JSON Serialisieren.</span><span class="sxs-lookup"><span data-stu-id="60d51-110">The following API shows how to construct an Adaptive Card using the object model and serialize it to JSON.</span></span>
+<span data-ttu-id="5d8b8-110">Die folgende API zeigt, wie Sie eine Adaptive Karte mithilfe des Objektmodells erstellen und in JSON Serialisieren.</span><span class="sxs-lookup"><span data-stu-id="5d8b8-110">The following API shows how to construct an Adaptive Card using the object model and serialize it to JSON.</span></span>
 
 ```typescript
 let card = new Adaptive.AdaptiveCard();

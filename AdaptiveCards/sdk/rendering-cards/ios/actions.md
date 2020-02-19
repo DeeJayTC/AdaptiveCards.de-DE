@@ -4,16 +4,16 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: ff8d4924f5394b7882110f5fa38c6833fd2c3896
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 3c0a0886ca5b4403292f8d92cccc329325909738
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59553582"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454773"
 ---
-# <a name="actions---ios"></a><span data-ttu-id="e9804-102">Aktionen (IOS)</span><span class="sxs-lookup"><span data-stu-id="e9804-102">Actions - iOS</span></span>
+# <a name="actions---ios"></a><span data-ttu-id="f535e-102">Aktionen (IOS)</span><span class="sxs-lookup"><span data-stu-id="f535e-102">Actions - iOS</span></span>
 
-<span data-ttu-id="e9804-103">Entwickler können Aktionen wie submitAction und OpenURL durch Implementieren von acractiondelegaten empfangen und auf eine Instanz von adaptivecard festlegen.</span><span class="sxs-lookup"><span data-stu-id="e9804-103">Developers can receive actions such SubmitAction and OpenUrl by implementing ACRActionDelegate, and set it to instance of AdaptiveCard.</span></span>
+<span data-ttu-id="f535e-103">Entwickler können Aktionen wie submitAction und OpenURL durch Implementieren von acractiondelegaten empfangen und auf eine Instanz von adaptivecard festlegen.</span><span class="sxs-lookup"><span data-stu-id="f535e-103">Developers can receive actions such SubmitAction and OpenUrl by implementing ACRActionDelegate, and set it to instance of AdaptiveCard.</span></span>
 
 ```objective-c
 //// delegate implementation

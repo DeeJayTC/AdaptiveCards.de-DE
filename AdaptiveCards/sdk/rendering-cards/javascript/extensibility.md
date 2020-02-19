@@ -4,23 +4,23 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 464fda8c83f9943d316f43fec811511ab9696916
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 4c43637d81bcf43251638133c66d1c77b92ace56
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552632"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454673"
 ---
-# <a name="extensibility---javascript"></a><span data-ttu-id="4f4e1-102">Erweiterbarkeit: JavaScript</span><span class="sxs-lookup"><span data-stu-id="4f4e1-102">Extensibility - JavaScript</span></span>
+# <a name="extensibility---javascript"></a><span data-ttu-id="09743-102">Erweiterbarkeit: JavaScript</span><span class="sxs-lookup"><span data-stu-id="09743-102">Extensibility - JavaScript</span></span>
 
-## <a name="implement-and-register-a-custom-element"></a><span data-ttu-id="4f4e1-103">Implementieren und Registrieren eines benutzerdefinierten Elements</span><span class="sxs-lookup"><span data-stu-id="4f4e1-103">Implement and register a custom element</span></span>
+## <a name="implement-and-register-a-custom-element"></a><span data-ttu-id="09743-103">Implementieren und Registrieren eines benutzerdefinierten Elements</span><span class="sxs-lookup"><span data-stu-id="09743-103">Implement and register a custom element</span></span>
 
-<span data-ttu-id="4f4e1-104">Die Schritte zum Erstellen eines benutzerdefinierten Adaptive Card-Elementtyps lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="4f4e1-104">The steps for creating a custom Adaptive Card element type are:</span></span>
-- <span data-ttu-id="4f4e1-105">Erstellen Sie eine neue Klasse, die von`CardElement`</span><span class="sxs-lookup"><span data-stu-id="4f4e1-105">Create a new class driving from `CardElement`</span></span>
-- <span data-ttu-id="4f4e1-106">Implementieren der `getJsonTypeName`Methoden `parse`, `toJSON`, und`internalRender` `renderSpeech`</span><span class="sxs-lookup"><span data-stu-id="4f4e1-106">Implement its `getJsonTypeName`, `parse`, `toJSON`, `internalRender` and `renderSpeech` methods</span></span>
-- <span data-ttu-id="4f4e1-107">Registrieren Sie Sie, indem Sie Sie der Element Registrierung des Renderers hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="4f4e1-107">Register it by adding it to the renderer's element registry</span></span>
+<span data-ttu-id="09743-104">Die Schritte zum Erstellen eines benutzerdefinierten Adaptive Card-Elementtyps lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="09743-104">The steps for creating a custom Adaptive Card element type are:</span></span>
+- <span data-ttu-id="09743-105">Erstellen Sie eine neue Klasse, die von `CardElement`</span><span class="sxs-lookup"><span data-stu-id="09743-105">Create a new class driving from `CardElement`</span></span>
+- <span data-ttu-id="09743-106">Implementieren der Methoden `getJsonTypeName`, `parse`, `toJSON`, `internalRender` und `renderSpeech`</span><span class="sxs-lookup"><span data-stu-id="09743-106">Implement its `getJsonTypeName`, `parse`, `toJSON`, `internalRender` and `renderSpeech` methods</span></span>
+- <span data-ttu-id="09743-107">Registrieren Sie Sie, indem Sie Sie der Element Registrierung des Renderers hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="09743-107">Register it by adding it to the renderer's element registry</span></span>
 
-<span data-ttu-id="4f4e1-108">Sehen wir uns ein Beispiel an, um ein einfaches Statusanzeige Element zu implementieren:</span><span class="sxs-lookup"><span data-stu-id="4f4e1-108">Let's take an example and implement a simple Progress Bar element:</span></span>
+<span data-ttu-id="09743-108">Sehen wir uns ein Beispiel an, um ein einfaches Statusanzeige Element zu implementieren:</span><span class="sxs-lookup"><span data-stu-id="09743-108">Let's take an example and implement a simple Progress Bar element:</span></span>
 
 ```typescript
 import * as Adaptive from "adaptivecards";
@@ -136,15 +136,15 @@ export class ProgressBar extends Adaptive.CardElement {
 }
 ```
 
-<span data-ttu-id="4f4e1-109">Das ist alles.</span><span class="sxs-lookup"><span data-stu-id="4f4e1-109">That's it.</span></span> <span data-ttu-id="4f4e1-110">Registrieren Sie nun einfach die Statusanzeige Klasse beim Renderer:</span><span class="sxs-lookup"><span data-stu-id="4f4e1-110">Now just register the Progress Bar class with the renderer:</span></span>
+<span data-ttu-id="09743-109">Das war's.</span><span class="sxs-lookup"><span data-stu-id="09743-109">That's it.</span></span> <span data-ttu-id="09743-110">Registrieren Sie nun einfach die Statusanzeige Klasse beim Renderer:</span><span class="sxs-lookup"><span data-stu-id="09743-110">Now just register the Progress Bar class with the renderer:</span></span>
 
 ```typescript
 Adaptive.AdaptiveCard.elementTypeRegistry.registerType("ProgressBar", () => { return new ProgressBar(); });
 ```
 
-## <a name="implement-and-register-a-custom-action"></a><span data-ttu-id="4f4e1-111">Implementieren und Registrieren einer benutzerdefinierten Aktion</span><span class="sxs-lookup"><span data-stu-id="4f4e1-111">Implement and register a custom action</span></span>
+## <a name="implement-and-register-a-custom-action"></a><span data-ttu-id="09743-111">Implementieren und Registrieren einer benutzerdefinierten Aktion</span><span class="sxs-lookup"><span data-stu-id="09743-111">Implement and register a custom action</span></span>
 
-<span data-ttu-id="4f4e1-112">Die Schritte zum Erstellen einer benutzerdefinierten adaptiven kartenaktion sind im Wesentlichen identisch mit denen für benutzerdefinierte Elemente.</span><span class="sxs-lookup"><span data-stu-id="4f4e1-112">The steps for creating a custom Adaptive Card action are essentially the same as those for custom elements.</span></span> <span data-ttu-id="4f4e1-113">Im folgenden finden Sie ein einfaches Beispiel für eine Warnungs Aktion, bei der einfach ein Meldungs Feld mit konfigurier barem Text angezeigt wird:</span><span class="sxs-lookup"><span data-stu-id="4f4e1-113">Here is a simple example of an Alert Action that simply displays a message box with configurable text:</span></span>
+<span data-ttu-id="09743-112">Die Schritte zum Erstellen einer benutzerdefinierten adaptiven kartenaktion sind im Wesentlichen identisch mit denen für benutzerdefinierte Elemente.</span><span class="sxs-lookup"><span data-stu-id="09743-112">The steps for creating a custom Adaptive Card action are essentially the same as those for custom elements.</span></span> <span data-ttu-id="09743-113">Im folgenden finden Sie ein einfaches Beispiel für eine Warnungs Aktion, bei der einfach ein Meldungs Feld mit konfigurier barem Text angezeigt wird:</span><span class="sxs-lookup"><span data-stu-id="09743-113">Here is a simple example of an Alert Action that simply displays a message box with configurable text:</span></span>
 
 ```typescript
 import * as Adaptive from "adaptivecards";
@@ -176,15 +176,15 @@ export class AlertAction extends Adaptive.Action {
 }
 ```
 
-<span data-ttu-id="4f4e1-114">Registrieren Sie nun die neue Aktion:</span><span class="sxs-lookup"><span data-stu-id="4f4e1-114">Now register the new action:</span></span>
+<span data-ttu-id="09743-114">Registrieren Sie nun die neue Aktion:</span><span class="sxs-lookup"><span data-stu-id="09743-114">Now register the new action:</span></span>
 
 ```
 Adaptive.AdaptiveCard.actionTypeRegistry.registerType("Action.Alert", () => { return new AlertAction(); });
 ```
 
-## <a name="example"></a><span data-ttu-id="4f4e1-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4f4e1-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="09743-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="09743-115">Example</span></span>
 
-<span data-ttu-id="4f4e1-116">Hier sehen Sie eine Beispiel Karte, die sowohl das ProgressBar-Element als auch die alertaction-Aktion verwendet:</span><span class="sxs-lookup"><span data-stu-id="4f4e1-116">Here is a sample card that uses both the ProgressBar element and AlertAction action:</span></span>
+<span data-ttu-id="09743-116">Hier sehen Sie eine Beispiel Karte, die sowohl das ProgressBar-Element als auch die alertaction-Aktion verwendet:</span><span class="sxs-lookup"><span data-stu-id="09743-116">Here is a sample card that uses both the ProgressBar element and AlertAction action:</span></span>
 ```
 {
     "type": "AdaptiveCard",
@@ -212,4 +212,4 @@ Adaptive.AdaptiveCard.actionTypeRegistry.registerType("Action.Alert", () => { re
 }
 ```
 
-<span data-ttu-id="4f4e1-117">Und so wird es gerendert ![: Image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)</span><span class="sxs-lookup"><span data-stu-id="4f4e1-117">And here is how it renders: ![image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)</span></span>
+<span data-ttu-id="09743-117">Und so wird es gerendert: ![Image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)</span><span class="sxs-lookup"><span data-stu-id="09743-117">And here is how it renders: ![image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)</span></span>
