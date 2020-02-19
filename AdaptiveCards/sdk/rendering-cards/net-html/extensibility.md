@@ -4,20 +4,20 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 5aedc2b0bb19cb7a26caa16c8490d0d2f3c93282
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: d1df38608abde9ad26c78bbc5f66eb3bbb3d1971
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552532"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454533"
 ---
-# <a name="extensibility---net-html"></a><span data-ttu-id="0e0db-102">Erweiterbarkeit: .net-html</span><span class="sxs-lookup"><span data-stu-id="0e0db-102">Extensibility - .NET HTML</span></span>
+# <a name="extensibility---net-html"></a><span data-ttu-id="6ae21-102">Erweiterbarkeit: .net-html</span><span class="sxs-lookup"><span data-stu-id="6ae21-102">Extensibility - .NET HTML</span></span>
 
-## <a name="custom-element-rendering"></a><span data-ttu-id="0e0db-103">Benutzerdefiniertes Rendering von Elementen</span><span class="sxs-lookup"><span data-stu-id="0e0db-103">Custom Element Rendering</span></span>
+## <a name="custom-element-rendering"></a><span data-ttu-id="6ae21-103">Benutzerdefiniertes Rendering von Elementen</span><span class="sxs-lookup"><span data-stu-id="6ae21-103">Custom Element Rendering</span></span>
 
-<span data-ttu-id="0e0db-104">Für die vollständige Kontrolle über den Renderer kannst du die `ElementRenderers`-Eigenschaft verwenden, um Standardrenderer **hinzuzufügen**, **zu entfernen** oder **außer Kraft zu setzen**.</span><span class="sxs-lookup"><span data-stu-id="0e0db-104">For full control of the renderer you can use the `ElementRenderers` property to **add**, **remove**, or **override** default renderers.</span></span>
+<span data-ttu-id="6ae21-104">Für die vollständige Kontrolle über den Renderer kannst du die `ElementRenderers`-Eigenschaft verwenden, um Standardrenderer **hinzuzufügen**, **zu entfernen** oder **außer Kraft zu setzen**.</span><span class="sxs-lookup"><span data-stu-id="6ae21-104">For full control of the renderer you can use the `ElementRenderers` property to **add**, **remove**, or **override** default renderers.</span></span>
 
-<span data-ttu-id="0e0db-105">Das folgende Beispiel zeigt, wie du ein benutzerdefiniertes `"type": "Rating"`-Element definieren und rendern kannst.</span><span class="sxs-lookup"><span data-stu-id="0e0db-105">The following example shows how you could define a custom `"type": "Rating"` element and render it.</span></span>
+<span data-ttu-id="6ae21-105">Das folgende Beispiel zeigt, wie du ein benutzerdefiniertes `"type": "Rating"`-Element definieren und rendern kannst.</span><span class="sxs-lookup"><span data-stu-id="6ae21-105">The following example shows how you could define a custom `"type": "Rating"` element and render it.</span></span>
 
 ```csharp
 // Register the new type with the JSON parser

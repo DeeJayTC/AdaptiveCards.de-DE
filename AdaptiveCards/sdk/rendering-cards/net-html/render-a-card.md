@@ -4,20 +4,20 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 1bc1a225fc731aeb8e66bde1ef21a9443e74c8b1
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 0280e37506e1034572f518b1f596e8f1a3bb30be
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134180"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454463"
 ---
-# <a name="render-a-card---net-html"></a><span data-ttu-id="5469a-102">Rendern einer Karte – .NET HTML</span><span class="sxs-lookup"><span data-stu-id="5469a-102">Render a card - .NET HTML</span></span>
+# <a name="render-a-card---net-html"></a><span data-ttu-id="a5435-102">Rendern einer Karte – .NET HTML</span><span class="sxs-lookup"><span data-stu-id="a5435-102">Render a card - .NET HTML</span></span>
 
-<span data-ttu-id="5469a-103">Hier findest zu Informationen zum Rendern einer Karte mit dem .NET HTML SDK.</span><span class="sxs-lookup"><span data-stu-id="5469a-103">Here's how to render a card using the .NET HTML SDK.</span></span>
+<span data-ttu-id="a5435-103">Hier findest zu Informationen zum Rendern einer Karte mit dem .NET HTML SDK.</span><span class="sxs-lookup"><span data-stu-id="a5435-103">Here's how to render a card using the .NET HTML SDK.</span></span>
 
-## <a name="instantiate-a-renderer"></a><span data-ttu-id="5469a-104">Instanziieren eines Renderers</span><span class="sxs-lookup"><span data-stu-id="5469a-104">Instantiate a renderer</span></span>
+## <a name="instantiate-a-renderer"></a><span data-ttu-id="a5435-104">Instanziieren eines Renderers</span><span class="sxs-lookup"><span data-stu-id="a5435-104">Instantiate a renderer</span></span>
 
-<span data-ttu-id="5469a-105">Der nächste Schritt besteht darin, eine Instanz des Renderers zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5469a-105">The next step is to create an instance of the renderer.</span></span> 
+<span data-ttu-id="a5435-105">Der nächste Schritt besteht darin, eine Instanz des Renderers zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a5435-105">The next step is to create an instance of the renderer.</span></span> 
 
 ```csharp
 using AdaptiveCards;
@@ -32,7 +32,7 @@ AdaptiveCardRenderer renderer = new AdaptiveCardRenderer();
 AdaptiveSchemaVersion schemaVersion = renderer.SupportedSchemaVersion; // 1.0
 ```
 
-## <a name="render-a-card-to-html"></a><span data-ttu-id="5469a-106">Rendern einer Karte in HTML</span><span class="sxs-lookup"><span data-stu-id="5469a-106">Render a card to HTML</span></span>
+## <a name="render-a-card-to-html"></a><span data-ttu-id="a5435-106">Rendern einer Karte in HTML</span><span class="sxs-lookup"><span data-stu-id="a5435-106">Render a card to HTML</span></span>
 
 ```csharp
 // Build a simple card

@@ -4,13 +4,13 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 1cc4adbeabb03932ae287b5cc75e22323215226b
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: adfb745309ea6c1fcb245f2ce119084080261944
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552872"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454403"
 ---
-# <a name="extensibility---net-image"></a><span data-ttu-id="c5439-102">Erweiterbarkeit: .net-Image</span><span class="sxs-lookup"><span data-stu-id="c5439-102">Extensibility - .NET Image</span></span>
+# <a name="extensibility---net-image"></a><span data-ttu-id="cb3d4-102">Erweiterbarkeit: .net-Image</span><span class="sxs-lookup"><span data-stu-id="cb3d4-102">Extensibility - .NET Image</span></span>
 
-<span data-ttu-id="c5439-103">Eine vollständige Zusammenführung dieser Optionen finden Sie in der [WPF](../net-wpf/getting-started.md) -Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="c5439-103">See the [WPF docs](../net-wpf/getting-started.md) for a full run-down of these options.</span></span>
+<span data-ttu-id="cb3d4-103">Eine vollständige Zusammenführung dieser Optionen finden Sie in der [WPF](../net-wpf/getting-started.md) -Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="cb3d4-103">See the [WPF docs](../net-wpf/getting-started.md) for a full run-down of these options.</span></span>

@@ -4,18 +4,18 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: 39ddbc47fd123c5f25ba778925f0bf1bf1845f54
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: dfee76c5dc0a8caafcd693b47337c28f84e71a53
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134338"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454343"
 ---
-# <a name="actions---net-wpf"></a><span data-ttu-id="1d161-102">Aktionen – .NET WPF</span><span class="sxs-lookup"><span data-stu-id="1d161-102">Actions - .NET WPF</span></span>
+# <a name="actions---net-wpf"></a><span data-ttu-id="6316c-102">Aktionen – .NET WPF</span><span class="sxs-lookup"><span data-stu-id="6316c-102">Actions - .NET WPF</span></span>
 
-<span data-ttu-id="1d161-103">Alle `actions` in der Karte werden als WPF-`Button`-Elemente gerendert. Was passiert, wenn ein Benutzer auf sie klickt, wird jedoch von der App verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="1d161-103">Any `actions` within the card will render as WPF `Button`s, but it's up to your app to handle what happens when a user presses them.</span></span> 
+<span data-ttu-id="6316c-103">Alle `actions` in der Karte werden als WPF-`Button`-Elemente gerendert. Was passiert, wenn ein Benutzer auf sie klickt, wird jedoch von der App verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="6316c-103">Any `actions` within the card will render as WPF `Button`s, but it's up to your app to handle what happens when a user presses them.</span></span> 
 
-<span data-ttu-id="1d161-104">Das `RenderedAdaptiveCard`-Objekt stellt ein `OnAction`-Ereignis für diesen Zweck bereit.</span><span class="sxs-lookup"><span data-stu-id="1d161-104">The `RenderedAdaptiveCard` object provides an `OnAction` event for this purpose.</span></span>
+<span data-ttu-id="6316c-104">Das `RenderedAdaptiveCard`-Objekt stellt ein `OnAction`-Ereignis für diesen Zweck bereit.</span><span class="sxs-lookup"><span data-stu-id="6316c-104">The `RenderedAdaptiveCard` object provides an `OnAction` event for this purpose.</span></span>
 
 ```csharp
 // Event handler fires when a user clicks an action within the card
