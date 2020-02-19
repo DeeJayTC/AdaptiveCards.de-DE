@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/15/2018
 ms.topic: article
-ms.openlocfilehash: da3b95dc53c55c81fbbbbed6ee7605f86eb427a9
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 565c61535adc5b316cb8b1f3ad77e511012e7612
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552522"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454043"
 ---
 # <a name="native-styling---uwp"></a>Native Formatierung-UWP
 
@@ -21,8 +21,8 @@ UWP vereinfacht dies, indem es Ihnen ermöglicht wird, ein ResourceDictionary f�
 |---|---|
 | AdaptiveCard | Adaptive.Card| 
 | Action.OpenUrl  | Adaptive.Action.OpenUrl  |
-| Action. showcard | Adaptive.Action.ShowCard |
-| Aktion. übermitteln  | Adaptive.Action.Submit  |
+| Action.ShowCard | Adaptive.Action.ShowCard |
+| Action.Submit  | Adaptive.Action.Submit  |
 | Spalte | Adaptive. Column, Adaptive. Action. Tap |
 | ColumnSet | Adaptive.ColumnSet, Adaptive.VerticalSeparator |
 | Container | Adaptive. Container|
@@ -37,7 +37,7 @@ UWP vereinfacht dies, indem es Ihnen ermöglicht wird, ein ResourceDictionary f�
 | FactSet | Adaptive.FactSet, Adaptive.Fact.Title, Adaptive.Fact.Value |
 | TextBlock  | Adaptive.TextBlock |
 
-Dieses Beispiel-XAML-Ressourcen Wörterbuch, das den Hintergrund aller Textblöcke auf Aqua festlegt. Wahrscheinlich möchten Sie etwas höher als dieses😁
+Dieses Beispiel-XAML-Ressourcen Wörterbuch, das den Hintergrund aller Textblöcke auf Aqua festlegt. Wahrscheinlich möchten Sie etwas höher als dieses 😁
 
 ```xml
 <ResourceDictionary

@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 10/19/2017
 ms.topic: article
-ms.openlocfilehash: ee5bec1a11f39ad69d40e57410c105b50ba45981
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 204845f942be4e7d04e20e9cd64d826daef26e93
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552722"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454023"
 ---
 # <a name="native-styling---net-wpf"></a>Native Formatierung: .net WPF
 
@@ -21,8 +21,8 @@ WPF vereinfacht dies, indem es Ihnen ermöglicht wird, ein ResourceDictionary f�
 |---|---|
 | AdaptiveCard | Adaptive.Card| 
 | Action.OpenUrl  | Adaptive.Action.OpenUrl  |
-| Action. showcard | Adaptive.Action.ShowCard |
-| Aktion. übermitteln  | Adaptive.Action.Submit  |
+| Action.ShowCard | Adaptive.Action.ShowCard |
+| Action.Submit  | Adaptive.Action.Submit  |
 | Spalte | Adaptive. Column, Adaptive. Action. Tap |
 | ColumnSet | Adaptive.ColumnSet, Adaptive.VerticalSeparator |
 | Container | Adaptive. Container|
@@ -37,7 +37,7 @@ WPF vereinfacht dies, indem es Ihnen ermöglicht wird, ein ResourceDictionary f�
 | FactSet | Adaptive.FactSet, Adaptive.Fact.Title, Adaptive.Fact.Value |
 | TextBlock  | Adaptive.TextBlock |
 
-Dieses Beispiel-XAML-Ressourcen Wörterbuch, das den Hintergrund aller Textblöcke auf Aqua festlegt. Wahrscheinlich möchten Sie etwas höher als dieses😁
+Dieses Beispiel-XAML-Ressourcen Wörterbuch, das den Hintergrund aller Textblöcke auf Aqua festlegt. Wahrscheinlich möchten Sie etwas höher als dieses 😁
 
 ```xml
 <ResourceDictionary
@@ -59,4 +59,4 @@ renderer.ResourcesPath = <path-to-my-resource-dictionary.xaml>;
 ```
 
 > [!IMPORTANT]
-> **Hinweis zur serverseitigen Bildgenerierung** Der WPF-Renderer stellt `RenderCardToImageAsync` eine Methode bereit, die für die serverseitige Bildgenerierung verwendet werden kann. Sie müssen die `ResourcesPath` -Eigenschaft nur verwenden, wenn Sie in dieser Umgebung verwendet wird. Weitere Informationen finden Sie in den [Bild Rendering](../net-image/getting-started.md) -Dokumenten.
+> **Hinweis zur serverseitigen Bildgenerierung** Der WPF-Renderer stellt eine `RenderCardToImageAsync`-Methode bereit, die für die serverseitige Bildgenerierung verwendet werden kann. Sie dürfen die `ResourcesPath`-Eigenschaft nur verwenden, wenn Sie in dieser Umgebung verwendet wird. Weitere Informationen finden Sie in den [Bild Rendering](../net-image/getting-started.md) -Dokumenten.

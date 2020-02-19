@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 4a6030dda12ab8d9a1e5c387cec63d45e84660d8
-ms.sourcegitcommit: aa044167fd0b32b485ea2ce014afcf0b332bf1a2
+ms.openlocfilehash: 29786fe5e533e67558df88f58b1330aa6646b532
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529844"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454622"
 ---
 # <a name="getting-started---javascript"></a>Getting Started (JavaScript)
 

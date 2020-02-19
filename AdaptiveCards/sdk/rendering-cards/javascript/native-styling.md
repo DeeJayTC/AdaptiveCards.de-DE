@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 6f086d268abcaeb7fa159b74708597e89aafaf53
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 687a90dd572ba2df786816fdd9dc313746cca982
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552892"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454643"
 ---
 # <a name="native-styling---javascript"></a>Native Formatierung: JavaScript
 
@@ -19,12 +19,12 @@ Die folgenden CSS-Klassen werden verschiedenen Elementen hinzugefügt.
 
 | CSS-Klasse | Verwendung |
 |---|---|
-| . AC-Container | Schütt |
-| . AC-auswählbar  | Elemente mit`selectAction` |
+| . AC-Container | Container |
+| . AC-auswählbar  | Elemente mit `selectAction` |
 | . AC-Image | image |
 | . AC-PUSHBUTTON | Aktionen gerendert wie Schaltflächen |
 | . AC-LinkButton  | Aktionen gerendert wie Links |
-| . AC-Eingabe | Eingabe Steuerelemente|
+| . AC-Eingabe | Eingabesteuerelemente|
 | . AC-TextInput| Texteingabe |
 | . AC-Multiline | mehrzeilige Texteingabe |
 | . AC-anzahleingabe | Zahlen Eingabe|
