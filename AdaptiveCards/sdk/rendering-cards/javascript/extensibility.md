@@ -4,20 +4,20 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 11/28/2017
 ms.topic: article
-ms.openlocfilehash: 464fda8c83f9943d316f43fec811511ab9696916
-ms.sourcegitcommit: 99c7b64d6fc66da336c454951406fb42cd2a7427
+ms.openlocfilehash: 4c43637d81bcf43251638133c66d1c77b92ace56
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59552632"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454673"
 ---
 # <a name="extensibility---javascript"></a>Erweiterbarkeit: JavaScript
 
 ## <a name="implement-and-register-a-custom-element"></a>Implementieren und Registrieren eines benutzerdefinierten Elements
 
 Die Schritte zum Erstellen eines benutzerdefinierten Adaptive Card-Elementtyps lauten wie folgt:
-- Erstellen Sie eine neue Klasse, die von`CardElement`
-- Implementieren der `getJsonTypeName`Methoden `parse`, `toJSON`, und`internalRender` `renderSpeech`
+- Erstellen Sie eine neue Klasse, die von `CardElement`
+- Implementieren der Methoden `getJsonTypeName`, `parse`, `toJSON`, `internalRender` und `renderSpeech`
 - Registrieren Sie Sie, indem Sie Sie der Element Registrierung des Renderers hinzufügen.
 
 Sehen wir uns ein Beispiel an, um ein einfaches Statusanzeige Element zu implementieren:
@@ -136,7 +136,7 @@ export class ProgressBar extends Adaptive.CardElement {
 }
 ```
 
-Das ist alles. Registrieren Sie nun einfach die Statusanzeige Klasse beim Renderer:
+Das war's. Registrieren Sie nun einfach die Statusanzeige Klasse beim Renderer:
 
 ```typescript
 Adaptive.AdaptiveCard.elementTypeRegistry.registerType("ProgressBar", () => { return new ProgressBar(); });
@@ -212,4 +212,4 @@ Hier sehen Sie eine Beispiel Karte, die sowohl das ProgressBar-Element als auch 
 }
 ```
 
-Und so wird es gerendert ![: Image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)
+Und so wird es gerendert: ![Image](https://user-images.githubusercontent.com/1334689/52665466-8155e780-2ec0-11e9-841a-7d272ad1d103.png)

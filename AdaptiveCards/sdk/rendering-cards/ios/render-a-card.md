@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
-ms.openlocfilehash: 7d8d8410c030584dc5a518af7e6473d1d51f3991
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: d47b94595c22afa51a0d4cf9666771203cd79c7e
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67134329"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454743"
 ---
 # <a name="render-a-card---ios"></a>Rendern einer Karte – iOS
 
@@ -31,7 +31,7 @@ NSArray<ACRParseWarning *> warnings = cardPraseResult.parseWarnings;
 
 ## <a name="render-a-card"></a>Rendern einer Karte
 
-Der Renderer verwendet die adaptive Karte und die Hostkonfiguration. HostConfig kann „nil“ sein. In dem Fall wird der Standardwert verwendet.
+Der Rederer nimmt die Adaptive Karte und die Host Konfiguration vor. Hostconfig kann NULL sein, und wenn NULL, wird der Standardwert verwendet.
 Das zurückgegebene UIView-Element verwendet ein Autolayout. Die Breite wird auf den Wert eingeschränkt, der von widthConstraint festgelegt wurde. Wenn der Wert 0 verwendet wird, gilt keine Begrenzung.
 Die Höhe ist nicht begrenzt. Nach dem Zurückgeben ist sie so groß wie die Höhe der Summen aller gerenderten Inhalte. Verwende NSLayoutConstraint, um die Ansichtsdimension zu begrenzen. Auf die genaue Dimension kann aus dem Kontext von viewDidLayoutSubview der viewcontroller-Überansicht oder die Methode mit dem gleichen Namen zugegriffen werden, wenn ACRViewController verwendet wird.
 
