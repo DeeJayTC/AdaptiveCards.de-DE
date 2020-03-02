@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 09/15/2017
 ms.topic: article
-ms.openlocfilehash: b39493f82f3378e5a554abc6df890d6821869671
-ms.sourcegitcommit: e002a988c570072d5bc24a1242eaaac0c9ce90df
+ms.openlocfilehash: 607ce40e70e0e54e61a572853a521d2dd70a5c23
+ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67138023"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77454913"
 ---
 # <a name="adaptive-card-renderer-specification"></a>Spezifikation eines Renderers für adaptive Karten
 
@@ -38,7 +38,7 @@ Die folgende Spezifikation beschreibt die Implementierung eines Renderers für a
 ### <a name="unknown-properties"></a>Unbekannte Eigenschaften
 1. Ein Parser **MUSS** **zusätzliche** Eigenschaften in Elementen einschließen.
 
-### <a name="additional-considerations"></a>Weitere Aspekte
+### <a name="additional-considerations"></a>Weitere Überlegungen
 1. Die Eigenschaft `speak` kann SSML-Markup enthalten und **MUSS** wie angegeben an die Host-App zurückgegeben werden.
 
 ## <a name="parsing-host-config"></a>Analyse der Hostkonfiguration
@@ -91,8 +91,8 @@ Eine `AdaptiveCard` besteht aus einem `body`- und einem `actions`-Element. Der `
 
 1. Ein Renderer **SOLLTE** Host-Apps informieren, wenn alle HTTP-Bilder heruntergeladen wurden und die Karte „vollständig gerendert“ ist.
 1. Ein Renderer **MUSS** beim Herunterladen von HTTP-Bildern den Hostkonfigurationsparameter `maxImageSize` überprüfen.
-1. Ein Renderer **MUSS** `.png` und `.jpeg` unterstützen.
-1. Ein Renderer **SOLLTE** `.gif`-Bilder unterstützen.
+1. Ein Renderer **MUSS**`.png` und `.jpeg` unterstützen.
+1. Ein Renderer **SOLLTE**`.gif`-Bilder unterstützen.
 
 ### <a name="host-config"></a>Hostkonfiguration
 
@@ -124,14 +124,14 @@ So können plattformunabhängige Eigenschaften für Renderer auf verschiedenen P
 1. Das Ereignis **MUSS** alle zugeordneten Eigenschaften mit der Aktion übergeben.
 1. Das Ereignis **MUSS** die ausgeführte `AdaptiveCard` übergeben.
 
-Aktion | Verhalten
+Action | Verhalten
 --- | ---
 **Action.OpenUrl** | Öffnet eine externe URL zur Anzeige.
 **Action.ShowCard** | Fordert eine untergeordnete Karte an, die dem Benutzer angezeigt werden soll.
 **Action.Submit** | Fordert an, dass alle Eingabeelemente in einem Objekt zusammengefasst werden, das dir anschließend über eine von der Hostanwendung definierte Methode gesendet wird.
 
 ### <a name="actionopenurl"></a>Action.OpenUrl
-1. `Action.OpenUrl` **SOLLTE** mithilfe des nativen Plattformmechanismus eine URL öffnen.
+1. `Action.OpenUrl` **SOLLTE** eine URL mithilfe des nativen Plattformmechanismus öffnen.
 1. Wenn dies nicht möglich ist, **MUSS** die Aktion ein Ereignis auslösen, damit die Host-App das Öffnen der URL verarbeitet. Dieses Ereignis **MUSS** es der Host-App ermöglichen, das Standardverhalten zu überschreiben, beispielsweise durch Öffnen der URL innerhalb der eigenen App.
 
 ### <a name="actionshowcard"></a>Action.ShowCard
@@ -144,7 +144,7 @@ Die Submit-Aktion verhält sich wie eine Übermittlungsaktion in einem HTML-Form
 
 1. Wenn ein Ereignis ausgelöst werden **MUSS**, tippt der Benutzer auf die aufgerufene Aktion.  
 1. Die `data`-Eigenschaft **MUSS** in der Rückrufnutzlast enthalten sein.
-1. Bei `Action.Submit` **MUSS** ein Renderer alle Eingaben auf der Karte erfassen und die zugehörigen Werte abrufen. 
+1. Bei `Action.Submit`**MUSS** ein Renderer alle Eingaben auf der Karte erfassen und die zugehörigen Werte abrufen. 
 
 ### <a name="selectaction"></a>selectAction
 
@@ -164,6 +164,6 @@ Die Submit-Aktion verhält sich wie eine Übermittlungsaktion in einem HTML-Form
    Wir können keinerlei Zusagen hinsichtlich der Eingabeüberprüfung in adaptiven Karten machen, daher obliegt es dem Empfänger, Antworten ordnungsgemäß zu analysieren. „Input.Number“ könnte beispielsweise „Hallo“ zurückgeben, und die Empfänger müssen darauf vorbereitet sein.
 
 
-## <a name="events"></a>Veranstaltungen
+## <a name="events"></a>Ereignisse
 
 1. Ein Renderer **SOLLTE** ein Ereignis auslösen, wenn sich die Sichtbarkeit eines Elements geändert hat, sodass die Host-App die Karte an die richtige Position verschieben kann.
