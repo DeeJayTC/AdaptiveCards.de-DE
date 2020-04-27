@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 03/14/2019
 ms.topic: article
 ms.openlocfilehash: f0c5a61d3406e1defffefc575ee0a6ec78fba93d
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "77454833"
 ---
 # <a name="tools-and-samples"></a>Tools und Beispiele
@@ -58,7 +58,7 @@ Um die Erweiterung zu installieren, öffne den Marketplace für Erweiterungen un
 
 ![Marketplace](media/tools/vscode-extension-marketplace.png)
 
-### <a name="usage"></a>Usage
+### <a name="usage"></a>Verwendungszweck
 
 Wenn du eine JSON-Datei mit einer adaptiven Karteneigenschaft `$schema` bearbeitest, kannst du das Schema mithilfe von `Ctrl+Shift+V A` anzeigen.
 ```json

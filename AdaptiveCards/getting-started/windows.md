@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
 ms.openlocfilehash: 39bdc64ed3244aca68d36c886a9562d964ded217
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "76145390"
 ---
 # <a name="adaptive-cards-for-windows-developers"></a>Adaptive Karten für Windows-Entwickler
@@ -39,7 +39,7 @@ Diese Schritte werden vollständig in einem hervorragenden, 45-minütigen Lernmo
 
 [Adaptive Karten in die Windows 10-Zeitachse integrieren](https://docs.microsoft.com/learn/modules/integrate-app-into-windows-10-timeline/)
 
-### <a name="learn-more"></a>Weitere Informationen
+### <a name="learn-more"></a>Mehr erfahren
 
 Diese Sitzung auf der Build 2017 behandelt Benutzeraktivitäten im Detail.
 
@@ -54,5 +54,5 @@ In diesem Tutorial haben wir das Thema nur oberflächlich behandelt. Sieh dir da
 
 * Lass dich von den [Beispielkarten](http://adaptivecards.io/samples/) inspirieren.
 * Durchsuche die verfügbaren Elemente mit dem [Schema-Explorer](http://adaptivecards.io/explorer).
-* Erstelle eine Karte mit dem [interaktiven Visualizer](http://adaptivecards.io/visualizer/index.html?hostApp=Skype).
+* Erstelle eine Karte mit dem [interaktiven Visualizer](http://adaptivecards.io/visualizer/index.html?hostApp=Skype)
 * [Wende dich an uns](http://adaptivecards.io/connect), wenn du Feedback hast.

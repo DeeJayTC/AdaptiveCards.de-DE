@@ -5,10 +5,10 @@ ms.author: paulcam
 ms.date: 09/18/2018
 ms.topic: reference
 ms.openlocfilehash: 848ce3dd2ccca1f975dfd330c1c88292c753641d
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "77454923"
 ---
 # <a name="what-is-hostconfig"></a>Was ist HostConfig?
@@ -42,7 +42,7 @@ Informationen zu den Inhalten findest du in diesem [HostConfig.json](https://git
 
 Optionen auf oberster Ebene für `AdaptiveCards`
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**allowCustomStyle**|`boolean`| Nein, Standardwert: `true`|Steuert, ob eine benutzerdefinierte Formatierung zulässig ist|1.0
 |**supportsInteractivity**|`boolean`| Nein, Standardwert: `true`|Steuert, ob interaktive `Action`-Elemente aufgerufen werden dürfen|1.0
@@ -66,7 +66,7 @@ Optionen auf oberster Ebene für `AdaptiveCards`
 
 Optionen für `Action`-Elemente
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**actionsOrientation**|`string`| Nein, Standardwert: `"horizontal"`|Steuert die Ausrichtung von Schaltflächen|1.0
 |**actionAlignment**|`string`| Nein, Standardwert: `"stretch"`|Steuert das Layout von Schaltflächen|1.0
@@ -83,7 +83,7 @@ Optionen für `Action`-Elemente
 
 Steuert den Stil für Container mit Standard- und Hervorhebungsformatierung
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**default**|`object`| Nein|Standardcontainerstil|1.0
 |**emphasis**|`object`| Nein|Containerstil für Hervorhebungen|1.0
@@ -94,7 +94,7 @@ Steuert den Stil für Container mit Standard- und Hervorhebungsformatierung
 
 Steuert die Anzeige von `FactSet`-Elementen
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**title**|`object`| Nein, Standardwert: `{"weight":"bolder","size":"default","color":"default","isSubtle":false,"wrap":true,"maxWidth":150}`|Parameter für die Steuerung der Textanzeige|1.0
 |**value**|`object`| Nein, Standardwert: `{"weight":"default","size":"default","color":"default","isSubtle":false,"wrap":true,"maxWidth":0}`|Parameter für die Steuerung der Textanzeige|1.0
@@ -106,7 +106,7 @@ Steuert die Anzeige von `FactSet`-Elementen
 
 Steuert die Metrik für den Schriftgrad für verschiedene Schriftarten
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**small**|`integer`| Nein, Standardwert: `10`|Kleiner Schriftgrad|1.0
 |**default**|`integer`| Nein, Standardwert: `12`|Standardschriftgrad|1.0
@@ -120,7 +120,7 @@ Steuert die Metrik für den Schriftgrad für verschiedene Schriftarten
 
 Steuert die Metrik für die Strichstärke der Schrift
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**lighter**|`integer`| Nein, Standardwert: `200`|&nbsp;|1.0
 |**default**|`integer`| Nein, Standardwert: `400`|&nbsp;|1.0
@@ -132,7 +132,7 @@ Steuert die Metrik für die Strichstärke der Schrift
 
 Steuert verschiedene Schriftfarben
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**default**|`object`| Nein, Standardwert: `{"default":"#FF000000","subtle":"#B2000000"}`|&nbsp;|1.0
 |**accent**|`object`| Nein, Standardwert: `{"default":"#FF0000FF","subtle":"#B20000FF"}`|&nbsp;|1.0
@@ -148,7 +148,7 @@ Steuert verschiedene Schriftfarben
 
 Steuert die Anzeige von `ImageSet`-Elementen
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**imageSize**|`string`| Nein, Standardwert: `"auto"`|Steuert die Größe einzelner Bilder|1.0
 |**maxImageHeight**|`integer`| Nein, Standardwert: `100`|Beschränkt die Bildhöhe auf diesen Wert|1.0
@@ -159,7 +159,7 @@ Steuert die Anzeige von `ImageSet`-Elementen
 
 Steuert `Image`-Größen
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**small**|`integer`| Nein, Standardwert: `80`|Wert für geringe Bildgröße|1.0
 |**medium**|`integer`| Nein, Standardwert: `120`|Wert für mittlere Bildgröße|1.0
@@ -173,7 +173,7 @@ Steuert die Anzeige und das Verhalten von `Media`-Elementen
 
 #### <a name="introduced-in-version-11"></a>Eingeführt in Version 1.1
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**defaultPoster**|`string`| Nein|URI zum anzuzeigenden Bild, wenn die Wiedergabeschaltfläche nicht aufgerufen wurde|1.1
 |**playButton**|`string`| Nein|Bild, das als Wiedergabeschaltfläche angezeigt werden soll|1.1
@@ -185,7 +185,7 @@ Steuert die Anzeige und das Verhalten von `Media`-Elementen
 
 Steuert die Anzeige von Trennzeichen
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**lineThickness**|`integer`| Nein, Standardwert: `1`|Stärke der Trennlinie|1.0
 |**lineColor**|`string,null`| Nein, Standardwert: `#B2000000`|Beim Zeichnen einer Trennlinie zu verwendende Farbe|1.0
@@ -196,7 +196,7 @@ Steuert die Anzeige von Trennzeichen
 
 Steuert das Verhalten und die Formatierung von `Action.ShowCard`
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**actionMode**|`string`| Nein, Standardwert: `"inline"`|Steuert die Anzeige der Karte|1.0
 |**style**|`object`| Nein, Standardwert: `emphasis`|Steuert den Stil eines Containers|1.0
@@ -208,7 +208,7 @@ Steuert das Verhalten und die Formatierung von `Action.ShowCard`
 
 Steuert das Layout von Elementen
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**small**|`integer`| Nein, Standardwert: `3`|Geringer Abstandswert|1.0
 |**default**|`integer`| Nein, Standardwert: `8`|Standardabstandswert|1.0
@@ -223,7 +223,7 @@ Steuert das Layout von Elementen
 
 Parameter für die Steuerung der Textanzeige
 
-|Eigenschaft|Type|Erforderlich|Beschreibung|Version|
+|Eigenschaft|Typ|Erforderlich|Beschreibung|Version|
 |--------|----|--------|-----------|-------|
 |**size**|`string`| Nein, Standardwert: `"default"`|Zu verwendender Schriftgrad, wenn dieser für die Karte nicht angegeben ist|1.0
 |**weight**|`string`| Nein, Standardwert: `"normal"`|Zu verwendende Strichstärke der Schrift, wenn diese für die Karte nicht angegeben ist|1.0

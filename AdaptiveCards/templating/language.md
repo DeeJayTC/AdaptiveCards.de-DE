@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 2c583f774451e60f825cd8fd2c38f2ea34c2f8de
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.openlocfilehash: ffd2ec065550f483bf602483eebf622565f7f47a
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145400"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82136176"
 ---
 # <a name="adaptive-cards-template-language"></a>Vorlagensprache für adaptive Karten
 
@@ -25,7 +25,7 @@ Wenn Sie eine Vorlage erstellen, können Sie die Daten inline mit der `AdaptiveC
 
 ## <a name="specify-data-within-the-card"></a>Daten innerhalb der Karte angeben
 
-Um Daten direkt innerhalb der Kartennutzlast bereitzustellen, fügen Sie Ihrer `AdaptiveCard` einfach ein `$data`-Attribut hinzu (siehe unten).
+Um Daten direkt innerhalb der Kartennutzlast bereitzustellen, fügen Sie Ihrer `$data` einfach ein `AdaptiveCard`-Attribut hinzu (siehe unten).
 
 ## <a name="binding-to-the-data"></a>Bindung an Daten
 
@@ -80,7 +80,7 @@ Alternativ (und wahrscheinlicher) erstellen Sie eine wiederverwendbare Karte „
 
 ```json
 {
-    "type": "AdaptivCard",
+    "type": "AdaptiveCard",
     "body": [
         {
             "type": "TextBlock",
@@ -271,7 +271,7 @@ Die hier verwendete Syntax ist noch in der Schwebe, also kehren Sie bald zurück
 
 * JSON.parse – Möglichkeit, eine JSON-Zeichenfolge zu parsen 
 
-**`JSON.parse` Beispiel**
+**`JSON.parse`-Beispiel**
 
 Dies ist eine Azure DevOps-Antwort, bei der die `message`-Eigenschaft eine serialisierte JSON-Zeichenfolge ist. Um auf Werte innerhalb der Zeichenfolge zuzugreifen, muss die Funktion `JSON.parse` in der Vorlage verwendet werden.
 

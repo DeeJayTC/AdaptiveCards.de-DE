@@ -5,10 +5,10 @@ ms.author: mahiding
 ms.date: 06/26/2017
 ms.topic: article
 ms.openlocfilehash: a562a05a91676dc5e6d8b51690acc4788802fb99
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "77454933"
 ---
 # <a name="rendering-cards-inside-your-application"></a>Rendern von Karten in der Anwendung
@@ -21,7 +21,7 @@ Das Rendern von adaptiven Karten in deiner Anwendung ist ganz einfach. Wir stell
 
 ## <a name="adaptive-cards-sdks"></a>SDKs für adaptive Karten
 
-|Plattform|Installation|Erstellen|Docs|Status|
+|Plattform|Installieren|Version|Dokumentation|Status|
 |---|---|---|---|---|
 | JavaScript | [![npm-Installation](https://img.shields.io/npm/v/adaptivecards.svg)](https://www.npmjs.com/package/adaptivecards) | [Quelle](https://github.com/Microsoft/AdaptiveCards/tree/master/source/nodejs)| [Dokumentation](../sdk/rendering-cards/javascript/getting-started.md) | ![Buildstatus](https://img.shields.io/vso/build/Microsoft/56cf629e-8f3a-4412-acbc-bf69366c552c/20564.svg) |
 | .NET WPF | [![NuGet-Installation](https://img.shields.io/nuget/vpre/AdaptiveCards.Rendering.Wpf.svg)](https://www.nuget.org/packages/AdaptiveCards.Rendering.Wpf) | [Quelle](https://github.com/Microsoft/AdaptiveCards/tree/master/source/dotnet)| [Dokumentation](../sdk/rendering-cards/net-wpf/getting-started.md) | ![Buildstatus](https://img.shields.io/vso/build/Microsoft/56cf629e-8f3a-4412-acbc-bf69366c552c/20596.svg) |
