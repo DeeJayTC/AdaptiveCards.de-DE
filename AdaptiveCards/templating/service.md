@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 08/01/2019
 ms.topic: article
-ms.openlocfilehash: 8ccccd3c3e67324acf123e03b947372e1517faab
-ms.sourcegitcommit: 1e18c5dc0cf85d26f66335e312348bbfb903d95a
+ms.openlocfilehash: db211fc3bac27dc980ae87983a918a35730f8e5e
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77454983"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82136186"
 ---
 # <a name="adaptive-cards-template-service"></a>Vorlagendienst für adaptive Karten
 
@@ -85,7 +85,7 @@ Dieser Endpunkt versucht, eine Vorlage durch Analysieren der Struktur Ihrer Date
 
 #### <a name="example"></a>Beispiel
 
-Angenommen, ich klicke einfach auf einen [Microsoft Graph](https://graph.microsoft.com)-Endpunkt, um Organisationsdaten über mich abzurufen.
+Angenommen, ich greife auf einen [Microsoft Graph](https://graph.microsoft.com)-Endpunkt zu, um Organisationsdaten über mich abzurufen.
 
 > `HTTP GET https://graph.microsoft.com/v1.0/me/`
 
@@ -222,7 +222,7 @@ Beachten Sie, dass die Antwort den Text des ersten `TextBlock` durch `"Megan Bow
 
 ## <a name="contributing-templates"></a>Beitragende Vorlagen
 
-Der Vorlagendienst wird von einem GitHub-Repository unterstützt. Das Repository ist zurzeit **privat**, wird jedoch als Open Source verfügbar gemacht, sobald einige lose Enden verknüpft sind.
+Die Vorlagen sind auf GitHub im Repository [adaptivecards-templates](https://github.com/microsoft/adaptivecards-templates) gehostet.
 
 Wir hoffen, dass wir mithilfe von GitHub als Sicherungsspeicher für die Vorlagen den Prozess der Erstellung, Verbesserung und Freigabe von Vorlagen „demokratischer“ gestalten können. Jeder kann einen Pull Request mit einer völlig neuen Vorlage übermitteln oder Verbesserungen an vorhandenen Vorlagen vornehmen, und zwar alles innerhalb der entwicklerfreundlichen GitHub-Umgebung.
 
@@ -230,6 +230,6 @@ Wir hoffen, dass wir mithilfe von GitHub als Sicherungsspeicher für die Vorlage
 
 Nicht alle Datentypen sind für den unter `https://templates.adaptivecards.io` gehosteten „zentralen“ Vorlagendienst für adaptive Karten geeignet. 
 
-Wir möchten sicherstellen, dass alle Benutzer den Vorlagendienst in Ihrer Organisation hosten können, um den Quellcode verfügbar zu machten, und wir vereinfachen die Bereitstellung in Azure oder in Ihrem eigenen Back-End.
+Wir möchten sicherstellen, dass alle Benutzer den Vorlagendienst in Ihrer Organisation hosten können, daher ist der Quellcode auf GitHub verfügbar und kann leicht in Ihrer eigenen Azure Function-Implementierung bereitgestellt werden. 
 
-Weitere Informationen hierzu zu einem späteren Zeitpunkt.
+Beginnen Sie hier: ➡ [adaptivecards-templates](https://github.com/microsoft/adaptivecards-templates)

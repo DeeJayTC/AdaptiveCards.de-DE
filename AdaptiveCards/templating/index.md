@@ -4,12 +4,12 @@ author: matthidinger
 ms.author: mahiding
 ms.date: 07/29/2019
 ms.topic: article
-ms.openlocfilehash: 6a818e5009a0ec65e7e17fe47cc0172d2e34ae31
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.openlocfilehash: ab3a3f335b52a06dbb2219159e15e5033e715ba1
+ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145550"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82136166"
 ---
 # <a name="adaptive-cards-templating-preview"></a>Vorlagen für adaptive Karten (Vorschau)
 
@@ -27,7 +27,7 @@ Durch Vorlagen wird die Trennung von **Daten** aus dem **Layout** in einer adapt
 
 Derzeit ist es nicht möglich, eine Karte mit dem [Adaptive Card Designer](https://adaptivecards.io/designer) (Designer für adaptive Karten) zu erstellen und mithilfe dieses JSON-Codes die Nutzlast mit **dynamischem Inhalt** aufzufüllen. Zu diesem Zweck müssen Sie benutzerdefinierten Code schreiben, um eine JSON-Zeichenfolge zu erstellen, oder die Objektmodell-SDKs verwenden, um ein Objektmodell zu erstellen, das Ihre Karte darstellt, und es zu JSON serialisieren. In beiden Fällen erfolgt im Designer ein einmaliger unidirektionaler Vorgang, der es nicht einfach macht, den Kartenentwurf später zu optimieren, nachdem Sie ihn in Code umgewandelt haben.
 
-### <a name="it-makes-tranmissions-over-the-wire-smaller"></a>Die Menge der über das Netzwerk übertragenen Daten wird dadurch kleiner.
+### <a name="it-makes-transmissions-over-the-wire-smaller"></a>Die Menge der über das Netzwerk übertragenen Daten wird dadurch kleiner.
 
 Stellen Sie sich eine Welt vor, in der eine Vorlage und Daten **direkt auf dem Client** kombiniert werden können. Das bedeutet, dass wenn Sie dieselbe Vorlage mehrmals verwenden oder sie mit neuen Daten aktualisieren möchten, Sie nur neue Daten an das Gerät senden müssen und es die gleiche Vorlage immer wieder verwenden kann.
 
