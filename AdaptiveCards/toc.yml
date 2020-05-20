@@ -14,7 +14,7 @@
       href: authoring-cards/getting-started.md
     - name: Kartenschema
       href: 'https://adaptivecards.io/explorer'
-    - name: Spracherkennung
+    - name: Speech
       href: authoring-cards/speech.md
     - name: Textmerkmale
       href: authoring-cards/text-features.md
@@ -40,7 +40,7 @@
       href: sdk/rendering-cards/toc.yml
     - name: Designer SDK
       href: sdk/designer.md
-- name: Vorlagen (Vorschau)
+- name: Anwenden von Vorlagen
   items:
     - name: Übersicht
       href: templating/index.md
