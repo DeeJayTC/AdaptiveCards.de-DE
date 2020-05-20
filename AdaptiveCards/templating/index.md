@@ -2,24 +2,34 @@
 title: Übersicht über Vorlagen
 author: matthidinger
 ms.author: mahiding
-ms.date: 07/29/2019
+ms.date: 05/18/2020
 ms.topic: article
-ms.openlocfilehash: ab3a3f335b52a06dbb2219159e15e5033e715ba1
-ms.sourcegitcommit: e6418d692296e06be7412c95c689843f9db5240d
+ms.openlocfilehash: db1f44c4465db88d375dec728bcb32d5933ef702
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82136166"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631369"
 ---
-# <a name="adaptive-cards-templating-preview"></a>Vorlagen für adaptive Karten (Vorschau)
+# <a name="adaptive-cards-templating"></a>Vorlagen für adaptive Karten
 
 Wir freuen uns, Ihnen eine Vorschau neuer Tools zur Verfügung zu stellen ,mit denen Sie adaptive Karten **erstellen**, **wiederverwenden** und **freigeben** können. 
 
 > [!IMPORTANT] 
 > 
-> Diese Features befinden sich **in der Vorschauphase und können geändert werden**. Ihr Feedback ist nicht nur willkommen, sondern wichtig, um sicherzustellen, dass **wir** Ihnen die benötigten Features bieten.
+> **Breaking Changes** im **Release Candidate von Mai 2020**
+>
+> Der Release Candidate für Vorlagen enthält einige kleinere, nicht abwärtskompatible Änderungen, die Sie kennen sollten, wenn Sie die älteren Pakete verwendet haben. Einzelheiten finden Sie unten.
 
-## <a name="how-can-templating-help-you"></a>Wie können Vorlagen Ihnen helfen?
+
+## <a name="breaking-changes-as-of-may-2020"></a>Breaking Changes Stand Mai 2020
+
+1. Die Bindungssyntax wurde von `{...}` in `${...}` geändert. 
+    * Beispiel: Aus `"text": "Hello {name}"` wird `"text": "Hello ${name}"`.
+2. Die JavaScript-API enthält kein `EvaluationContext`-Objekt mehr. Übergeben Sie Ihre Daten einfach an die `expand`-Funktion. Ausführliche Informationen finden Sie auf der [SDK-Seite](sdk.md).
+3. Die .NET-API wurde umgestaltet, damit sie der JavaScript-API besser entspricht. Ausführliche Informationen finden Sie auf der [SDK-Seite](sdk.md).
+
+## <a name="how-can-templating-help-you"></a>So können Vorlagen Ihnen helfen
 
 Durch Vorlagen wird die Trennung von **Daten** aus dem **Layout** in einer adaptiven Karte ermöglicht. 
 
@@ -85,7 +95,7 @@ Fügen Sie das folgende Beispiel in den Bereich **Card Payload Editor** (Editor 
                     "items": [
                         {
                             "type": "Image",
-                            "url": "{photo}",
+                            "url": "${photo}",
                             "altText": "Profile picture",
                             "size": "Small",
                             "style": "Person"
@@ -98,7 +108,7 @@ Fügen Sie das folgende Beispiel in den Bereich **Card Payload Editor** (Editor 
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "Hi {name}!",
+                            "text": "Hi ${name}!",
                             "size": "Medium"
                         },
                         {
@@ -112,7 +122,7 @@ Fügen Sie das folgende Beispiel in den Bereich **Card Payload Editor** (Editor 
         },
         {
             "type": "TextBlock",
-            "text": "Your manager is: **{manager.name}**"
+            "text": "Your manager is: **${manager.name}**"
         },
         {
             "type": "TextBlock",
@@ -122,9 +132,9 @@ Fügen Sie das folgende Beispiel in den Bereich **Card Payload Editor** (Editor 
             "type": "FactSet",
             "facts": [
                 {
-                    "$data": "{peers}",
-                    "title": "{name}",
-                    "value": "{title}"
+                    "$data": "${peers}",
+                    "title": "${name}",
+                    "value": "${title}"
                 }
             ]
         }
@@ -175,12 +185,12 @@ Die Vorlagen-SDKs ermöglichen es, eine Vorlage mit echten Daten aufzufüllen.
 
 > [!NOTE]
 >
-> In der ersten Vorschauphase steht nur eine begrenzte Anzahl von SDKs zur Verfügung. Nach der Veröffentlichung wird es Vorlagenbibliotheken für jede unterstützte Plattform für adaptive Karten geben.
+> Zum gegenwärtigen Zeitpunkt sind Vorlagen-SDKs für .NET und NodeJS erhältlich. Im Lauf der Zeit werden wir Vorlagen-SDKs für alle verbleibenden Plattformen für Adaptive Karten veröffentlichen, wie iOS, Android, UWP usw.
 
-Plattform | Installation | Dokumentation
---- | --- | ---
-JavaScript | `npm install adaptivecards-templating` | [Dokumentation](https://www.npmjs.com/package/adaptivecards-templating)
-.NET | `nuget install AdaptiveCards.Templating` | [Dokumentation](https://docs.microsoft.com/adaptive-cards/templating/sdk#net)
+Plattform | Paket | Installation | Dokumentation
+--- | --- | --- | ---
+JavaScript | [![npm-Installation](https://img.shields.io/npm/v/adaptivecards-templating.svg)](https://www.npmjs.com/package/adaptivecards-templating) | `npm install adaptivecards-templating` | [Dokumentation](https://www.npmjs.com/package/adaptivecards-templating)
+.NET | [![NuGet-Installation](https://img.shields.io/nuget/vpre/AdaptiveCards.Templating.svg)](https://www.nuget.org/packages/AdaptiveCards.Templating) | `dotnet add package AdaptiveCards.Templating` | [Dokumentation](https://docs.microsoft.com/adaptive-cards/templating/sdk#net)
 
 ### <a name="javascript-example"></a>JavaScript-Beispiel
 
@@ -191,12 +201,11 @@ var template = new ACData.Template({
     // EmployeeCardTemplate goes here
 });
 
-var dataContext = new ACData.EvaluationContext();
-dataContext.$root = {
-    // Data goes here
-};
-
-var card = template.expand(dataContext);
+var card = template.expand({
+    $root: {
+        // Your data goes here
+    }
+});
 // Now you have an AdaptiveCard ready to render!
 ```
 
@@ -218,6 +227,4 @@ Sämtliche Vorlagen sind flache JSON-Dateien, die in einem GitHub-Repository ges
 
 ## <a name="whats-next-and-sending-feedback"></a>Nächste Schritte und Senden von Feedback
 
-Die Vorlagenerstellung und Trennung der Präsentation von den Daten bringt uns unserem Ziel ein ganzes Stück näher, nämlich „einem Ökosystem für den Austausch von Karteninhalten auf einheitliche Weise“.
-
-Wir sind bestrebt, Ihnen schnellstmöglich mehr Informationen zukommen zu lassen. Geben Sie in der Zwischenzeit hier Feedback: [GitHub](https://github.com/microsoft/AdaptiveCards) oder Twitter **[@MattHidinger](https://twitter.com/matthidinger)** / **#AdaptiveCards**. 
+Die Vorlagenerstellung und die Trennung der Präsentation von den Daten bringen uns unserem Ziel ein ganzes Stück näher, nämlich „einem Ökosystem für den standardisierten Austausch von Karteninhalten zwischen Apps und Diensten“. Wir haben auf diesem Gebiet eine Menge zu bieten, also bleiben Sie am Ball, und informieren Sie uns auf [GitHub](https://github.com/Microsoft/AdaptiveCards/issues) über Ihre Erfahrungen!
