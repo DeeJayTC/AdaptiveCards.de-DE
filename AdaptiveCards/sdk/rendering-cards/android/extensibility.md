@@ -1,21 +1,21 @@
 ---
-title: Android SDK
+title: Android SDK Erweiterbarkeit
 author: almedina-ms
 ms.author: almedina
 ms.date: 09/27/2017
 ms.topic: article
-ms.openlocfilehash: ae5c1b2addf6fc5bcdda3defebb6de5925b58507
-ms.sourcegitcommit: 9a9973129c36a41f5e4af30d95ffc146820ad173
+ms.openlocfilehash: 1281a31c333474c1899831acab28c962ce8e4514
+ms.sourcegitcommit: c921a7bb15a95c0ceb803ad375501ee3b8bef028
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76145510"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631318"
 ---
 # <a name="extensibility---android"></a>Erweiterbarkeit – Android
 
 Der Android-Renderer kann erweitert werden, um mehrere Szenarien zu unterstützen, darunter:
-* [Benutzerdefinierte Verarbeitung von Karten Elementen](#custom-parsing-of-card-elements)
-* [Benutzerdefiniertes Rendering von Karten Elementen](#custom-rendering-of-card-elements)
+* [Benutzerdefinierte Analyse von Kartenelementen](#custom-parsing-of-card-elements)
+* [Benutzerdefiniertes Rendern von Kartenelementen](#custom-rendering-of-card-elements)
 * [Benutzerdefiniertes Rendering von Aktionen](#custom-rendering-of-actions) (seit v 1.2)
 * [Laden benutzerdefinierter Images](#custom-image-loading) (seit v 1.0.1)
 * [Benutzerdefiniertes Laden von Medien](#custom-media-loading) (seit v 1.1)
@@ -91,7 +91,7 @@ Als Nächstes wird das benutzerdefinierte Element gerendert.
 >
 > [Wichtige Änderungen für v1.2](#breaking-changes-for-v12)
 
-Um unseren eigenen benutzerdefinierten Renderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen, die sich von ```BaseCardElementRenderer```erstreckt:
+Um unseren eigenen benutzerdefinierten Renderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen, die sich von erstreckt ```BaseCardElementRenderer``` :
 ```java
 public class MyCardElementRenderer extends BaseCardElementRenderer
 {
@@ -120,9 +120,9 @@ CardRendererRegistration.getInstance().registerRenderer("MyType", new CustomBlah
 RenderedAdaptiveCard renderedCard = AdaptiveCardRenderer.getInstance().render(context, fragmentManager, adaptiveCard, cardActionHandler,  hostConfig);
 ```
 
-### <a name="breaking-changes-for-v12"></a>Wichtige Änderungen für v 1.2
+### <a name="breaking-changes-for-v12"></a>Wichtige Änderungen für v1.2
 
-Die ```render```-Methode wurde geändert, um den ```RenderedAdaptiveCard```-Parameter einzuschließen, und ```ContainerStyle``` wurde für ein renderargs geändert, in dem das ContainerStyle jetzt enthalten ist, sodass eine Klasse, die den basecardelta-entrenderer erweitert, wie folgt aussehen sollte.
+Die ```render``` -Methode wurde so geändert, ```RenderedAdaptiveCard``` dass Sie den-Parameter enthält, und ```ContainerStyle``` wurde für eine renderargs geändert, in der das ContainerStyle jetzt enthalten ist, sodass eine Klasse, die den basecardelta-entrenderer erweitert, wie folgt aussehen sollte:
 
 ```
 public class MyCardElementRenderer extends BaseCardElementRenderer
@@ -144,7 +144,7 @@ public class MyCardElementRenderer extends BaseCardElementRenderer
 }
 ```
 
-Anschließend zeigen die folgenden Zeilen, wie Sie Sie in ein "aktionelement" analysieren können, das sich vom ```BaseActionElement```erstreckt:
+Anschließend zeigen die folgenden Zeilen, wie Sie Sie in ein "aktionelement" analysieren können, das sich von erstreckt ```BaseActionElement``` :
 ```java
 public class MyActionElement extends BaseActionElement
 {
@@ -216,7 +216,7 @@ Nächste Schritte zum Rendern der benutzerdefinierten Aktion
 
 ## <a name="custom-rendering-of-actions"></a>Benutzerdefiniertes Rendering von Aktionen
 
-Um einen eigenen benutzerdefinierten aktionsrenderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen, die sich von ```BaseActionElementRenderer```erstreckt:
+Um einen eigenen benutzerdefinierten aktionsrenderer für den Typ zu definieren, müssen wir zuerst eine Klasse erstellen, die sich von erstreckt ```BaseActionElementRenderer``` :
 ```java
 public class MyActionRenderer extends BaseActionElementRenderer
 {
@@ -281,11 +281,11 @@ public class OnlineImageLoader implements IOnlineImageLoader
     @Override
     public HttpRequestResult<Bitmap> loadOnlineImage(String url, GenericImageLoaderAsync loader) throws IOException, URISyntaxException
     {
-        String catImnageUri = "http://adaptivecards.io/content/cats/1.png";
-        byte[] bytes = HttpRequestHelper.get(catImnageUri);
+        String catImageUri = "http://adaptivecards.io/content/cats/1.png";
+        byte[] bytes = HttpRequestHelper.get(catImageUri);
         if (bytes == null)
         {
-            throw new IOException("Failed to retrieve content from " + catImnageUri);
+            throw new IOException("Failed to retrieve content from " + catImageUri);
         }
 
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
@@ -381,12 +381,12 @@ Das Transformieren eines IOnlineImageLoader in einen IResourceResolver ist eine 
 Wie du siehst, sind dies die größten Änderungen:
 
 * ```loadOnlineImage(String, GenericImageLoaderAsync)``` wurde in ```resolveImageResource(String, GenericImageLoaderAsync)``` umbenannt.
-* eine Überladung für ```resolveImageResource(String, GenericImageLoaderAsync)``` wurde als ```resolveImageResource(String, GenericImageLoaderAsync, int)``` hinzugefügt, um Szenarios zu unterstützen, in denen die maximale Breite erforderlich ist.
+* eine Überladung für ```resolveImageResource(String, GenericImageLoaderAsync)``` wurde hinzugefügt ```resolveImageResource(String, GenericImageLoaderAsync, int)``` , um Szenarios zu unterstützen, in denen die maximale Breite erforderlich ist.
 
 ## <a name="custom-media-loading"></a>Laden benutzerdefinierter Medien
 
 > [!IMPORTANT]
-> **Beachten Sie, dass ```IOnlineMediaLoader``` ```MediaDataSource```, die auf API-Ebene 23 oder Android M hinzugefügt wurde.**
+> **Beachten ```IOnlineMediaLoader``` Sie ```MediaDataSource``` , dass die API-Ebene 23 oder Android M hinzugefügt wurde.**
 
 Zusammen mit der Einbeziehung des Medienelements wurde auch die IOnlineMediaLoader-Benutzeroberfläche einbezogen, die es Entwicklern ermöglicht, das [MediaDataSource](https://developer.android.com/reference/android/media/MediaDataSource)-Element außer Kraft zu setzen, das für das zugrunde liegende mediaPlayer-Element verwendet wurde. **(Erfordert Android M)**
 
