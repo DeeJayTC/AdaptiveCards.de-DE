@@ -56,19 +56,20 @@ var templatePayload = {
     "body": [
         {
             "type": "TextBlock",
-            "text": "Hello {name}!"
+            "text": "Hello ${name}!"
         }
     ]
 };
  
-// Create a Template instamce from the template payload
+// Create a Template instance from the template payload
 var template = new ACData.Template(templatePayload);
  
 // Create a data binding context, and set its $root property to the
 // data object to bind the template to
-var context = new ACData.EvaluationContext();
-context.$root = {
-    "name": "Mickey Mouse"
+var context: ACData.IEvaluationContext = {
+    $root = {
+        "name": "Adaptive Cards"
+    }
 };
  
 // "Expand" the template - this generates the final Adaptive Card,
@@ -79,7 +80,7 @@ var card = template.expand(context);
 var adaptiveCard = new AdaptiveCards.AdaptiveCard();
 adaptiveCard.parse(card);
  
-var htmlElement = adaptiveCard.render();
+document.getElementById('exampleDiv').appendChild(adaptiveCard.render());
 ```
 
 ## <a name="net"></a>.NET 
@@ -118,6 +119,7 @@ var dataJson = @"
     ""name"": ""Mickey Mouse""
 }";
 
-var transformer = new AdaptiveTransformer();
-var cardJson = transformer.Transform(templateJson, dataJson);
+var template = new AdaptiveCardTemplate(cardBlock.Template);
+var context = new EvaluationContext(cardBlock.Data.Value);
+var cardJson = template.Expand(context);
 ```
